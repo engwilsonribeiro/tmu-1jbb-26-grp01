@@ -63,10 +63,10 @@ nav ul {
 
 .logomarca-estrela-azul {
   position: absolute;
-  top: 150%;
-  left: 5%;
-  width: 150px;
-  height: 150px;
+  top: 130%;
+  left: -30px;
+  width: 200px;
+  height: 200px;
   transform: translateY(-50%);
   background-image: url("./../img/star.png");
 
