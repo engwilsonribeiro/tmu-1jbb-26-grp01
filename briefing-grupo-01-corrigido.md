@@ -131,8 +131,8 @@ Marquem cada etapa somente quando os critérios estiverem concluídos e houver e
 | 20% | Pesquisa e público | Público-alvo, necessidades, referências e benchmarking organizados para orientar as decisões. | [x] |
 | 30% | Escopo e experiência | Páginas, funcionalidades prioritárias, jornada do usuário, navegação e requisitos técnicos definidos. | [x] |
 | 40% | Direção visual | Paleta, tipografia, componentes e critérios de contraste definidos e alinhados à identidade da Starry. | [ ] |
-| 55% | Protótipo navegável | Telas principais prototipadas no Figma, com conteúdo e fluxos de reserva, shows e cardápio representados. | [ ] |
-| 65% | Validação do protótipo | Protótipo revisado com professores/cliente; problemas identificados e ajustes prioritários aplicados. | [ ] |
+| 50% | Protótipo navegável | Telas principais prototipadas no Figma, com conteúdo e fluxos de reserva, shows e cardápio representados. | [ ] |
+| 60% | Validação do protótipo | Protótipo revisado com professores/cliente; problemas identificados e ajustes prioritários aplicados. | [ ] |
 | 80% | Implementação | Site desenvolvido em HTML, CSS e JavaScript, com as páginas principais e layout responsivo implementados. | [ ] |
 | 90% | Testes e refinamento | Fluxos e formulários testados em desktop e celular; erros corrigidos e critérios de aceite verificados. | [ ] |
 | 100% | Entrega aprovada | Versão final apresentada e aprovada, com entregáveis organizados e validação técnica concluída. | [ ] |
