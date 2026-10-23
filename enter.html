@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Configurações -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starry | Minha Conta</title>
+    <link rel="stylesheet" href="./assets/css/Style.css" />
+  </head>
+
+  <!-- Página da conta -->
+  <body>
+
+    <!-- Menu -->
+    <nav>
+      <div class="logomarca-estrela"></div>
+      <!-- Logo -->
+      <div class="logomarca-estrela-azul"></div>
+      <!-- Estrela -->
+      <div class="titulo">
+        <h1>STARRY</h1>
+      </div>
+      <!-- Nome da empresa -->
+      <ul>
+        <!-- Opções de página do menu -->
+        <li><a href="index.html">Início</a></li>
+        <!-- Início -->
+        <li><a href="karaoke.html">Karaokê</a></li>
+        <!-- Karaokê -->
+        <li><a href="shows.html">Shows</a></li>
+        <!-- Shows -->
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <!-- Cardápio -->
+        <li><a href="about.html">Sobre</a></li>
+        <!-- Sobre -->
+        <li><a href="enter.html">Entrar</a></li>
+        <!-- Login -->
+      </ul>
+    </nav>
+
+    <section class="conta-topo">
+      <!-- Cabeçalho da conta -->
+      <div class="conta-foto">
+        FOTO
+      </div>
+      <!-- Foto do usuário -->
+
+      <div class="conta-nome">
+        <!-- Informações do usuário -->
+        <span>MINHA CONTA</span>
+        <h2>NOME</h2>
+        <p>@GMAIL.COM</p>
+      </div>
+
+      <button class="conta-editar">
+        EDITAR PERFIL
+      </button>
+      <!-- Botão para editar o perfil -->
+
+    </section>
+
+    <!-- Área principal -->
+    <main class="conta-area">
+
+      <!-- Menu lateral -->
+      <aside class="conta-menu">
+        <!-- Opções da conta -->
+
+        <span>MENU</span>
+
+        <a href="#perfil" class="ativo">
+          MEU PERFIL
+        </a>
+        <!-- Link para o perfil -->
+
+        <a href="#reservas">
+          RESERVAS
+        </a>
+        <!-- Link para as reservas -->
+
+        <a href="#favoritos">
+          FAVORITOS
+        </a>
+        <!-- Link para os favoritos -->
+
+        <a href="#historico">
+          HISTÓRICO
+        </a>
+        <!-- Link para o histórico -->
+
+        <a href="#configuracoes">
+          CONFIGURAÇÕES
+        </a>
+        <!-- Link para as configurações -->
+
+        <a href="index.html" class="sair">
+          SAIR
+        </a>
+        <!-- Link para a página inicial -->
+
+      </aside>
+
+      <!-- Conteúdo da conta -->
+      <div class="conta-conteudo">
+
+        <section class="conta-perfil" id="perfil">
+          <!-- Informações do perfil -->
+
+          <div>
+            <span>PERFIL</span>
+            <h2>
+              NOME
+            </h2>
+            <p>
+              @GMAIL.COM
+            </p>
+          </div>
+
+          <div class="conta-biografia">
+            <!-- Biografia do usuário -->
+            <span>BIOGRAFIA</span>
+            <p>
+              Escreva uma breve descrição sobre você.
+            </p>
+          </div>
+
+        </section>
+
+        <!-- Reservas -->
+        <section class="conta-secao" id="reservas">
+
+          <div class="titulo-conta">
+            <!-- Título da seção -->
+            <span>01</span>
+            <h2>MINHAS RESERVAS</h2>
+          </div>
+
+          <div class="reservas-grid">
+            <!-- Organização dos cards -->
+
+            <div class="reserva-card">
+              <!-- Card 1 -->
+              <div class="reserva-imagem">
+              </div>
+              <!-- Espaço da imagem -->
+
+              <div class="reserva-texto">
+                <!-- Informações da reserva -->
+                <span>KARAOKÊ</span>
+                <h3>Reserva</h3>
+                <p>Data e horário</p>
+              </div>
+
+              <strong>→</strong>
+              <!-- Seta -->
+            </div>
+
+            <div class="reserva-card">
+              <!-- Card 2 -->
+              <div class="reserva-imagem rosa">
+
+              </div>
+              <!-- Espaço da imagem -->
+
+              <div class="reserva-texto">
+                <!-- Informações da reserva -->
+                <span>SHOW</span>
+                <h3>Reserva</h3>
+                <p>Data e horário</p>
+              </div>
+
+              <strong>→</strong>
+              <!-- Seta -->
+            </div>
+
+            <div class="reserva-card">
+              <!-- Card 3 -->
+              <div class="reserva-imagem amarelo">
+              </div>
+              <!-- Espaço da imagem -->
+
+              <div class="reserva-texto">
+                <!-- Informações da reserva -->
+                <span>CARDÁPIO</span>
+                <h3>Reserva</h3>
+                <p>Data e horário</p>
+              </div>
+
+              <strong>→</strong>
+              <!-- Seta -->
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- Favoritos -->
+        <section class="conta-secao" id="favoritos">
+
+          <div class="titulo-conta">
+            <!-- Título da seção -->
+            <span>02</span>
+            <h2>MEUS FAVORITOS</h2>
+          </div>
+
+          <div class="favoritos-grid">
+            <!-- Cards de favoritos -->
+
+            <div class="favorito-card roxo">
+              <!-- Card Karaokê -->
+              <strong>♫</strong>
+              <!-- Símbolo -->
+              <h3>KARAOKÊ</h3>
+              <!-- Nome -->
+              <p>Salas favoritas</p>
+              <!-- Descrição -->
+            </div>
+
+            <div class="favorito-card rosa">
+              <!-- Card Shows -->
+              <strong>★</strong>
+              <!-- Símbolo -->
+              <h3>SHOWS</h3>
+              <!-- Nome -->
+              <p>Artistas favoritos</p>
+              <!-- Descrição -->
+            </div>
+
+            <div class="favorito-card ciano">
+              <!-- Card Cardápio -->
+              <strong>♡</strong>
+              <!-- Símbolo -->
+              <h3>CARDÁPIO</h3>
+              <!-- Nome -->
+              <p>Itens favoritos</p>
+              <!-- Descrição -->
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- Histórico -->
+        <section class="conta-historico" id="historico">
+          <!-- Reservas e experiências anteriores -->
+
+          <span>03</span>
+          <h2>HISTÓRICO</h2>
+          <p>
+            Aqui ficarão suas reservas e experiências anteriores
+            na Starry.
+          </p>
+
+        </section>
+
+        <!-- Configurações -->
+        <section class="conta-configuracoes" id="configuracoes">
+          <!-- Opções da conta -->
+
+          <span>04</span>
+          <h2>CONFIGURAÇÕES</h2>
+
+          <button>
+            EDITAR DADOS
+          </button>
+          <!-- Botão para editar os dados -->
+
+        </section>
+
+      </div>
+
+    </main>
+
+    <!-- Final da página -->
+    <section class="conta-final">
+      <!-- Frase de encerramento -->
+
+      <p>STARRY</p>
+      <h2>
+        ONDE A MÚSICA<br>
+        VIRA HISTÓRIA.
+      </h2>
+
+    </section>
+
+  </body>
+
+</html>

@@ -1,24 +1,170 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/Style.css" />
-  </head>
+<!doctype html> 
+<html lang="pt-br"> 
+  <head> 
+    <!-- Configurações --> 
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Starry</title> 
+    <link rel="stylesheet" href="./assets/css/Style.css" /> 
+  </head> 
 
-  <body>
-    <nav>
-      <div class="logomarca"></div>
-      <div class="logomarca-estrela"></div>
 
-      <div class="logomarca-estrela-azul"></div>
+ <!--PÁGINA INICIAL -->
+  <body class="pagina-inicial"> 
 
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </body>
-</html>
+    <!-- ================================================= -->
+    <!-- MENU -->
+    <!-- ================================================= -->
+
+    <nav> 
+      <div class="logomarca-estrela"></div> 
+      <!-- Logo --> 
+      <div class="logomarca-estrela-azul"></div> 
+      <!-- Estrela --> 
+      <div class="titulo"><h1>STARRY</h1></div> 
+      <!-- Nome da empresa --> 
+ 
+      <ul> 
+        <!-- Opções de página do menu --> 
+        <li><a href="index.html">Início</a></li> 
+        <!-- Início --> 
+        <li><a href="karaoke.html">Karaokê</a></li> 
+        <!-- Karaokê --> 
+        <li><a href="shows.html">Shows</a></li> 
+        <!-- Shows --> 
+        <li><a href="cardapio.html">Cardápio</a></li> 
+        <!-- Cardápio --> 
+        <li><a href="about.html">Sobre</a></li> 
+        <!-- Sobre --> 
+        <li><a href="enter.html">Entrar</a></li> 
+        <!-- Login --> 
+      </ul> 
+    </nav> 
+ 
+    <div class="imagem-principal"> 
+      <img src="./assets/img/foto.jpg" alt="Imagem principal da Starry"> 
+      <!-- Foto de exemplo --> 
+    </div> 
+ 
+    <section class="como-funciona"> 
+      <h2>COMO<br>FUNCIONA?</h2> 
+      <!-- Título separado --> 
+ 
+      <div class="passos"> 
+ <!-- separei as classes por passo a passo para fazer as caixas -->
+        <div class="passo passo-01"> 
+          <!-- Caixa 1 --> 
+          <strong>01</strong> 
+          <!-- Número --> 
+          <p>ESCOLHA A SALA<br>E O HORÁRIO</p> 
+          <!-- Texto --> 
+        </div> 
+ 
+        <div class="passo passo-02"> 
+          <!-- Caixa 2 --> 
+          <strong>02</strong> 
+          <!-- Número --> 
+          <p>CHAME A<br>GALERA</p> 
+          <!-- Texto --> 
+        </div> 
+ 
+        <div class="passo passo-03"> 
+          <!-- Caixa 3 --> 
+          <strong>03</strong> 
+          <!-- Número --> 
+          <p>CANTE, TOQUE<br>E SE DIVIRTA</p> 
+          <!-- Texto --> 
+        </div> 
+ 
+        <div class="passo passo-04"> 
+          <!-- Caixa 4 --> 
+          <strong>04</strong> 
+          <!-- Número --> 
+          <p>PEÇA COMIDA E<br>DRINKS</p> 
+          <!-- Texto --> 
+        </div> 
+      </div> 
+    </section> 
+ 
+    <section class="nossas-atracoes"> 
+      <!-- Seção --> 
+      <h2>NOSSAS<br>ATRAÇÕES</h2> 
+      <!-- Título --> 
+ 
+      <div class="atracoes"> 
+        <!-- Cards --> 
+ 
+        <!-- Card Karaokê --> 
+        <div class="atracao atracao-karaoke"> 
+          <!-- Card 1 --> 
+          <div class="imagem-atracao"> 
+            <!-- Classe de Imagem --> 
+            <img src="./assets/img/karaoke.jpg" alt="Karaokê"> 
+            <!-- Foto --> 
+          </div> 
+          <h3>KARAOKÊ</h3> 
+          <!-- Nome --> 
+          <p>Salas modernas para você se divertir com a galera.</p> 
+          <!-- Descrição --> 
+          <a href="karaoke.html">RESERVAR SALA →</a> 
+          <!-- Link pra página de karaoke --> 
+        </div> 
+ 
+        <!-- Card Shows --> 
+        <div class="atracao atracao-shows"> 
+          <!-- Card 2 --> 
+          <div class="imagem-atracao"> 
+            <!-- Classe de Imagem --> 
+            <img src="./assets/img/show.jpg" alt="Shows"> 
+            <!-- Foto --> 
+          </div> 
+          <h3>SHOWS</h3> 
+          <!-- Nome --> 
+          <p>Calendário de shows com bandas incríveis.</p> 
+          <!-- Descrição --> 
+          <a href="shows.html">VER CALENDÁRIO →</a> 
+          <!-- Link --> 
+        </div> 
+ 
+        <!-- Card Cardápio --> 
+        <div class="atracao atracao-cardapio"> 
+          <!-- Card 3 --> 
+          <div class="imagem-atracao"> 
+            <!-- Classe de Imagem --> 
+            <img src="./assets/img/cardapio.jpg" alt="Cardápio"> 
+            <!-- Foto --> 
+          </div> 
+          <h3>CARDÁPIO</h3> 
+          <!-- Nome --> 
+          <p>Comidas deliciosas e drinks especiais para sua noite.</p> 
+          <!-- Descrição --> 
+          <a href="cardapio.html">VER CARDÁPIO →</a> 
+          <!-- Link --> 
+        </div> 
+      </div> 
+    </section> 
+ 
+    <!-- Seção Contato --> 
+    <section class="contato"> 
+ 
+      <div class="informacoes-contato"> 
+        <!-- Classes de Informações --> 
+        <h2>CONTATO</h2> 
+        <!-- Título --> 
+        <p>PARA FALAR COM A GENTE:</p> 
+        <!-- Introdução --> 
+ 
+        <ul> 
+          <!-- Lista --> 
+          <li>[telefone]</li> 
+          <li>[email]</li>  
+          <li>[endereço]</li>  
+          <li>[horário de funcionamento]</li> 
+        </ul> 
+      </div> 
+
+      <div class="bloco-contato"></div> 
+      <!-- Bloco roxo só pra decoração --> 
+    </section> 
+  </body> 
+</html> 
