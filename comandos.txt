@@ -1,0 +1,50 @@
+    1  git init
+    2  git config --global user.name 'Ana Laura de Andrade Pivetta'
+    3  git config --global user.email 'ana.pivetta@edu.senai.br'
+    4  git auth login 
+    5  gh auth login
+    6  gh auth login
+    7  git init
+    8  git config --global user.name 'Ana Laura de Andrade Pivetta'
+    9  git config --global user.email 'ana.pivetta@edu.senai.br
+   10  x
+   11  git config --global user.email 'ana.pivetta@edu.senai.br
+   12  gh auth login
+   13  git add . 
+   14  git commit -m 'Matriz do projeto'
+   15  git branch -M main
+   16  git remote add origin https://github.com 
+   17  git remote add origin [200~ https://github.com/engwilsonribeiro/aula20072026-grupo04.git~
+   18  git clone [200~git remote add origin https://github.com/engwilsonribeiro/aula20072026-grupo04.git~
+   19  git clone https://github.com/engwilsonribeiro/aula20072026-grupo04.git
+   20  git branch ana laura de andrade
+   21  git branch analaura-andrade
+   22  git switch analaura-andrade
+   23  git push origin analaura-andrade
+   24  git clone https://github.com/engwilsonribeiro/tmu-1jbb-26-grp01.git
+   25  ls
+   26  git branch ana
+   27  git branch analaura
+   28  git switch analaura
+   29  git push origin analaura
+   30  git add .
+   31  git commit -m 'janela principal'
+   32  git push origin analaura
+   33  git switch wilson
+   34  git fecth
+   35  git fecth --help
+   36  git fetch origin 
+   37  git fetch origin wilson  //atualizar as branch
+   38  git switch wilson
+   39  git switch analaura //chave para analaura
+   40  git merge wilson // mesclei o projeto wilson com o da analaura
+   41  history
+   42  history >> comandos.txt
+
+
+
+
+
+git add .
+git commit -m 'imagem nova'
+git push origin analaura 

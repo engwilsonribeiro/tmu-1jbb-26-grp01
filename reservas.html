@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starry | Reserve seu momento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/Style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="logomarca"></div>
+      <div class="logomarca-estrela"></div>
+      <div class="logomarca-estrela-azul"></div>
+
+      <ul>
+        <li><a href="Início.html">Home</a></li>
+        <li><a href="Karaoke.html">Karaoke</a></li>
+        <li><a href="Shows.html">Shows</a></li>
+        <li><a href="Cardápio.html">Cardápio</a></li>
+        <li><a href="Sobre.html">Sobre</a></li>
+        <li><a href="Entrar.html">Entrar</a></li>
+      </ul>
+    </nav>
+
+    <main class="home-content">
+      <section class="hero-copy" aria-labelledby="hero-title">
+        <h2 id="hero-title">
+          <span>VOCÊ NO PALCO.</span>
+          <span>O MUNDO ASSISTINDO.</span>
+        </h2>
+        <p class="hero-note">SEU MOMENTO<br />COMEÇA<br />AGORA!</p>
+      </section>
+
+      <aside class="booking-note">
+        <p>
+          Aqui você pode agendar seu show e exibir seus talentos a todos. Basta
+          marcar seu horário, a quantidade de pessoas na equipe musical e
+          solicitar o pagamento. Aproveite sua noite!
+        </p>
+      </aside>
+
+    <div class="calendar-card" aria-label="Calendário compacto">
+      <div class="calendar-header">
+        <h1>Calendário</h1>
+        <div class="month-nav">
+          <button class="nav-arrow" id="prevMonth" type="button" aria-label="Mês anterior">&lt;</button>
+          <span id="monthLabel">Maio 2026</span>
+          <button class="nav-arrow" id="nextMonth" type="button" aria-label="Próximo mês">&gt;</button>
+          <div class="month-selects">
+            <select id="monthSelect" aria-label="Selecionar mês">
+              <option value="0">Janeiro</option>
+              <option value="1">Fevereiro</option>
+              <option value="2">Março</option>
+              <option value="3">Abril</option>
+              <option value="4">Maio</option>
+              <option value="5">Junho</option>
+              <option value="6">Julho</option>
+              <option value="7">Agosto</option>
+              <option value="8">Setembro</option>
+              <option value="9">Outubro</option>
+              <option value="10">Novembro</option>
+              <option value="11">Dezembro</option>
+            </select>
+            <select id="yearSelect" aria-label="Selecionar ano">
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026" selected>2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div id="calendarGrid" class="calendar-grid" aria-live="polite"></div>
+      <div id="showMessage" class="show-message" aria-live="polite"></div>
+    </div>
+
+      <section class="reservation-section" aria-labelledby="reservation-title">
+        <h2 id="reservation-title">DATA E HORÁRIO:</h2>
+        <form id="reservationForm" class="reservation-form">
+          <div class="reservation-options">
+            <label>
+              Data
+              <input id="reservationDate" name="date" type="date" required />
+            </label>
+            <label>
+              Horário
+              <select name="time" required>
+                <option value="20:00">20:00</option>
+                <option value="19:00">19:00</option>
+                <option value="21:00">21:00</option>
+                <option value="22:00">22:00</option>
+              </select>
+            </label>
+            <label>
+              Quantidade de pessoas
+              <input name="guests" type="number" min="1" max="30" value="8" required />
+            </label>
+          </div>
+
+          <div class="reservation-fields">
+            <label>
+              Seu nome
+              <input name="name" type="text" placeholder="Digite seu nome" autocomplete="name" required />
+            </label>
+            <label>
+              E-mail
+              <input name="email" type="email" placeholder="Digite seu e-mail" autocomplete="email" required />
+            </label>
+            <label>
+              Telefone
+              <input name="phone" type="tel" placeholder="(11) 99999-9999" autocomplete="tel" required />
+            </label>
+            <label>
+              Nome do grupo
+              <input name="group" type="text" placeholder="Nome da banda ou equipe" required />
+            </label>
+          </div>
+
+          <button class="reservation-submit" type="submit">CONFIRMAR RESERVA</button>
+          <p id="reservationMessage" class="reservation-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <div class="barras" aria-label="Faixas decorativas">
+      <span class="barra barra-magenta"></span>
+      <span class="barra barra-cyan"></span>
+      <span class="barra barra-amarela"></span>
+      <span class="barra barra-roxa"></span>
+      <span class="barra barra-pink"></span>
+    </div>
+
+    <script>
+      const monthNames = [
+        'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+        'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+      ];
+
+      const weekdayNames = ['DOM', 'SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SÁB'];
+
+      const monthSelect = document.getElementById('monthSelect');
+      const yearSelect = document.getElementById('yearSelect');
+      const monthLabel = document.getElementById('monthLabel');
+      const grid = document.getElementById('calendarGrid');
+      const showMessage = document.getElementById('showMessage');
+      const reservationDate = document.getElementById('reservationDate');
+      const reservationForm = document.getElementById('reservationForm');
+      const reservationMessage = document.getElementById('reservationMessage');
+      const prevMonthButton = document.getElementById('prevMonth');
+      const nextMonthButton = document.getElementById('nextMonth');
+      const showDescriptions = [
+        'Show ao vivo às 20h',
+        'Banda convidada às 21h',
+        'Noite de karaokê às 19h30',
+        'Música ao vivo às 20h30'
+      ];
+      const showsByMonth = new Map();
+
+      let selectedDate = new Date(2026, 4, 15);
+
+      function formatDateForInput(date) {
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${date.getFullYear()}-${month}-${day}`;
+      }
+
+      function selectCalendarDate(date) {
+        selectedDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+        monthSelect.value = String(selectedDate.getMonth());
+
+        const year = String(selectedDate.getFullYear());
+        if (!Array.from(yearSelect.options).some((option) => option.value === year)) {
+          const yearOption = document.createElement('option');
+          yearOption.value = year;
+          yearOption.textContent = year;
+          yearSelect.add(yearOption);
+        }
+
+        yearSelect.value = year;
+        reservationDate.value = formatDateForInput(selectedDate);
+      }
+
+      function getShowsForMonth(year, month) {
+        const monthKey = `${year}-${month}`;
+
+        if (!showsByMonth.has(monthKey)) {
+          const lastDay = new Date(year, month + 1, 0).getDate();
+          const showDays = new Map();
+
+          while (showDays.size < 3) {
+            const day = Math.floor(Math.random() * lastDay) + 1;
+            if (!showDays.has(day)) {
+              const descriptionIndex = Math.floor(Math.random() * showDescriptions.length);
+              showDays.set(day, showDescriptions[descriptionIndex]);
+            }
+          }
+
+          showsByMonth.set(monthKey, showDays);
+        }
+
+        return showsByMonth.get(monthKey);
+      }
+
+      function updateMonthLabel() {
+        const viewMonth = Number(monthSelect.value);
+        const viewYear = Number(yearSelect.value);
+        monthLabel.textContent = `${monthNames[viewMonth]} ${viewYear}`;
+      }
+
+      function renderCalendar() {
+        const month = Number(monthSelect.value);
+        const year = Number(yearSelect.value);
+        const firstDayOfMonth = new Date(year, month, 1);
+        const lastDayOfMonth = new Date(year, month + 1, 0);
+        const startDate = new Date(firstDayOfMonth);
+        startDate.setDate(startDate.getDate() - firstDayOfMonth.getDay());
+        const monthShows = getShowsForMonth(year, month);
+
+        updateMonthLabel();
+        reservationDate.value = formatDateForInput(selectedDate);
+        grid.innerHTML = '';
+
+        weekdayNames.forEach((dayName) => {
+          const weekday = document.createElement('div');
+          weekday.className = 'weekday';
+          weekday.textContent = dayName;
+          grid.appendChild(weekday);
+        });
+
+        for (let i = 0; i < 42; i += 1) {
+          const date = new Date(startDate);
+          date.setDate(startDate.getDate() + i);
+
+          const dayButton = document.createElement('button');
+          dayButton.type = 'button';
+          dayButton.className = 'day';
+          dayButton.textContent = date.getDate();
+
+          const isCurrentMonth = date.getMonth() === month && date.getFullYear() === year;
+          const isSelected = date.getDate() === selectedDate.getDate() &&
+            date.getMonth() === selectedDate.getMonth() &&
+            date.getFullYear() === selectedDate.getFullYear();
+
+          if (!isCurrentMonth) {
+            dayButton.classList.add('muted');
+          }
+
+          if (isSelected) {
+            dayButton.classList.add('selected');
+          }
+
+          const showDescription = isCurrentMonth ? monthShows.get(date.getDate()) : null;
+          if (showDescription) {
+            dayButton.classList.add('show-day');
+            dayButton.setAttribute('aria-label', `Dia ${date.getDate()}: ${showDescription}`);
+          }
+
+          dayButton.addEventListener('click', () => {
+            selectCalendarDate(date);
+            showMessage.textContent = showDescription
+              ? `Show dia ${date.getDate()}: ${showDescription}`
+              : `Sem show programado para ${date.getDate()} de ${monthNames[date.getMonth()]}.`;
+            renderCalendar();
+          });
+
+          grid.appendChild(dayButton);
+        }
+      }
+
+      monthSelect.addEventListener('change', () => {
+        const month = Number(monthSelect.value);
+        const year = Number(yearSelect.value);
+        const maxDay = new Date(year, month + 1, 0).getDate();
+
+        if (selectedDate.getMonth() !== month || selectedDate.getFullYear() !== year) {
+          selectedDate = new Date(year, month, Math.min(selectedDate.getDate(), maxDay));
+        }
+
+        renderCalendar();
+      });
+
+      yearSelect.addEventListener('change', () => {
+        const month = Number(monthSelect.value);
+        const year = Number(yearSelect.value);
+        const maxDay = new Date(year, month + 1, 0).getDate();
+
+        if (selectedDate.getMonth() !== month || selectedDate.getFullYear() !== year) {
+          selectedDate = new Date(year, month, Math.min(selectedDate.getDate(), maxDay));
+        }
+
+        renderCalendar();
+      });
+
+      reservationDate.addEventListener('change', () => {
+        if (!reservationDate.value) {
+          return;
+        }
+
+        const [year, month, day] = reservationDate.value.split('-').map(Number);
+        selectCalendarDate(new Date(year, month - 1, day));
+        showMessage.textContent = '';
+        renderCalendar();
+      });
+
+      prevMonthButton.addEventListener('click', () => {
+        const currentMonth = Number(monthSelect.value);
+        const currentYear = Number(yearSelect.value);
+        const previousMonth = currentMonth === 0 ? 11 : currentMonth - 1;
+        const previousYear = currentMonth === 0 ? currentYear - 1 : currentYear;
+
+        monthSelect.value = String(previousMonth);
+        yearSelect.value = String(previousYear);
+        selectedDate = new Date(previousYear, previousMonth, 1);
+        renderCalendar();
+      });
+
+      nextMonthButton.addEventListener('click', () => {
+        const currentMonth = Number(monthSelect.value);
+        const currentYear = Number(yearSelect.value);
+        const nextMonth = currentMonth === 11 ? 0 : currentMonth + 1;
+        const nextYear = currentMonth === 11 ? currentYear + 1 : currentYear;
+
+        monthSelect.value = String(nextMonth);
+        yearSelect.value = String(nextYear);
+        selectedDate = new Date(nextYear, nextMonth, 1);
+        renderCalendar();
+      });
+
+      reservationForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(reservationForm);
+        const date = new Date(`${formData.get('date')}T00:00:00`);
+        const formattedDate = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long' }).format(date);
+        const name = formData.get('name');
+        const time = formData.get('time');
+        const guests = formData.get('guests');
+        const group = formData.get('group');
+
+        selectCalendarDate(date);
+        renderCalendar();
+        reservationMessage.textContent =
+          `Reserva confirmada para ${formattedDate}, às ${time}. ` +
+          `Obrigado, ${name}! Esperamos você e o grupo ${group} (${guests} pessoas).`;
+      });
+
+      reservationForm.addEventListener('input', () => {
+        reservationMessage.textContent = '';
+      });
+
+      reservationForm.addEventListener('change', () => {
+        reservationMessage.textContent = '';
+      });
+
+      monthSelect.value = String(selectedDate.getMonth());
+      yearSelect.value = String(selectedDate.getFullYear());
+      renderCalendar();
+    </script>
+  </body>
+</html>
