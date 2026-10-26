@@ -1,0 +1,2066 @@
+/* ================================================= */
+/* CONFIGURAÇÕES GERAIS */
+/* ================================================= */
+
+/* Configurações gerais da página */
+body {
+  font-family: Arial, sans-serif; /* Fonte */
+  margin: 0 auto; /* Centralização */
+  padding: 0; /* Espaço interno */
+  background-color: #202020; /* Cor de fundo */
+  box-sizing: border-box; /* Tamanho */
+}
+
+/* Configuração dos títulos h1 */
+h1 {
+  color: #333; /* Cor */
+  text-align: center; /* Centralização */
+  margin-top: 50px; /* Espaço superior */
+  margin-left: -20px; 
+
+}
+
+/* Lista usada no menu */
+ul {
+  list-style-type: none; /* Remove marcadores */
+  padding: 0; /* Espaço interno */
+  margin: 0; /* Remove margem */
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centralização */
+  background-color: #00fff7; /* Cor de fundo do menu */
+}
+
+
+/* ================================================= */
+/* MENU — TEM EM TODAS AS PÁGINAS */
+/* ================================================= */
+
+/* Links do menu */
+nav ul li a {
+  text-decoration: none; /* Sem sublinhado */
+  color: #000000; /* Cor */
+  font-weight: bold; /* Negrito */
+  padding: 10px 20px; /* Espaçamento */
+  display: block; /* Bloco */
+  background-color: #00fff7; /* Cor de fundo */
+  transition: 0.2s; /* Transição */
+}
+
+/* Efeito dos links quando passa o mouse */
+nav ul li a:hover {
+  background-color: #7b36e6; /* Cor */
+  color: white; /* Cor */
+}
+
+/* Área principal do menu */
+nav {
+  position: relative; /* Posição */
+  top: 0; /* Posição superior */
+  left: 0; /* Posição lateral */
+  width: 100%; /* Largura */
+  margin-top: 0; /* Espaço superior */
+  z-index: 10; /* Camada */
+}
+
+/* Ajusta a posição da lista do menu */
+nav ul {
+  padding-left: 72px; /* Espaço esquerdo */
+  z-index: 11; /* Camada */
+}
+
+/* Logo principal */
+.logomarca-estrela {
+  position: absolute; /* Posição */
+  top: 200%; /* Posição superior */
+  left: 0; /* Posição lateral */
+  width: 150px; /* Largura */
+  height: 150px; /* Altura */
+  transform: translateY(-50%); /* Ajuste vertical */
+  background-image: url("./../img/logo.png"); /* Imagem */
+  background-position: center; /* Centralização */
+  background-repeat: no-repeat; /* Sem repetição */
+  background-size: contain; /* Tamanho da imagem */
+  z-index: 12; /* Camada */
+}
+
+/* Estrela azul da logo */
+.logomarca-estrela-azul {
+  position: absolute; /* Posição */
+  top: 130%; /* Posição superior */
+  left: -16px; /* Posição lateral */
+  width: 200px; /* Largura */
+  height: 300px; /* Altura */
+  transform: translateY(-50%); /* Ajuste vertical */
+  background-image: url("./../img/star.png"); /* Imagem */
+  background-position: center; /* Centralização */
+  background-repeat: no-repeat; /* Sem repetição */
+  background-size: contain; /* Tamanho da imagem */
+  z-index: 11; /* Camada */
+}
+
+/* Nome STARRY no menu */
+.titulo {
+  position: absolute; /* Posição */
+  h1 {
+    color: #000; /* Cor */
+  }
+  z-index: 13; /* Camada */
+  top: -50px; /* Posição superior */
+  left: 150px; /* Posição lateral */
+}
+
+/* ================================================= */
+/* PÁGINA INICIAL */
+/* ================================================= */
+
+/* Imagem principal */
+.pagina-inicial .imagem-principal {
+  width: 92%; /* Largura */
+  height: 390px; /* Altura */
+  margin: 25px auto 0; /* Espaçamento */
+  background-color: white; /* Cor de fundo */
+  overflow: hidden; /* Esconde excesso */
+  border: 6px solid #00fff7; /* Cor da borda */
+  box-sizing: border-box; /* Tamanho */
+  position: relative; /* Posição */
+}
+/* Imagem principal */
+.pagina-inicial .imagem-principal img {
+  width: 100%; /* Largura */
+  height: 100%; /* Altura */
+  object-fit: cover; /* Ajuste da imagem */
+  display: block; /* Bloco */
+  transition: 0.4s; /* Transição */
+}
+
+/* Efeito da imagem quando passa o mouse*/
+.pagina-inicial .imagem-principal:hover img {
+  transform: scale(1.03); /* Ampliação */
+}
+
+
+/* ================================================= */
+/* INICIAL — COMO FUNCIONA */
+/* ================================================= */
+
+/* Área "Como funciona?" */
+.pagina-inicial .como-funciona {
+  display: flex; /* Flexbox */
+  align-items: stretch; /* Alinhamento */
+  width: 92%; /* Largura */
+  margin: 35px auto 0; /* Espaçamento */
+  background-color: #202020; /* Cor de fundo */
+  gap: 20px; /* Espaço */
+}
+
+/* Título da área */
+.pagina-inicial .como-funciona h2 {
+  color: white; /* Cor */
+  font-size: 38px; /* Tamanho */
+  line-height: 0.95; /* Altura */
+  margin: 0; /* Remove margem */
+  width: 25%; /* Largura */
+  display: flex; /* Flexbox */
+  align-items: center; /* Alinhamento */
+  padding-left: 5px; /* Espaço esquerdo */
+}
+
+/* Área dos passos a passos */
+.pagina-inicial .passos {
+  display: flex; /* Flexbox */
+  gap: 12px; /* Espaço */
+  width: 75%; /* Largura */
+}
+
+/* Cada caixa */
+.pagina-inicial .passo {
+  width: 25%; /* Largura */
+  min-height: 135px; /* Altura */
+  text-align: center; /* Centralização */
+  padding: 15px 10px; /* Espaço interno */
+  box-sizing: border-box; /* Tamanho */
+  transition: 0.2s; /* Transição */
+}
+
+/* Efeito das caixas */
+.pagina-inicial .passo:hover {
+  transform: translateY(-5px); /* Movimento */
+}
+
+/* Os números das caixas */
+.pagina-inicial .passo strong {
+  display: block; /* Bloco */
+  font-size: 38px; /* Tamanho */
+  color: #000; /* Cor */
+}
+
+/* O texto das caixas */
+.pagina-inicial .passo p {
+  font-size: 10px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  color: #000; /* Cor */
+  margin: 12px 0 0; /* Espaçamento */
+  line-height: 1.3; /* Altura */
+}
+
+/* Caixa 1 */
+.pagina-inicial .passo-01 {
+  background-color: #7b36e6; /* Cor */
+}
+/* Caixa 2 */
+.pagina-inicial .passo-02 {
+  background-color: #ff00d4; /* Cor */
+}
+/* Caixa 3 */
+.pagina-inicial .passo-03 {
+  background-color: #ffff00; /* Cor */
+}
+/* Caixa 4 */
+.pagina-inicial .passo-04 {
+  background-color: #00fff7; /* Cor */
+}
+
+
+/* ================================================= */
+/* INICIO — NOSSAS ATRAÇÕES */
+/* ================================================= */
+
+/* Área das atrações */
+.pagina-inicial .nossas-atracoes {
+  width: 92%; /* Largura */
+  margin: 35px auto 0; /* Espaçamento */
+  background-color: white; /* Cor de fundo da área */
+  display: flex; /* Flexbox */
+  padding: 25px; /* Espaço interno */
+  box-sizing: border-box; /* Tamanho */
+  gap: 25px; /* Espaço */
+}
+
+/* Título das atracões */
+.pagina-inicial .nossas-atracoes h2 {
+  width: 25%; /* Largura */
+  margin: 0; /* Remove margem */
+  color: #000; /* Cor */
+  font-size: 38px; /* Tamanho */
+  line-height: 0.95; /* Altura */
+  display: flex; /* Flexbox */
+  align-items: center; /* Alinhamento */
+}
+
+/* Área dos cards */
+.pagina-inicial .atracoes {
+  width: 75%; /* Largura */
+  display: flex; /* Flexbox */
+  gap: 15px; /* Espaço */
+}
+
+/* Cada card */
+.pagina-inicial .atracao {
+  width: 33.33%; /* Largura */
+  padding: 10px; /* Espaço interno */
+  box-sizing: border-box; /* Tamanho */
+  text-align: center; /* Centralização */
+  transition: 0.2s; /* Transição */
+}
+
+/* Efeito dos cards quando passa o mouse */
+.pagina-inicial .atracao:hover {
+  transform: translateY(-6px); /* Movimento */
+}
+
+/* Espaço da imagem */
+.pagina-inicial .imagem-atracao {
+  width: 100%; /* Largura */
+  height: 150px; /* Altura */
+  overflow: hidden; /* Esconde excesso */
+}
+/* Imagem */
+.pagina-inicial .imagem-atracao img {
+  width: 100%; /* Largura */
+  height: 100%; /* Altura */
+  object-fit: cover; /* Ajuste da imagem */
+  display: block; /* Bloco */
+  transition: 0.3s; /* Transição */
+}
+/* Zoom da imagem */
+.pagina-inicial .atracao:hover img {
+  transform: scale(1.05); /* Ampliação */
+}
+
+/* Título dos cards */
+.pagina-inicial .atracao h3 {
+  font-size: 17px; /* Tamanho */
+  margin: 12px 0 8px; /* Espaçamento */
+}
+
+/* Descrição */
+.pagina-inicial .atracao > p {
+  font-size: 10px; /* Tamanho */
+  margin: 8px; /* Espaçamento */
+  line-height: 1.4; /* Altura */
+}
+
+/* Link */
+.pagina-inicial .atracao a {
+  font-size: 9px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  color: #000; /* Cor */
+  text-decoration: none; /* Sem sublinhado */
+}
+
+/* Cor do card 1 */
+.pagina-inicial .atracao-karaoke {
+  background-color: #ffff00; /* Cor */
+}
+
+/* Cor do card 2 */
+.pagina-inicial .atracao-shows {
+  background-color: #ff00d4; /* Cor */
+}
+
+/* Cor do card 3 */
+.pagina-inicial .atracao-cardapio {
+  background-color: #00fff7; /* Cor */
+}
+
+
+/* ================================================= */
+/* INICIO — CONTATO */
+/* ================================================= */
+
+/* Área de contato */
+.pagina-inicial .contato {
+  width: 92%; /* Largura */
+  margin: 35px auto 50px; /* Espaçamento */
+  background-color: #202020; /* Cor */
+  display: flex; /* Flexbox */
+  box-sizing: border-box; /* Tamanho */
+  min-height: 180px; /* Altura */
+}
+
+/* Informações */
+.pagina-inicial .informacoes-contato {
+  width: 35%; /* Largura */
+  padding: 25px; /* Espaço interno */
+  box-sizing: border-box; /* Tamanho */
+}
+
+/* Título */
+.pagina-inicial .informacoes-contato h2 {
+  margin: 0; /* Remove margem */
+  color: white; /* Cor */
+  font-size: 38px; /* Tamanho */
+}
+
+/* Introdução */
+.pagina-inicial .informacoes-contato p {
+  margin: 8px 0; /* Espaçamento */
+  color: white; /* Cor */
+  font-size: 10px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+}
+
+/* Lista */
+.pagina-inicial .informacoes-contato ul {
+  display: block; /* Bloco */
+  background-color: transparent; /* Fundo */
+  margin-top: 12px; /* Espaço superior */
+  padding-left: 0; /* Espaço esquerdo */
+  color: white; /* Cor */
+  font-size: 10px; /* Tamanho */
+  line-height: 1.8; /* Altura */
+}
+
+/* Bloco final */
+.pagina-inicial .bloco-contato {
+  width: 65%; /* Largura */
+  min-height: 180px; /* Altura */
+  background-color: #7b36e6; /* Cor */
+  position: relative; /* Posição */
+  overflow: hidden; /* Esconde excesso */
+}
+
+
+
+/* ================================================= */
+/* PÁGINA KARAOKÊ */
+/* ================================================= */
+
+/* Cabeçalho do Karaokê */
+.cabecalho-karaoke {
+  width: 92%; /* Largura */
+  min-height: 300px; /* Altura */
+  margin: 45px auto 0; /* Espaçamento */
+  padding: 35px; /* Espaço interno */
+  background-color: #111; /* Cor de fundo */
+  box-sizing: border-box; /* Tamanho */
+  display: flex; /* Flexbox */
+  align-items: center; /* Alinhamento */
+  justify-content: space-between; /* Distribuição */
+  position: relative; /* Posição */
+  overflow: hidden; /* Esconde excesso */
+}
+/* Detalhe roxo do cabeçalho */
+.cabecalho-karaoke::after {
+  content: ""; /* Conteúdo */
+  position: absolute; /* Posição */
+  width: 230px; /* Largura */
+  height: 230px; /* Altura */
+  right: -80px; /* Posição lateral */
+  top: -80px; /* Posição superior */
+  border: 35px solid #7b36e6; /* Borda */
+  transform: rotate(45deg); /* Rotação */
+}
+/* Texto do cabeçalho */
+.texto-cabecalho-karaoke {
+  width: 55%; /* Largura */
+  position: relative; /* Posição */
+  z-index: 2; /* Camada */
+}
+/* Subtítulo */
+.subtitulo-karaoke {
+  margin: 0 0 8px; /* Espaçamento */
+  color: #00fff7; /* Cor */
+  font-size: 12px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  letter-spacing: 3px; /* Espaçamento */
+}
+
+/* Título principal */
+.texto-cabecalho-karaoke h2 {
+  margin: 0; /* Remove margem */
+  color: #ffff00; /* Cor */
+  font-size: 58px; /* Tamanho */
+  line-height: 0.85; /* Altura */
+  text-shadow: -6px 0 #ff00d4, -10px 0 #7b36e6; /* Sombra */
+}
+/* Descrição */
+.texto-cabecalho-karaoke > p:last-child {
+  width: 80%; /* Largura */
+  margin: 20px 0 0; /* Espaçamento */
+  color: white; /* Cor */
+  font-size: 11px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  line-height: 1.5; /* Altura */
+}
+
+/* Destaque dentro do cabeçalho */
+.destaque-karaoke {
+  width: 250px; /* Largura */
+  height: 210px; /* Altura */
+  background-color: #ff00d4; /* Cor */
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Direção */
+  align-items: center; /* Alinhamento */
+  justify-content: center; /* Centralização */
+  text-align: center; /* Centralização */
+  transform: rotate(3deg); /* Rotação */
+  position: relative; /* Posição */
+  z-index: 2; /* Camada */
+  box-shadow: 12px 12px 0 #00fff7; /* Sombra */
+}
+/* Símbolo */
+.destaque-karaoke span {
+  font-size: 65px; /* Tamanho */
+  color: #000; /* Cor */
+  line-height: 1; /* Altura */
+}
+/* Texto */
+.destaque-karaoke strong {
+  margin-top: 8px; /* Espaçamento */
+  color: #000; /* Cor */
+  font-size: 20px; /* Tamanho */
+  line-height: 1; /* Altura */
+}
+
+
+/* ================================================= */
+/* KARAOKÊ — ESCOLHA DA SALA */
+/* ================================================= */
+
+/* Área de escolha */
+.escolha-sala {
+  width: 92%; /* Largura */
+  margin: 35px auto 0; /* Espaçamento */
+  padding: 30px; /* Espaço interno */
+  background-color: white; /* Cor de fundo */
+  box-sizing: border-box; /* Tamanho */
+}
+
+/* Título da sala */
+.titulo-sala {
+  width: 100%; /* Largura */
+  margin-bottom: 25px; /* Espaçamento */
+  color: #000; /* Cor */
+}
+
+/* Número da seção */
+.numero-secao {
+  margin: 0 0 5px; /* Espaçamento */
+  color: #ff00d4; /* Cor */
+  font-size: 12px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  letter-spacing: 2px; /* Espaçamento */
+}
+
+/* Título */
+.titulo-sala h2 {
+  margin: 0; /* Remove margem */
+  font-size: 42px; /* Tamanho */
+  line-height: 0.85; /* Altura */
+  color: #ffff00; /* Amarelo */
+  text-shadow: -4px 0 #ff00d4, -7px 0 #7b36e6; /* Sombra */
+}
+
+/* Texto */
+.titulo-sala > p:last-child {
+  margin: 12px 0 0; /* Espaçamento */
+  font-size: 9px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  color: #202020; /* Cor */
+}
+
+/* Tipos de sala */
+.tipos-sala {
+  display: flex; /* Flexbox */
+  gap: 15px; /* Espaço */
+}
+
+/* Cada sala */
+.sala {
+  width: 25%; /* Largura */
+  min-height: 255px; /* Altura */
+  padding: 15px; /* Espaço interno */
+  box-sizing: border-box; /* Tamanho */
+  position: relative; /* Posição */
+  overflow: hidden; /* Esconde excesso */
+  transition: 0.2s; /* Transição */
+}
+
+/* Efeito da sala quado passa o mouse */
+.sala:hover {
+  transform: translateY(-7px); /* Movimento */
+}
+
+/* Detalhe das salas */
+.sala::after {
+  content: ""; /* Conteúdo */
+  position: absolute; /* Posição */
+  width: 65px; /* Largura */
+  height: 65px; /* Altura */
+  right: -25px; /* Posição lateral */
+  bottom: -25px; /* Posição inferior */
+  border: 12px solid rgba(0, 0, 0, 0.15); /* Borda */
+  transform: rotate(45deg); /* Rotação */
+}
+
+/* Topo da sala */
+.topo-sala {
+  display: flex; /* Flexbox */
+  justify-content: space-between; /* Distribuição */
+  align-items: center; /* Alinhamento */
+}
+
+/* Número da sala */
+.topo-sala span {
+  font-size: 12px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+}
+
+/* Nome da sala */
+.sala h3 {
+  margin: 0; /* Remove margem */
+  font-size: 20px; /* Tamanho */
+  color: #000; /* Cor */
+}
+
+/* Espaço da foto */
+.espaco-foto {
+  width: 100%; /* Largura */
+  height: 90px; /* Altura */
+  margin-top: 12px; /* Espaçamento */
+  background-color: #fff; /* Cor */
+  display: flex; /* Flexbox */
+  align-items: center; /* Alinhamento */
+  justify-content: center; /* Centralização */
+  overflow: hidden; /* Esconde excesso */
+}
+
+/* Símbolo da sala */
+.espaco-foto span {
+  font-size: 45px; /* Tamanho */
+  color: #202020; /* Cor */
+}
+
+/* Informações */
+.sala > p {
+  margin: 12px 0 8px; /* Espaçamento */
+  font-size: 9px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  line-height: 1.4; /* Altura */
+}
+
+/* Descrição */
+.descricao-sala {
+  display: block; /* Bloco */
+  font-size: 9px; /* Tamanho */
+  line-height: 1.2; /* Altura */
+}
+
+/* Sala 1 */
+.sala-1 {
+  background-color: #7b36e6; /* Cor */
+}
+
+/* Sala 2 */
+.sala-2 {
+  background-color: #ff00d4; /* Cor */
+}
+
+/* Sala 3 */
+.sala-3 {
+  background-color: #ffff00; /* Cor */
+}
+
+/* Sala 4 */
+.sala-4 {
+  background-color: #00fff7; /* Cor */
+}
+
+
+/* ================================================= */
+/* KARAOKÊ — DATA E HORÁRIO */
+/* ================================================= */
+
+/* Área de data */
+.data-horario {
+  width: 92%; /* Largura */
+  margin: 30px auto 0; /* Espaçamento */
+  padding: 30px; /* Espaço interno */
+  background-color: #202020; /* Cor de fundo */
+  box-sizing: border-box; /* Tamanho */
+  display: flex; /* Flexbox */
+  align-items: center; /* Alinhamento */
+  gap: 40px; /* Espaço */
+}
+
+/* Título */
+.titulo-data {
+  width: 30%; /* Largura */
+}
+
+/* Número */
+.titulo-data .numero-secao {
+  color: #00fff7; /* Cor */
+}
+
+/* Título */
+.titulo-data h2 {
+  margin: 0; /* Remove margem */
+  color: white; /* Cor */
+  font-size: 38px; /* Tamanho */
+  line-height: 0.9; /* Altura */
+}
+
+/* Texto */
+.titulo-data > p:last-child {
+  margin: 12px 0 0; /* Espaçamento */
+  color: white; /* Cor */
+  font-size: 9px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  line-height: 1.4; /* Altura */
+}
+
+/* Campos */
+.campos-data {
+  width: 70%; /* Largura */
+  display: flex; /* Flexbox */
+  gap: 15px; /* Espaço */
+}
+
+/* Cada campo */
+.campo {
+  flex: 1; /* Tamanho */
+}
+
+/* Nome do campo */
+.campo label {
+  display: block; /* Bloco */
+  margin-bottom: 7px; /* Espaçamento */
+  color: white; /* Cor */
+  font-size: 9px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+}
+
+/* Campos de entrada */
+.campo input,
+.campo select {
+  width: 100%; /* Largura */
+  height: 42px; /* Altura */
+  padding: 8px; /* Espaço interno */
+  border: 2px solid #00fff7; /* Borda */
+  box-sizing: border-box; /* Tamanho */
+  background-color: white; /* Cor */
+  color: #000; /* Cor */
+  font-size: 9px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  outline: none; /* Remove contorno */
+}
+
+/* Campo selecionado */
+.campo input:focus,
+.campo select:focus {
+  border-color: #ff00d4; /* Cor */
+}
+
+
+/* ================================================= */
+/* KARAOKÊ — SEUS DADOS */
+/* ================================================= */
+
+/* Área dos dados */
+.seus-dados {
+  width: 92%; /* Largura */
+  margin: 30px auto 50px; /* Espaçamento */
+  padding: 30px; /* Espaço interno */
+  background-color: white; /* Cor */
+  box-sizing: border-box; /* Tamanho */
+}
+
+/* Título */
+.titulo-dados {
+  margin-bottom: 25px; /* Espaçamento */
+}
+
+/* Número */
+.titulo-dados .numero-secao {
+  color: #7b36e6; /* Cor */
+}
+
+/* Título */
+.titulo-dados h2 {
+  margin: 0; /* Remove margem */
+  color: #000; /* Cor */
+  font-size: 38px; /* Tamanho */
+  line-height: 0.9; /* Altura */
+}
+
+/* Texto */
+.titulo-dados > p:last-child {
+  margin: 12px 0 0; /* Espaçamento */
+  color: #202020; /* Cor */
+  font-size: 9px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  line-height: 1.4; /* Altura */
+}
+
+/* Formulário */
+.formulario {
+  display: grid; /* Grade */
+  grid-template-columns: 1fr 1fr; /* Colunas */
+  gap: 18px; /* Espaço */
+}
+
+/* Cada campo */
+.campo-dados {
+  width: 100%; /* Largura */
+}
+
+/* Nome do campo */
+.campo-dados label {
+  display: block; /* Bloco */
+  margin-bottom: 7px; /* Espaçamento */
+  color: #000; /* Cor */
+  font-size: 9px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+}
+
+/* Campos */
+.campo-dados input {
+  width: 100%; /* Largura */
+  height: 42px; /* Altura */
+  padding: 10px; /* Espaço interno */
+  border: 2px solid #202020; /* Borda */
+  box-sizing: border-box; /* Tamanho */
+  font-size: 9px; /* Tamanho */
+  outline: none; /* Remove contorno */
+}
+
+/* Campo selecionado */
+.campo-dados input:focus {
+  border-color: #ff00d4; /* Cor */
+}
+
+/* Texto dentro dos campos */
+.campo-dados input::placeholder {
+  color: #777; /* Cor */
+}
+
+/* Botão */
+.seus-dados button {
+  display: block; /* Bloco */
+  margin: 30px auto 0; /* Espaçamento */
+  padding: 14px 30px; /* Espaço interno */
+  border: none; /* Remove borda */
+  background-color: #ff00d4; /* Cor */
+  color: #000; /* Cor */
+  font-size: 10px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  cursor: pointer; /* Cursor */
+  transition: 0.2s; /* Transição */
+}
+
+/* Efeito do botão */
+.seus-dados button:hover {
+  background-color: #00fff7; /* Cor */
+  transform: translateY(-4px); /* Movimento */
+}
+
+
+/* ================================================= */
+/* KARAOKÊ — FRASE FINAL */
+/* ================================================= */
+
+/* Área da frase */
+.frase-karaoke {
+  width: 92%; /* Largura */
+  margin: 0 auto 60px; /* Espaçamento */
+  padding: 45px; /* Espaço interno */
+  background-color: #7b36e6; /* Cor */
+  box-sizing: border-box; /* Tamanho */
+  position: relative; /* Posição */
+  overflow: hidden; /* Esconde excesso */
+}
+
+
+
+/* Texto */
+.frase-karaoke p {
+  margin: 0; /* Remove margem */
+  color: white; /* Cor */
+  font-size: 34px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  line-height: 0.9; /* Altura */
+  position: relative; /* Posição */
+  z-index: 2; /* Camada */
+}
+
+/* Destaque */
+.frase-karaoke strong {
+  color: #00fff7; /* Cor */
+  text-shadow: 3px 3px #000; /* Sombra */
+}
+
+
+/* ================================================= */
+/* PÁGINA SOBRE */
+/* ================================================= */
+
+/* Apresentação */
+.sobre-apresentacao {
+  width: 92%; /* Largura */
+  min-height: 500px; /* Altura */
+  margin: 45px auto 0; /* Espaçamento */
+  position: relative; /* Posição */
+  overflow: hidden; /* Esconde excesso */
+  box-sizing: border-box; /* Tamanho */
+}
+
+/* Título */
+.titulo-sobre {
+  position: absolute; /* Posição */
+  top: 150px; /* Posição superior */
+  left: 60px; /* Posição lateral */
+  width: 360px; /* Largura */
+  z-index: 5; /* Camada */
+}
+
+/* Identificação */
+.titulo-sobre > span {
+  display: block; /* Bloco */
+  margin-bottom: 10px; /* Espaçamento */
+  color: #00fff7; /* Ciano */
+  font-size: 12px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  letter-spacing: 2px; /* Espaço */
+}
+
+/* Título */
+.titulo-sobre h2 {
+  margin: 0; /* Remove margem */
+  color: #ffff00; /* Amarelo */
+  font-size: 55px; /* Tamanho */
+  line-height: 0.9; /* Altura */
+  font-weight: 900; /* Negrito */
+  text-shadow:
+    6px 6px 0 #ff00d4,
+    11px 11px 0 #7b36e6; /* Sombras */
+}
+
+/* Slogan */
+.titulo-sobre p {
+  margin-top: 25px; /* Espaçamento */
+  color: white; /* Cor */
+  font-size: 16px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  line-height: 1.2; /* Altura */
+  letter-spacing: 1px; /* Espaço */
+}
+
+/* Conteúdo */
+.sobre-conteudo {
+  width: 100%; /* Largura */
+  height: 100%; /* Altura */
+  position: relative; /* Posição */
+}
+
+/* Balão */
+.balao-sobre {
+  position: absolute; /* Posição */
+  left: 20px; /* Posição lateral */
+  bottom: 25px; /* Posição inferior */
+  width: 470px; /* Largura */
+  height: 220px; /* Altura */
+  padding: 65px 75px 50px 65px; /* Espaço interno */
+  box-sizing: border-box; /* Tamanho */
+  background-image: url("./../img/balão.starry.png"); /* Imagem */
+  background-position: center; /* Centralização */
+  background-repeat: no-repeat; /* Sem repetição */
+  background-size: 100% 100%; /* Tamanho */
+  z-index: 3; /* Camada */
+}
+
+/* Texto do balão */
+.balao-sobre p {
+  margin: 0; /* Remove margem */
+  color: #000; /* Cor */
+  font-size: 10px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  line-height: 1.4; /* Altura */
+  text-align: center; /* Centralização */
+}
+
+/* Imagem do local */
+.imagem-local {
+  position: absolute; /* Posição */
+  top: 0; /* Posição superior */
+  right: 15px; /* Posição lateral */
+  width: 58%; /* Largura */
+  height: 430px; /* Altura */
+  z-index: 4; /* Camada */
+  overflow: hidden; /* Esconde excesso */
+  border: 5px solid #00fff7; /* Borda */
+  box-sizing: border-box; /* Tamanho */
+}
+
+/* Foto */
+.imagem-local img {
+  width: 100%; /* Largura */
+  height: 100%; /* Altura */
+  object-fit: cover; /* Ajuste */
+  display: block; /* Bloco */
+}
+
+
+/* ================================================= */
+/* HISTÓRIA */
+/* ================================================= */
+
+/* Área */
+.historia {
+  width: 92%; /* Largura */
+  margin: 70px auto 0; /* Espaçamento */
+  padding: 45px; /* Espaço interno */
+  display: flex; /* Flexbox */
+  gap: 60px; /* Espaço */
+  background-color: #151515; /* Fundo */
+  box-sizing: border-box; /* Tamanho */
+  border-left: 8px solid #7b36e6; /* Borda */
+}
+
+/* Título */
+.titulo-secao {
+  width: 35%; /* Largura */
+  flex-shrink: 0; /* Não diminui */
+}
+
+/* Número */
+.titulo-secao > span {
+  display: block; /* Bloco */
+  margin-bottom: 10px; /* Espaçamento */
+  color: #ff00d4; /* Rosa */
+  font-size: 18px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+}
+
+/* Título */
+.titulo-secao h2 {
+  margin: 0; /* Remove margem */
+  color: #ffff00; /* Amarelo */
+  font-size: 48px; /* Tamanho */
+  line-height: 0.95; /* Altura */
+  text-shadow: 4px 4px 0 #ff00d4; /* Sombra */
+}
+
+/* Texto */
+.texto-secao {
+  flex: 1; /* Ocupa espaço */
+}
+
+/* Parágrafos */
+.texto-secao p {
+  margin: 0 0 20px; /* Espaçamento */
+  color: white; /* Cor */
+  font-size: 15px; /* Tamanho */
+  line-height: 1.7; /* Altura */
+}
+
+
+/* ================================================= */
+/* MISSÃO */
+/* ================================================= */
+
+/* Área */
+.missao {
+  width: 92%; /* Largura */
+  margin: 40px auto 0; /* Espaçamento */
+  padding: 45px; /* Espaço interno */
+  display: flex; /* Flexbox */
+  align-items: center; /* Alinhamento */
+  gap: 60px; /* Espaço */
+  background-color: #00fff7; /* Ciano */
+  box-sizing: border-box; /* Tamanho */
+}
+
+/* Título */
+.titulo-missao {
+  width: 35%; /* Largura */
+  flex-shrink: 0; /* Não diminui */
+}
+
+/* Número */
+.titulo-missao > span {
+  display: block; /* Bloco */
+  margin-bottom: 10px; /* Espaçamento */
+  color: #7b36e6; /* Roxo */
+  font-size: 18px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+}
+
+/* Título */
+.titulo-missao h2 {
+  margin: 0; /* Remove margem */
+  color: #000; /* Cor */
+  font-size: 48px; /* Tamanho */
+  line-height: 0.95; /* Altura */
+  text-shadow: 5px 5px 0 #ff00d4; /* Sombra */
+}
+
+/* Caixa */
+.caixa-missao {
+  flex: 1; /* Ocupa espaço */
+  padding: 30px; /* Espaço interno */
+  background-color: #000; /* Fundo */
+}
+
+/* Texto */
+.caixa-missao p {
+  margin: 0; /* Remove margem */
+  color: white; /* Cor */
+  font-size: 16px; /* Tamanho */
+  line-height: 1.6; /* Altura */
+}
+
+
+/* ================================================= */
+/* EXPERIÊNCIA */
+/* ================================================= */
+
+/* Área */
+.experiencia {
+  width: 92%; /* Largura */
+  margin: 40px auto 0; /* Espaçamento */
+  padding: 45px; /* Espaço interno */
+  background-color: #ff00d4; /* Rosa */
+  box-sizing: border-box; /* Tamanho */
+}
+
+/* Título */
+.titulo-experiencia {
+  margin-bottom: 35px; /* Espaçamento */
+}
+
+/* Número */
+.titulo-experiencia > span {
+  color: #ffff00; /* Amarelo */
+  font-size: 18px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+}
+
+/* Título */
+.titulo-experiencia h2 {
+  margin: 10px 0 0; /* Espaçamento */
+  color: white; /* Cor */
+  font-size: 48px; /* Tamanho */
+  line-height: 0.95; /* Altura */
+  text-shadow: 5px 5px 0 #7b36e6; /* Sombra */
+}
+
+/* Conteúdo */
+.experiencia-conteudo {
+  display: flex; /* Flexbox */
+  gap: 15px; /* Espaço */
+}
+
+/* Item */
+.experiencia-item {
+  flex: 1; /* Mesmo tamanho */
+  min-height: 180px; /* Altura */
+  padding: 25px; /* Espaço interno */
+  background-color: #7b36e6; /* Fundo */
+  box-sizing: border-box; /* Tamanho */
+}
+
+/* Número */
+.experiencia-item > span {
+  display: block; /* Bloco */
+  margin-bottom: 30px; /* Espaçamento */
+  color: #ffff00; /* Amarelo */
+  font-size: 14px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+}
+
+/* Nome */
+.experiencia-item strong {
+  display: block; /* Bloco */
+  margin-bottom: 10px; /* Espaçamento */
+  color: #000; /* Cor */
+  font-size: 25px; /* Tamanho */
+}
+
+/* Texto */
+.experiencia-item p {
+  margin: 0; /* Remove margem */
+  color: #000; /* Cor */
+  font-size: 13px; /* Tamanho */
+  line-height: 1.5; /* Altura */
+}
+
+/* Cor do segundo item */
+.experiencia-item:nth-child(2) {
+  background-color: #01FFF6; /* Rosa */
+}
+
+/* Cor do terceiro item */
+.experiencia-item:nth-child(3) {
+  background-color: #ffff00; /* Amarelo */
+}
+
+
+/* ================================================= */
+/* VALORES */
+/* ================================================= */
+
+/* Área */
+.valores {
+  width: 92%; /* Largura */
+  margin: 40px auto 0; /* Espaçamento */
+  padding: 45px; /* Espaço interno */
+  background-color: #151515; /* Fundo */
+  box-sizing: border-box; /* Tamanho */
+}
+
+/* Título */
+.titulo-valores {
+  margin-bottom: 35px; /* Espaçamento */
+}
+
+/* Número */
+.titulo-valores > span {
+  color: #ff00d4; /* Rosa */
+  font-size: 18px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+}
+
+/* Título */
+.titulo-valores h2 {
+  margin: 10px 0 0; /* Espaçamento */
+  color: white; /* Cor */
+  font-size: 48px; /* Tamanho */
+  line-height: 0.95; /* Altura */
+  text-shadow: 5px 5px 0 #00fff7; /* Sombra */
+}
+
+/* Lista */
+.lista-valores {
+  display: grid; /* Grid */
+  grid-template-columns: repeat(2, 1fr); /* Colunas */
+  gap: 15px; /* Espaço */
+}
+
+/* Cada valor */
+.valor {
+  min-height: 170px; /* Altura */
+  padding: 25px; /* Espaço interno */
+  box-sizing: border-box; /* Tamanho */
+}
+
+/* Número */
+.valor strong {
+  display: block; /* Bloco */
+  margin-bottom: 20px; /* Espaçamento */
+  font-size: 14px; /* Tamanho */
+}
+
+/* Nome */
+.valor h3 {
+  margin: 0 0 10px; /* Espaçamento */
+  font-size: 25px; /* Tamanho */
+}
+
+/* Texto */
+.valor p {
+  margin: 0; /* Remove margem */
+  font-size: 13px; /* Tamanho */
+  line-height: 1.5; /* Altura */
+}
+
+/* Roxo */
+.valor-roxo {
+  background-color: #7b36e6; /* Roxo */
+  color: rgb(0, 0, 0); /* Cor */
+}
+
+/* Ciano */
+.valor-ciano {
+  background-color: #00fff7; /* Ciano */
+  color: #000; /* Cor */
+}
+
+/* Rosa */
+.valor-rosa {
+  background-color: #ff00d4; /* Rosa */
+  color: #000; /* Cor */
+}
+
+/* Amarelo */
+.valor-amarelo {
+  background-color: #ffff00; /* Amarelo */
+  color: #000; /* Cor */
+}
+
+
+/* ================================================= */
+/* DIFERENCIAL */
+/* ================================================= */
+
+/* Área */
+.diferencial {
+  width: 92%; /* Largura */
+  margin: 40px auto 0; /* Espaçamento */
+  padding: 55px; /* Espaço interno */
+  display: flex; /* Flexbox */
+  gap: 70px; /* Espaço */
+  background-color: #7b36e6; /* Roxo */
+  box-sizing: border-box; /* Tamanho */
+}
+
+/* Título */
+.titulo-diferencial {
+  width: 40%; /* Largura */
+  flex-shrink: 0; /* Não diminui */
+}
+
+/* Destaque */
+.titulo-diferencial > span {
+  display: block; /* Bloco */
+  margin-bottom: 15px; /* Espaçamento */
+  color: #ffff00; /* Amarelo */
+  font-size: 11px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  letter-spacing: 1px; /* Espaço */
+}
+
+/* Título */
+.titulo-diferencial h2 {
+  margin: 0; /* Remove margem */
+  color: white; /* Cor */
+  font-size: 48px; /* Tamanho */
+  line-height: 0.95; /* Altura */
+  text-shadow: 5px 5px 0 #ff00d4; /* Sombra */
+}
+
+/* Texto */
+.texto-diferencial {
+  flex: 1; /* Ocupa espaço */
+}
+
+/* Parágrafos */
+.texto-diferencial p {
+  margin: 0 0 20px; /* Espaçamento */
+  color: white; /* Cor */
+  font-size: 15px; /* Tamanho */
+  line-height: 1.6; /* Altura */
+}
+
+/* Destaque final */
+.texto-diferencial strong {
+  display: block; /* Bloco */
+  margin-top: 30px; /* Espaçamento */
+  color: #ffff00; /* Amarelo */
+  font-size: 18px; /* Tamanho */
+  line-height: 1.3; /* Altura */
+}
+
+
+/* ================================================= */
+/* FRASE FINAL */
+/* ================================================= */
+
+/* Área */
+.frase-final {
+  width: 92%; /* Largura */
+  min-height: 300px; /* Altura */
+  margin: 40px auto 70px; /* Espaçamento */
+  padding: 60px; /* Espaço interno */
+  background-color: #000; /* Fundo */
+  box-sizing: border-box; /* Tamanho */
+  text-align: center; /* Centralização */
+  border-top: 6px solid #00fff7; /* Borda */
+}
+
+/* Nome */
+.frase-final p {
+  margin: 0 0 25px; /* Espaçamento */
+  color: #ff00d4; /* Rosa */
+  font-size: 16px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  letter-spacing: 5px; /* Espaço */
+}
+
+/* Frase */
+.frase-final h2 {
+  margin: 0; /* Remove margem */
+  color: #ffff00; /* Amarelo */
+  font-size: 52px; /* Tamanho */
+  line-height: 0.95; /* Altura */
+  text-shadow:
+    5px 5px 0 #ff00d4,
+    10px 10px 0 #7b36e6; /* Sombras */
+}
+
+/* Frase menor */
+.frase-final > span {
+  display: block; /* Bloco */
+  margin-top: 30px; /* Espaçamento */
+  color: #00fff7; /* Ciano */
+  font-size: 12px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  letter-spacing: 2px; /* Espaço */
+}
+
+
+/* ================================================= */
+/* RESPONSIVIDADE — SOBRE */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+  /* Apresentação */
+  .sobre-apresentacao {
+    min-height: auto; /* Altura */
+    padding: 30px 0; /* Espaço interno */
+  }
+
+  /* Título */
+  .titulo-sobre {
+    position: relative; /* Posição */
+    top: auto; /* Posição */
+    left: auto; /* Posição */
+    width: 100%; /* Largura */
+    padding: 20px; /* Espaço interno */
+    box-sizing: border-box; /* Tamanho */
+  }
+
+  /* Título */
+  .titulo-sobre h2 {
+    font-size: 42px; /* Tamanho */
+  }
+
+  /* Conteúdo */
+  .sobre-conteudo {
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Coluna */
+    gap: 25px; /* Espaço */
+  }
+
+  /* Balão */
+  .balao-sobre {
+    position: relative; /* Posição */
+    left: auto; /* Posição */
+    bottom: auto; /* Posição */
+    width: 100%; /* Largura */
+    height: 240px; /* Altura */
+  }
+
+  /* Imagem */
+  .imagem-local {
+    position: relative; /* Posição */
+    top: auto; /* Posição */
+    right: auto; /* Posição */
+    width: 100%; /* Largura */
+    height: 300px; /* Altura */
+  }
+
+  /* Seções */
+  .historia,
+  .missao,
+  .diferencial {
+    flex-direction: column; /* Coluna */
+    gap: 30px; /* Espaço */
+    padding: 30px; /* Espaço interno */
+  }
+
+  /* Títulos */
+  .titulo-secao,
+  .titulo-missao,
+  .titulo-diferencial {
+    width: 100%; /* Largura */
+  }
+
+  /* Experiência */
+  .experiencia {
+    padding: 30px; /* Espaço interno */
+  }
+
+  .experiencia-conteudo {
+    flex-direction: column; /* Coluna */
+  }
+
+  /* Valores */
+  .valores {
+    padding: 30px; /* Espaço interno */
+  }
+
+  .lista-valores {
+    grid-template-columns: 1fr; /* Coluna */
+  }
+
+  /* Frase final */
+  .frase-final {
+    padding: 40px 20px; /* Espaço interno */
+  }
+
+  .frase-final h2 {
+    font-size: 38px; /* Tamanho */
+  }
+}
+/* ================================================= */
+/* PÁGINA CONTA */
+/* ================================================= */
+
+
+/* ================================================= */
+/* CABEÇALHO */
+/* ================================================= */
+
+.conta-topo {
+  width: 92%; /* Largura */
+  min-height: 230px; /* Altura */
+  margin: 40px auto 0; /* Espaçamento */
+  padding: 35px; /* Espaço interno */
+  display: flex; /* Flexbox */
+  align-items: center; /* Alinhamento */
+  gap: 30px; /* Espaço */
+  position: relative; /* Posição */
+  background-color: #00fff7; /* Fundo */
+  box-sizing: border-box; /* Tamanho */
+}
+
+
+/* Foto */
+
+.conta-foto {
+  width: 145px; /* Largura */
+  height: 145px; /* Altura */
+  display: flex; /* Flexbox */
+  align-items: center; /* Alinhamento */
+  justify-content: center; /* Centralização */
+  background-color: #202020; /* Fundo */
+  border: 5px solid #ffff00; /* Borda */
+  color: #00fff7; /* Cor */
+  font-size: 18px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  box-sizing: border-box; /* Tamanho */
+}
+
+
+/* Nome */
+
+.conta-nome {
+  align-self: flex-end; /* Alinhamento */
+}
+
+
+/* Identificação */
+
+.conta-nome span {
+  color: #7b36e6; /* Roxo */
+  font-size: 11px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  letter-spacing: 2px; /* Espaço */
+}
+
+
+/* Título */
+
+.conta-nome h2 {
+  margin: 5px 0; /* Espaçamento */
+  color: #000; /* Cor */
+  font-size: 48px; /* Tamanho */
+  line-height: 0.9; /* Altura */
+}
+
+
+/* E-mail */
+
+.conta-nome p {
+  margin: 0; /* Remove margem */
+  color: #000; /* Cor */
+  font-size: 11px; /* Tamanho */
+}
+
+
+/* Botão */
+
+.conta-editar {
+  position: absolute; /* Posição */
+  right: 35px; /* Posição lateral */
+  top: 35px; /* Posição superior */
+  padding: 10px 25px; /* Espaçamento */
+  border: none; /* Sem borda */
+  background-color: #ff00d4; /* Rosa */
+  color: #000; /* Cor */
+  font-size: 10px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  cursor: pointer; /* Cursor */
+}
+
+
+/* ================================================= */
+/* ÁREA PRINCIPAL */
+/* ================================================= */
+
+.conta-area {
+  width: 92%; /* Largura */
+  margin: 0 auto; /* Centralização */
+  padding: 35px; /* Espaço interno */
+  display: flex; /* Flexbox */
+  gap: 35px; /* Espaço */
+  background-color: #202020; /* Fundo */
+  box-sizing: border-box; /* Tamanho */
+}
+
+
+/* ================================================= */
+/* MENU LATERAL */
+/* ================================================= */
+
+.conta-menu {
+  width: 190px; /* Largura */
+  flex-shrink: 0; /* Não diminui */
+}
+
+
+/* Título */
+
+.conta-menu > span {
+  display: block; /* Bloco */
+  margin-bottom: 20px; /* Espaçamento */
+  color: #00fff7; /* Ciano */
+  font-size: 11px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  letter-spacing: 2px; /* Espaço */
+}
+
+
+/* Links */
+
+.conta-menu a {
+  display: block; /* Bloco */
+  padding: 14px 12px; /* Espaçamento */
+  border-bottom: 1px solid #444; /* Borda */
+  color: #fff; /* Cor */
+  text-decoration: none; /* Sem sublinhado */
+  font-size: 11px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+}
+
+
+/* Link ativo */
+
+.conta-menu .ativo {
+  background-color: #ffff00; /* Fundo */
+  color: #000; /* Cor */
+}
+
+
+/* Sair */
+
+.conta-menu .sair {
+  margin-top: 25px; /* Espaçamento */
+  color: #ff00d4; /* Rosa */
+  border: none; /* Sem borda */
+}
+
+
+/* ================================================= */
+/* CONTEÚDO */
+/* ================================================= */
+
+.conta-conteudo {
+  flex: 1; /* Ocupa espaço */
+  min-width: 0; /* Ajuste */
+}
+
+
+/* ================================================= */
+/* PERFIL */
+/* ================================================= */
+
+.conta-perfil {
+  min-height: 180px; /* Altura */
+  padding: 30px; /* Espaço interno */
+  display: flex; /* Flexbox */
+  justify-content: space-between; /* Espaçamento */
+  align-items: flex-start; /* Alinhamento */
+  background-color: #151515; /* Fundo */
+  border-top: 4px solid #7b36e6; /* Borda */
+  box-sizing: border-box; /* Tamanho */
+}
+
+
+/* Identificação */
+
+.conta-perfil > div > span {
+  color: #ff00d4; /* Rosa */
+  font-size: 10px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+}
+
+
+/* Nome */
+
+.conta-perfil h2 {
+  margin: 8px 0 3px; /* Espaçamento */
+  color: #ffff00; /* Amarelo */
+  font-size: 40px; /* Tamanho */
+}
+
+
+/* E-mail */
+
+.conta-perfil > div > p {
+  margin: 0; /* Remove margem */
+  color: #aaa; /* Cor */
+  font-size: 10px; /* Tamanho */
+}
+
+
+/* Biografia */
+
+.conta-biografia {
+  width: 220px; /* Largura */
+  padding: 20px; /* Espaço interno */
+  background-color: #fff; /* Fundo */
+  box-sizing: border-box; /* Tamanho */
+}
+
+
+/* Título */
+
+.conta-biografia span {
+  color: #000 !important; /* Cor */
+}
+
+
+/* Texto */
+
+.conta-biografia p {
+  margin-top: 12px !important; /* Espaçamento */
+  color: #333 !important; /* Cor */
+  line-height: 1.5; /* Altura */
+}
+
+
+/* ================================================= */
+/* SEÇÕES */
+/* ================================================= */
+
+.conta-secao {
+  margin-top: 45px; /* Espaçamento */
+}
+
+
+/* Título */
+
+.titulo-conta {
+  margin-bottom: 20px; /* Espaçamento */
+}
+
+
+/* Número */
+
+.titulo-conta span {
+  color: #ff00d4; /* Rosa */
+  font-size: 11px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+}
+
+
+/* Nome */
+
+.titulo-conta h2 {
+  margin: 6px 0 0; /* Espaçamento */
+  color: #fff; /* Cor */
+  font-size: 32px; /* Tamanho */
+  line-height: 1; /* Altura */
+  text-shadow: 4px 4px 0 #7b36e6; /* Sombra */
+}
+
+
+/* ================================================= */
+/* RESERVAS */
+/* ================================================= */
+
+.reservas-grid {
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Coluna */
+  gap: 10px; /* Espaço */
+}
+
+
+/* Card */
+
+.reserva-card {
+  min-height: 80px; /* Altura */
+  display: flex; /* Flexbox */
+  align-items: center; /* Alinhamento */
+  background-color: #151515; /* Fundo */
+  border-left: 4px solid #00fff7; /* Borda */
+}
+
+
+/* Imagem */
+
+.reserva-imagem {
+  width: 110px; /* Largura */
+  height: 60px; /* Altura */
+  margin-left: 10px; /* Espaçamento */
+  display: flex; /* Flexbox */
+  align-items: center; /* Alinhamento */
+  justify-content: center; /* Centralização */
+  background-color: #7b36e6; /* Fundo */
+  font-size: 9px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+}
+
+
+/* Rosa */
+.reserva-imagem.rosa {
+  background-color: #ff00d4; /* Fundo */
+  color: #000; /* Cor */
+}
+
+
+/* Amarelo */
+.reserva-imagem.amarelo {
+  background-color: #ffff00; /* Fundo */
+  color: #000; /* Cor */
+}
+
+
+/* Texto */
+
+.reserva-texto {
+  flex: 1; /* Ocupa espaço */
+  padding: 15px 20px; /* Espaçamento */
+}
+
+
+/* Categoria */
+
+.reserva-texto span {
+  color: #777; /* Cor */
+  font-size: 8px; /* Tamanho */
+}
+
+
+/* Nome */
+
+.reserva-texto h3 {
+  margin: 4px 0; /* Espaçamento */
+  color: #fff; /* Cor */
+  font-size: 14px; /* Tamanho */
+}
+
+
+/* Data */
+
+.reserva-texto p {
+  margin: 0; /* Remove margem */
+  color: #aaa; /* Cor */
+  font-size: 9px; /* Tamanho */
+}
+
+
+/* Seta */
+
+.reserva-card > strong {
+  padding: 25px; /* Espaçamento */
+  color: #00fff7; /* Cor */
+  font-size: 22px; /* Tamanho */
+}
+
+
+/* ================================================= */
+/* FAVORITOS */
+/* ================================================= */
+
+.favoritos-grid {
+  display: grid; /* Grid */
+  grid-template-columns: repeat(3, 1fr); /* Colunas */
+  gap: 12px; /* Espaço */
+}
+
+
+/* Card */
+
+.favorito-card {
+  min-height: 160px; /* Altura */
+  padding: 20px; /* Espaço interno */
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Coluna */
+  justify-content: space-between; /* Espaçamento */
+  box-sizing: border-box; /* Tamanho */
+}
+
+
+/* Ícone */
+
+.favorito-card strong {
+  font-size: 32px; /* Tamanho */
+}
+
+
+/* Nome */
+
+.favorito-card h3 {
+  margin: 0; /* Remove margem */
+  font-size: 18px; /* Tamanho */
+}
+
+
+/* Texto */
+
+.favorito-card p {
+  margin: 5px 0 0; /* Espaçamento */
+  font-size: 9px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+}
+
+
+/* Cores */
+
+.favorito-card.roxo {
+  background-color: #7b36e6; /* Roxo */
+  color: #000000; /* Cor */
+}
+
+.favorito-card.rosa {
+  background-color: #ff00d4; /* Rosa */
+  color: #000; /* Cor */
+}
+
+.favorito-card.ciano {
+  background-color: #00fff7; /* Ciano */
+  color: #000; /* Cor */
+}
+
+
+/* ================================================= */
+/* HISTÓRICO */
+/* ================================================= */
+
+.conta-historico {
+  margin-top: 45px; /* Espaçamento */
+  padding: 30px; /* Espaço interno */
+  background-color: #ffff00; /* Fundo */
+  color: #000; /* Cor */
+  box-sizing: border-box; /* Tamanho */
+}
+
+
+/* Número */
+
+.conta-historico > span {
+  font-size: 11px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+}
+
+
+/* Título */
+
+.conta-historico h2 {
+  margin: 8px 0; /* Espaçamento */
+  font-size: 30px; /* Tamanho */
+}
+
+
+/* Texto */
+
+.conta-historico p {
+  margin: 0; /* Remove margem */
+  font-size: 11px; /* Tamanho */
+}
+
+
+/* ================================================= */
+/* CONFIGURAÇÕES */
+/* ================================================= */
+
+.conta-configuracoes {
+  margin-top: 15px; /* Espaçamento */
+  padding: 25px 30px; /* Espaço interno */
+  display: flex; /* Flexbox */
+  align-items: center; /* Alinhamento */
+  justify-content: space-between; /* Espaçamento */
+  background-color: #151515; /* Fundo */
+}
+
+
+/* Número */
+
+.conta-configuracoes > span {
+  color: #00fff7; /* Ciano */
+  font-size: 11px; /* Tamanho */
+}
+
+
+/* Título */
+
+.conta-configuracoes h2 {
+  margin: 0; /* Remove margem */
+  color: #fff; /* Cor */
+  font-size: 18px; /* Tamanho */
+}
+
+
+/* Botão */
+
+.conta-configuracoes button {
+  padding: 9px 20px; /* Espaçamento */
+  border: none; /* Sem borda */
+  background-color: #ff00d4; /* Rosa */
+  color: #000; /* Cor */
+  font-size: 9px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+}
+
+
+/* ================================================= */
+/* FINAL */
+/* ================================================= */
+
+.conta-final {
+  width: 92%; /* Largura */
+  margin: 0 auto 60px; /* Espaçamento */
+  padding: 50px; /* Espaço interno */
+  background-color: #000; /* Fundo */
+  text-align: center; /* Centralização */
+  box-sizing: border-box; /* Tamanho */
+}
+
+
+/* Nome */
+
+.conta-final p {
+  margin: 0 0 15px; /* Espaçamento */
+  color: #00fff7; /* Cor */
+  font-size: 12px; /* Tamanho */
+  font-weight: bold; /* Negrito */
+  letter-spacing: 4px; /* Espaço */
+}
+
+
+/* Frase */
+
+.conta-final h2 {
+  margin: 0; /* Remove margem */
+  color: #ffff00; /* Amarelo */
+  font-size: 40px; /* Tamanho */
+  line-height: 0.95; /* Altura */
+  text-shadow: 4px 4px 0 #ff00d4; /* Sombra */
+}
+
+
+/* ================================================= */
+/* RESPONSIVIDADE */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+  /* Cabeçalho */
+  .conta-topo {
+    flex-direction: column; /* Coluna */
+    align-items: flex-start; /* Alinhamento */
+    padding: 30px; /* Espaço */
+  }
+
+  /* Nome */
+  .conta-nome {
+    align-self: flex-start; /* Alinhamento */
+  }
+
+  /* Botão */
+  .conta-editar {
+    position: static; /* Posição */
+  }
+
+  /* Área */
+  .conta-area {
+    flex-direction: column; /* Coluna */
+    padding: 20px; /* Espaço */
+  }
+
+  /* Menu */
+  .conta-menu {
+    width: 100%; /* Largura */
+  }
+
+  /* Perfil */
+  .conta-perfil {
+    flex-direction: column; /* Coluna */
+    gap: 20px; /* Espaço */
+  }
+
+  /* Biografia */
+  .conta-biografia {
+    width: 100%; /* Largura */
+  }
+
+  /* Favoritos */
+  .favoritos-grid {
+    grid-template-columns: 1fr; /* Coluna */
+  }
+
+  /* Final */
+  .conta-final {
+    padding: 40px 20px; /* Espaço */
+  }
+
+  .conta-final h2 {
+    font-size: 30px; /* Tamanho */
+  }
+
+}
