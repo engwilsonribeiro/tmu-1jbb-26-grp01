@@ -1,79 +1,748 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0 auto;
-  padding: 0;
-  background-color: #f4f4f4;
-  box-sizing: border-box;
+
+/* ================================================= */
+/* CONFIGURAÇÕES GERAIS */
+/* ================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-h1 {
-  color: #333;
-  text-align: center;
-  margin-top: 50px;
+html {
+    scroll-behavior: smooth;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  background-color: #00fff7;
+body.pagina-inicial {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #202020;
+    color: #ffffff;
+    min-height: 100vh;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
-  padding: 10px 20px;
-  display: block;
-  background-color: #00fff7;
+/* ================================================= */
+/* MENU — PRESENTE EM TODAS AS PÁGINAS */
+/* ================================================= */
+
+.menu-principal {
+    position: relative;
+    width: 100%;
+    min-height: 42px;
+    margin: 0;
+    padding: 0;
+    background-color: #00fff7;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 10;
 }
 
-nav {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  margin-top: 0;
-  z-index: 1;
+/* Lista de links do menu */
+
+.menu-principal ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 12px 0 150px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    min-height: 42px;
+    background-color: #00fff7;
 }
 
-nav ul {
-  padding-left: 72px;
-  z-index: 2;
+/* Links */
+
+.menu-principal ul li a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #000000;
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.2s;
 }
 
+.menu-principal ul li a:hover,
+.menu-principal ul li a:focus-visible {
+    color: #7b36e6;
+}
+
+/* ================================================= */
+/* LOGO E ESTRELA */
+/* ================================================= */
+
+/* Logo principal */
 
 .logomarca-estrela {
-  position: absolute;
-  top: 200%;
-  left: 0;
-  width: 150px;
-  height: 150px;
-  transform: translateY(-50%);
-  background-image: url("./../img/logo.png");
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    width: 82px;
+    height: 82px;
 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+    background-image: url("./../img/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 
-  z-index: 2;
+    z-index: 12;
+    pointer-events: none;
+}
+
+/* Estrela decorativa */
+
+.logomarca-estrela-azul {
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    width: 115px;
+    height: 125px;
+
+    background-image: url("./../img/star.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    z-index: 11;
+    pointer-events: none;
+}
+
+/* Nome STARRY */
+
+.titulo {
+    position: absolute;
+    top: -13px;
+    left: 85px;
+    z-index: 13;
+}
+
+.titulo h1 {
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    font-size: 20px;
+    text-align: left;
+}
+
+/* ================================================= */
+/* DESTAQUE PRINCIPAL */
+/* ================================================= */
+
+.destaque {
+    min-height: 115px;
+    padding: 16px 10px 12px 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.destaque h2 {
+    margin: 0;
+    color: #ffff00;
+    font-size: 15px;
+    line-height: 1.25;
+    text-shadow: 2px 2px #ff00e6;
+}
+
+/* ================================================= */
+/* CATEGORIAS DO CARDÁPIO */
+/* ================================================= */
+
+.categorias {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 8px 6px;
+    margin: 0 auto 25px;
+}
+
+.categorias a {
+    display: inline-flex;
+    min-height: 38px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #292929;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    transition: transform 0.2s, filter 0.2s, box-shadow 0.2s;
+}
+
+.categorias a:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.3);
+    box-shadow: 0 4px 12px rgba(0, 255, 247, 0.2);
+}
+
+.categorias a:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.categorias .cervejas {
+    color: #ffff00;
+}
+
+.categorias .vinhos {
+    color: #ff4ca5;
+}
+
+.categorias .refrigerantes {
+    color: #9d50ff;
+}
+
+.categorias .sucos {
+    color: #00fff7;
+}
+
+.categorias .comidas {
+    color: #ffff00;
+}
+
+.categorias .drinks {
+    color: #ff00e6;
+}
+
+/* ================================================= */
+/* SEÇÕES DE RECOMENDAÇÕES */
+/* ================================================= */
+
+.secao-cardapio {
+    max-width: 650px;
+    margin: 0 auto 34px;
+    padding: 0 20px;
+}
+
+.secao-cardapio h2 {
+    margin: 0 0 35px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+/* ================================================= */
+/* CARDS COM IMAGENS */
+/* ================================================= */
+
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.card {
+    min-width: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Imagem dentro de cada card */
+
+.card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background-color: #ffffff;
+}
+
+/* Nome dos pratos e drinks */
+
+.card h3 {
+    min-height: 25px;
+    margin: 0;
+    padding: 6px 5px;
+    color: #000000;
+    font-size: 11px;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+/* Cores dos cards */
+
+.card-rosa {
+    background-color: #ff00e6;
+}
+
+.card-amarelo {
+    background-color: #ffff00;
+}
+
+.card-roxo {
+    background-color: #8235e8;
+}
+
+/* ================================================= */
+/* RODAPÉ */
+/* ================================================= */
+
+footer {
+    margin-top: 45px;
+    padding: 18px 10px;
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
+    font-size: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* ================================================= */
+/* RESPONSIVIDADE */
+/* ================================================= */
+
+@media (max-width: 600px) {
+
+    .menu-principal {
+        align-items: flex-start;
+    }
+
+    .menu-principal ul {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px;
+        padding-left: 125px;
+    }
+
+    .menu-principal ul li a {
+        font-size: 8px;
+    }
+
+    .logomarca-estrela {
+        width: 72px;
+        height: 72px;
+    }
+
+    .logomarca-estrela-azul {
+        width: 100px;
+        height: 110px;
+    }
+
+    .titulo {
+        left: 78px;
+    }
+
+    .titulo h1 {
+        font-size: 18px;
+    }
+
+    .destaque {
+        min-height: 120px;
+        padding-left: 85px;
+    }
+
+    .destaque h2 {
+        font-size: 14px;
+    }
+
+    .categorias {
+        gap: 12px;
+        margin-bottom: 28px;
+    }
+
+    .categorias a {
+        font-size: 10px;
+    }
+
+    .secao-cardapio {
+        padding: 0 15px;
+    }
+
+    .container-cards {
+        gap: 12px;
+    }
+
+    .card h3 {
+        padding: 5px 3px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .menu-principal ul {
+        gap: 5px;
+        padding-right: 5px;
+        padding-left: 105px;
+    }
+
+    .menu-principal ul li a {
+        font-size: 7px;
+    }
+
+    .container-cards {
+        gap: 9px;
+    }
+
+    .secao-cardapio {
+        padding: 0 12px;
+    }
+
+    .card h3 {
+        font-size: 9px;
+    }
+}
+
+.card.selecionado {
+    transform: scale(1.04);
+    box-shadow: 0 0 15px rgba(0, 255, 247, 0.7);
+}
+
+/* =========================================
+   CORREÇÕES DE RESPONSIVIDADE — STARRY
+   ========================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body.pagina-inicial {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* MENU */
+
+.menu-principal {
+    height: 44px;
+    min-height: 44px;
+    padding: 0 clamp(16px, 10vw, 190px) 0 clamp(180px, 15vw, 290px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-principal ul {
+    width: auto;
+    height: 44px;
+    min-height: 44px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: clamp(12px, 2.2vw, 42px);
+}
+
+.menu-principal ul li a {
+    padding: 6px 0;
+    font-size: clamp(11px, 1.25vw, 24px);
+    white-space: nowrap;
+}
+
+/* LOGO E NOME */
+
+.logomarca-estrela {
+    top: 4px;
+    left: -8px;
+    width: clamp(110px, 8vw, 150px);
+    height: clamp(115px, 9.5vw, 180px);
 }
 
 .logomarca-estrela-azul {
-  position: absolute;
-  top: 130%;
-  left: -30px;
-  width: 200px;
-  height: 200px;
-  transform: translateY(-50%);
-  background-image: url("./../img/star.png");
+    top: 6px;
+    left: -8px;
+    width: clamp(100px, 9.2vw, 175px);
+    height: clamp(130px, 13vw, 250px);
+}
 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+.titulo {
+    top: 8px;
+    left: clamp(105px, 8.3vw, 160px);
+}
 
-  z-index: 1;
-  
+.titulo h1 {
+    margin: 0;
+    font-size: clamp(23px, 2.3vw, 44px);
+}
+
+/* DESTAQUE */
+
+.destaque {
+    width: calc(100% - clamp(24px, 8vw, 120px));
+    max-width: 1740px;
+    min-height: clamp(180px, 25vw, 360px);
+    margin: 28px auto 0;
+    padding: 28px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid #00fff7;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.destaque::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.38)),
+        url("./../img/cardapio.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.25s ease;
+}
+
+.destaque:hover {
+    transform: none;
+}
+
+.destaque:hover::before {
+    transform: scale(1.05);
+}
+
+.destaque h2 {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(14px, 2vw, 20px);
+    line-height: 1.3;
+    text-align: right;
+}
+
+/* CATEGORIAS */
+
+.categorias {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 35px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.categorias a {
+    font-size: clamp(10px, 1vw, 13px);
+}
+
+/* SEÇÕES */
+
+.secao-cardapio {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.secao-cardapio h2 {
+    margin-bottom: 30px;
+    font-size: 13px;
+}
+
+#comidas > h2 {
+    color: #ffff00;
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.45);
+}
+
+#drinks > h2 {
+    color: #ff4ca5;
+    text-shadow: 0 0 10px rgba(255, 76, 165, 0.45);
+}
+
+/* GRADE DE CARDS */
+
+.container-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: clamp(24px, 4vw, 48px);
+    row-gap: 32px;
+    align-items: start;
+}
+
+.card {
+    width: 100%;
+    min-width: 0;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: #fff;
+}
+
+.card h3 {
+    min-height: 32px;
+    padding: 7px 5px;
+    font-size: clamp(9px, 1.1vw, 12px);
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+}
+
+/* TABLETS */
+
+@media (max-width: 800px) {
+    .menu-principal {
+        padding-left: 150px;
+    }
+
+    .menu-principal ul {
+        gap: 10px;
+    }
+
+    .menu-principal ul li a {
+        font-size: 9px;
+    }
+
+    .secao-cardapio {
+        max-width: 620px;
+    }
+
+    .container-cards {
+        gap: 18px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    .menu-principal {
+        height: auto;
+        min-height: 60px;
+        padding: 8px 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .menu-principal ul {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        padding: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 14px;
+    }
+
+    .menu-principal ul li a {
+        font-size: 10px;
+        padding: 6px 0;
+    }
+
+    .logomarca-estrela {
+        top: 8px;
+        left: 5px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .logomarca-estrela-azul {
+        top: 6px;
+        left: -6px;
+        width: 80px;
+        height: 90px;
+    }
+
+    .titulo {
+        top: 8px;
+        left: 75px;
+    }
+
+    .titulo h1 {
+        font-size: 20px;
+    }
+
+    .destaque {
+        width: calc(100% - 24px);
+        min-height: 180px;
+        margin-top: 18px;
+        padding: 20px 12px;
+        border-width: 5px;
+    }
+
+    .destaque h2 {
+        font-size: 15px;
+    }
+
+    .categorias {
+        justify-content: center;
+        gap: 14px 18px;
+        margin-bottom: 30px;
+    }
+
+    .categorias a {
+        font-size: 11px;
+    }
+
+    .secao-cardapio {
+        padding: 0 16px;
+        margin-bottom: 35px;
+    }
+
+    .secao-cardapio h2 {
+        margin-bottom: 25px;
+        font-size: 12px;
+    }
+
+    .container-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .card h3 {
+        min-height: 30px;
+        padding: 6px 4px;
+        font-size: 11px;
+    }
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 360px) {
+    .menu-principal ul {
+        gap: 5px 10px;
+    }
+
+    .menu-principal ul li a {
+        font-size: 9px;
+    }
+
+    .secao-cardapio {
+        padding: 0 12px;
+    }
+
+    .container-cards {
+        gap: 12px;
+    }
+
+    .card h3 {
+        font-size: 10px;
+    }
 }

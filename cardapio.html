@@ -1,33 +1,181 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio</title>
+
+    <title>STARRY - Seu palco, sua música, sua noite</title>
+
+    <link rel="stylesheet" href="assets/css/Style.css">
 </head>
-<body>
-     <nav>
-      <div class="logomarca"></div>
-      <div class="logomarca-estrela"></div>
 
-      <div class="logomarca-estrela-azul"></div>
+<body class="pagina-inicial">
 
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="cardapio.html">Cardápio</a></li>
-      </ul>
-    </nav>
-    <main>
-        <h1>Cardápio</h1>
-        <p>Bem-vindo ao nosso cardápio! Aqui você encontrará uma variedade de pratos deliciosos para satisfazer seu paladar.</p>
+    <!-- ================================================= -->
+    <!-- MENU -->
+    <!-- ================================================= -->
+
+    <nav class="menu-principal" aria-label="Navegação principal">
+
+        <!-- Logo principal -->
+        <div class="logomarca-estrela" aria-hidden="true"></div>
+
+        <!-- Estrela decorativa azul -->
+        <div class="logomarca-estrela-azul" aria-hidden="true"></div>
+
+        <!-- Nome da empresa -->
+        <div class="titulo">
+            <h1>STARRY</h1>
+        </div>
+
+        <!-- Opções de página do menu -->
         <ul>
-            <li>Prato 1: Descrição do prato 1</li>
-            <li>Prato 2: Descrição do prato 2</li>
-            <li>Prato 3: Descrição do prato 3</li>
-            <!-- Adicione mais pratos conforme necessário -->
+            <li><a href="index.html">Início</a></li>
+            <li><a href="karaoke.html">Karaokê</a></li>
+            <li><a href="shows.html">Shows</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="enter.html">Entrar</a></li>
         </ul>
+
+    </nav>
+
+    <!-- ================================================= -->
+    <!-- CONTEÚDO PRINCIPAL -->
+    <!-- ================================================= -->
+
+    <main>
+
+        <!-- Frase principal -->
+        <section class="destaque" id="inicio">
+
+            <h2>
+                SEU PALCO.<br>
+                SUA MÚSICA.<br>
+                SUA NOITE.
+            </h2>
+
+        </section>
+
+        <!-- Categorias do cardápio -->
+        <nav class="categorias" aria-label="Categorias do cardápio">
+
+            <a href="cardapio.html#cervejas" class="cervejas">
+                CEVADA
+            </a>
+
+            <a href="cardapio.html#vinhos" class="vinhos">
+                VINHOS
+            </a>
+
+            <a href="cardapio.html#refrigerantes" class="refrigerantes">
+                REFRIGERANTES
+            </a>
+
+            <a href="cardapio.html#sucos" class="sucos">
+                SUCOS
+            </a>
+
+            <a href="cardapio.html#comidas" class="comidas">
+                COMIDAS
+            </a>
+
+            <a href="cardapio.html#drinks" class="drinks">
+                DRINKS
+            </a>
+
+        </nav>
+
+        <!-- ================================================= -->
+        <!-- RECOMENDAÇÃO DO CHEF -->
+        <!-- ================================================= -->
+
+        <section class="secao-cardapio" id="comidas">
+
+            <h2>RECOMENDAÇÃO DO CHEF</h2>
+
+            <div class="container-cards">
+
+                <article class="card card-rosa">
+                    <img
+                        src="assets/img/burguer.jpg"
+                        alt="Burger da Casa"
+                    >
+                    <h3>BURGER DA CASA</h3>
+                </article>
+
+                <article class="card card-amarelo">
+                    <img
+                        src="assets/img/batata-frita.jpg"
+                        alt="Batata-frita"
+                    >
+                    <h3>BATATA FRITA</h3>
+                </article>
+
+                <article class="card card-roxo">
+                    <img
+                        src="assets/img/bolinha-queijo.jpg"
+                        alt="Bolinha-de-queijo"
+                    >
+                    <h3>BOLINHA DE QUEIJO</h3>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- ================================================= -->
+        <!-- RECOMENDAÇÃO DO BARMAN -->
+        <!-- ================================================= -->
+
+        <section class="secao-cardapio" id="drinks">
+
+            <h2>RECOMENDAÇÃO DO BARMAN</h2>
+
+            <div class="container-cards">
+
+                <article class="card card-rosa">
+                    <img
+                        src="assets/img/aperol-spritz.jpg"
+                        alt="Aperol Spritz"
+                    >
+                    <h3>APEROL SPRITZ</h3>
+                </article>
+
+                <article class="card card-amarelo">
+                    <img
+                        src="assets/img/caipirinha.jpg"
+                        alt="Caipirinha"
+                    >
+                    <h3>CAIPIRINHA</h3>
+                </article>
+
+                <article class="card card-roxo">
+                    <img
+                        src="assets/img/Moscow-Mule.jpg"
+                        alt="Moscow Mule"
+                    >
+                    <h3>MOSCOW MULE</h3>
+                </article>
+
+            </div>
+
+        </section>
+
     </main>
+
+    <!-- ================================================= -->
+    <!-- RODAPÉ -->
+    <!-- ================================================= -->
+
+    <footer>
+        <p>&copy; 2026 STARRY - Todos os direitos reservados.</p>
+        <p>Seu palco. Sua música. Sua noite.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>
