@@ -25,3 +25,16 @@ cards.forEach((card) => {
         }
     });
 });
+
+const acoesProdutoCevada = document.querySelectorAll(".acao-produto");
+
+acoesProdutoCevada.forEach((acao) => {
+    acao.addEventListener("click", () => {
+        const produto = acao.closest(".produto-menu");
+        const selecionado = produto.classList.toggle("selecionado");
+        acao.setAttribute("aria-pressed", selecionado);
+        acao.textContent = selecionado
+            ? "Produto selecionado"
+            : "Selecionar produto";
+    });
+});
