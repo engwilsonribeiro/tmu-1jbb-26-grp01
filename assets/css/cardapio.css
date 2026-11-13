@@ -22,6 +22,54 @@ body.pagina-inicial {
     min-height: 100vh;
 }
 
+/* Remove os marcadores e espaços padrão da lista,
+organiza os itens lado a lado e define o fundo azul-claro. */
+ul {
+  list-style-type: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o espaço interno */
+  margin: 0; /* Remove o espaço externo */
+  display: flex; /* Organiza os itens com Flexbox */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  background-color: #00fff7; /* Define a cor de fundo do menu */
+}
+
+/* Define a aparência dos links do menu, incluindo cor,
+negrito, espaçamento, fundo e efeitos. */
+nav ul li a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #000000; /* Define a cor preta do texto */
+  font-weight: bold; /* Deixa o texto em negrito */
+  padding: 10px 20px; /* Cria espaço interno ao redor do texto */
+  display: block; /* Faz o link ocupar o espaço do bloco */
+  background-color: #00fff7; /* Define o fundo azul-claro */
+  transition: 0.2s; /* Suaviza a mudança de aparência */
+}
+
+/* Muda as cores do link quando o usuário passa o mouse sobre ele. */
+nav ul li a:hover {
+  background-color: #7b36e6; /* Muda o fundo para roxo */
+  color: white; /* Muda a cor do texto para branco */
+}
+
+/* Define o posicionamento e a largura do menu,
+além de controlar sua posição na organização das camadas. */
+nav {
+  position: relative; /* Permite posicionar elementos em relação ao menu */
+  top: 0; /* Não desloca o menu para baixo */
+  left: 0; /* Mantém o menu alinhado à esquerda */
+  width: 100%; /* Faz o menu ocupar toda a largura disponível */
+  margin-top: 0; /* Remove o espaço acima do menu */
+  z-index: 10; /* Define a camada em que o menu aparece */
+}
+
+/* Adiciona espaço à esquerda da lista do menu
+e define sua posição em relação às outras camadas. */
+nav ul {
+  padding-left: 72px; /* Cria espaço interno à esquerda */
+  z-index: 11; /* Define a camada da lista do menu */
+}
+
+
 /* ================================================= */
 /* MENU — PRESENTE EM TODAS AS PÁGINAS */
 /* ================================================= */
