@@ -1,0 +1,596 @@
+/* ================================================= */
+/* CONFIGURAÇÕES GERAIS */
+/* ================================================= */
+
+/* Define a fonte padrão, remove espaços externos e internos,
+escolhe a cor de fundo e controla o tamanho dos elementos. */
+body {
+  font-family: Arial, sans-serif; /* Define a fonte do texto */
+  margin: 0 auto; /* Centraliza o elemento horizontalmente */
+  padding: 0; /* Remove o espaço interno */
+  background-color: #202020; /* Define o fundo cinza-escuro */
+  box-sizing: border-box; /* Inclui bordas e preenchimento no tamanho */
+}
+
+/* Centraliza os títulos principais, define sua cor
+e cria um espaço acima deles. */
+h1 {
+  color: #333; /* Define a cor do título */
+  text-align: center; /* Centraliza o texto */
+  margin-top: 50px; /* Cria espaço acima do título */
+  margin-left: -20px; 
+
+}
+
+/* Remove os marcadores e espaços padrão da lista,
+organiza os itens lado a lado e aplica o fundo azul-claro. */
+ul {
+  list-style-type: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o espaço interno */
+  margin: 0; /* Remove o espaço externo */
+  display: flex; /* Organiza os itens com Flexbox */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  background-color: #00fff7; /* Define a cor de fundo do menu */
+}
+
+
+/* ================================================= */
+/* MENU — TEM EM TODAS AS PÁGINAS */
+/* ================================================= */
+
+/* Define a aparência dos links do menu, incluindo cor,
+negrito, espaçamento, fundo e transição dos efeitos. */
+nav ul li a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #000000; /* Define a cor preta do texto */
+  font-weight: bold; /* Deixa o texto em negrito */
+  padding: 10px 20px; /* Cria espaço interno ao redor do texto */
+  display: block; /* Faz o link ocupar o espaço do bloco */
+  background-color: #00fff7; /* Define o fundo azul-claro */
+  transition: 0.2s; /* Suaviza a mudança de aparência */
+}
+
+/* Muda as cores do link quando o usuário passa o mouse sobre ele. */
+nav ul li a:hover {
+  background-color: #7b36e6; /* Muda o fundo para roxo */
+  color: white; /* Muda a cor do texto para branco */
+}
+
+/* Define a posição, a largura e a camada do menu
+em relação aos outros elementos da página. */
+nav {
+  position: relative; /* Define uma referência de posicionamento */
+  top: 0; /* Mantém o menu na posição vertical inicial */
+  left: 0; /* Mantém o menu alinhado à esquerda */
+  width: 100%; /* Faz o menu ocupar toda a largura disponível */
+  margin-top: 0; /* Remove o espaço acima do menu */
+  z-index: 10; /* Define a camada em que o menu aparece */
+}
+
+/* Adiciona espaço à esquerda da lista do menu
+e define sua posição nas camadas da página. */
+nav ul {
+  padding-left: 72px; /* Cria espaço interno à esquerda */
+  z-index: 11; /* Define a camada da lista do menu */
+}
+
+/* Posiciona a logo principal e define seu tamanho,
+sua imagem de fundo e a forma como ela será exibida. */
+.logomarca-estrela {
+  position: absolute; /* Permite posicionar a logo independentemente */
+  top: 200%; /* Define a posição vertical da logo */
+  left: 0; /* Alinha a logo à esquerda */
+  width: 150px; /* Define a largura da logo */
+  height: 150px; /* Define a altura da logo */
+  transform: translateY(-50%); /* Ajusta a posição vertical */
+  background-image: url("./../img/logo.png"); /* Carrega a imagem da logo */
+  background-position: center; /* Centraliza a imagem no espaço */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  background-size: contain; /* Ajusta a imagem sem deformá-la */
+  z-index: 12; /* Coloca a logo em uma camada superior */
+}
+
+/* Posiciona a estrela azul da logo e define seu tamanho
+e a maneira como a imagem aparece. */
+.logomarca-estrela-azul {
+  position: absolute; /* Permite posicionar a estrela independentemente */
+  top: 130%; /* Define a posição vertical da estrela */
+  left: -16px; /* Desloca a estrela para a esquerda */
+  width: 200px; /* Define a largura da estrela */
+  height: 300px; /* Define a altura da estrela */
+  transform: translateY(-50%); /* Ajusta a posição vertical */
+  background-image: url("./../img/star.png"); /* Carrega a imagem da estrela */
+  background-position: center; /* Centraliza a imagem no espaço */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  background-size: contain; /* Ajusta a imagem sem deformá-la */
+  z-index: 11; /* Define a camada da estrela */
+}
+
+/* Posiciona o nome STARRY e define a cor do título
+h1 que estiver dentro desse elemento. */
+.titulo {
+  position: absolute; /* Permite posicionar o título independentemente */
+  h1 {
+    color: #000; /* Define a cor preta do título */
+  }
+  z-index: 13; /* Coloca o nome em uma camada superior */
+  top: -50px; /* Desloca o elemento para cima */
+  left: 150px; /* Posiciona o elemento à direita */
+}
+
+/* ================================================= */
+/* PÁGINA KARAOKÊ */
+/* ================================================= */
+
+/* Define a largura, a altura mínima, o espaçamento e o fundo
+do cabeçalho, organizando seus elementos lado a lado. */
+.cabecalho-karaoke {
+  width: 92%; /* Define a largura do cabeçalho */
+  min-height: 300px; /* Define a altura mínima */
+  margin: 45px auto 0; /* Cria espaço acima e centraliza o cabeçalho */
+  padding: 35px; /* Cria espaço interno ao redor do conteúdo */
+  background-color: #111; /* Define o fundo quase preto */
+  box-sizing: border-box; /* Inclui bordas e preenchimento no tamanho */
+  display: flex; /* Organiza os elementos com Flexbox */
+  align-items: center; /* Centraliza os elementos verticalmente */
+  justify-content: space-between; /* Separa os elementos horizontalmente */
+  position: relative; /* Cria uma referência para elementos posicionados */
+  overflow: hidden; /* Esconde partes que ultrapassam os limites */
+}
+
+/* Cria um detalhe decorativo roxo no canto do cabeçalho,
+definindo seu tamanho, sua posição e sua rotação. */
+.cabecalho-karaoke::after {
+  content: ""; /* Cria um elemento decorativo vazio */
+  position: absolute; /* Permite posicionar o detalhe independentemente */
+  width: 230px; /* Define a largura do detalhe */
+  height: 230px; /* Define a altura do detalhe */
+  right: -80px; /* Desloca o detalhe para a direita */
+  top: -80px; /* Desloca o detalhe para cima */
+  border: 35px solid #7b36e6; /* Cria uma borda roxa */
+  transform: rotate(45deg); /* Gira o detalhe em 45 graus */
+}
+
+/* Define a largura da área de texto
+e sua posição em relação aos outros elementos do cabeçalho. */
+.texto-cabecalho-karaoke {
+  width: 55%; /* Reserva 55% da largura para o texto */
+  position: relative; /* Permite ajustar o posicionamento */
+  z-index: 2; /* Mantém o texto acima do detalhe decorativo */
+}
+
+/* Define a aparência do subtítulo, incluindo cor,
+tamanho, negrito e espaçamento entre as letras. */
+.subtitulo-karaoke {
+  margin: 0 0 8px; /* Cria espaço abaixo do subtítulo */
+  color: #00fff7; /* Define a cor azul-clara */
+  font-size: 12px; /* Define o tamanho da fonte */
+  font-weight: bold; /* Deixa o texto em negrito */
+  letter-spacing: 3px; /* Aumenta o espaço entre as letras */
+}
+
+/* Define a aparência do título principal,
+incluindo tamanho, cor, espaçamento e sombras coloridas. */
+.texto-cabecalho-karaoke h2 {
+  margin: 0; /* Remove a margem padrão */
+  color: #ffff00; /* Define a cor amarela */
+  font-size: 58px; /* Define o tamanho do título */
+  line-height: 0.85; /* Ajusta o espaço entre as linhas */
+  text-shadow: -6px 0 #ff00d4, -10px 0 #7b36e6; /* Cria sombras rosa e roxa */
+}
+
+/* Define a largura, o espaçamento, a cor e o tamanho
+do parágrafo de descrição no cabeçalho. */
+.texto-cabecalho-karaoke > p:last-child {
+  width: 80%; /* Limita a largura do parágrafo */
+  margin: 20px 0 0; /* Cria espaço acima da descrição */
+  color: white; /* Define o texto em branco */
+  font-size: 11px; /* Define o tamanho da fonte */
+  font-weight: bold; /* Deixa o texto em negrito */
+  line-height: 1.5; /* Ajusta o espaço entre as linhas */
+}
+
+/* Cria um bloco rosa de destaque e centraliza seu conteúdo,
+adicionando uma leve rotação e uma sombra azul-clara. */
+.destaque-karaoke {
+  width: 250px; /* Define a largura do bloco */
+  height: 210px; /* Define a altura do bloco */
+  background-color: #ff00d4; /* Define o fundo rosa */
+  display: flex; /* Organiza o conteúdo com Flexbox */
+  flex-direction: column; /* Coloca os elementos em coluna */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  justify-content: center; /* Centraliza os elementos verticalmente */
+  text-align: center; /* Centraliza o texto */
+  transform: rotate(3deg); /* Inclina o bloco em 3 graus */
+  position: relative; /* Permite ajustar o posicionamento */
+  z-index: 2; /* Mantém o bloco acima do detalhe decorativo */
+  box-shadow: 12px 12px 0 #00fff7; /* Cria uma sombra azul-clara */
+}
+
+/* Define o tamanho, a cor e o espaçamento vertical
+do símbolo exibido no bloco de destaque. */
+.destaque-karaoke span {
+  font-size: 65px; /* Aumenta o tamanho do símbolo */
+  color: #000; /* Define a cor preta */
+  line-height: 1; /* Ajusta o espaço vertical do símbolo */
+}
+
+/* Define a aparência do texto em destaque,
+incluindo seu tamanho, cor e espaçamento superior. */
+.destaque-karaoke strong {
+  margin-top: 8px; /* Cria espaço acima do texto */
+  color: #000; /* Define a cor preta */
+  font-size: 20px; /* Define o tamanho da fonte */
+  line-height: 1; /* Ajusta o espaço vertical do texto */
+}
+/* ================================================= */
+/* KARAOKÊ — ESCOLHA DA SALA */
+/* ================================================= */
+
+/* Área de escolha: organiza a seção que apresenta as opções de salas de karaokê. A largura ocupa 92% da página, com margem automática para centralizar o conteúdo. O preenchimento cria espaço interno e o box-sizing mantém o tamanho dentro da largura definida. */
+.escolha-sala {
+  width: 92%; /* Define a largura da área em relação ao elemento pai. */
+  margin: 35px auto 0; /* Cria espaço acima e centraliza horizontalmente. */
+  padding: 30px; /* Adiciona espaço entre o conteúdo e as bordas. */
+  background-color: white; /* Define o fundo branco da seção. */
+  box-sizing: border-box; /* Inclui o preenchimento no cálculo da largura total. */
+}
+
+/* Título da sala: organiza a área que contém o título e o texto introdutório das opções de salas. */
+.titulo-sala {
+  width: 100%; /* Ocupa toda a largura disponível. */
+  margin-bottom: 25px; /* Cria espaço abaixo do título. */
+  color: #000; /* Define a cor preta para o texto. */
+}
+
+/* Número da seção: destaca a identificação numérica ou textual da seção com uma cor vibrante e letras espaçadas. */
+.numero-secao {
+  margin: 0 0 5px; /* Remove as margens superior e laterais e deixa 5px abaixo. */
+  color: #ff00d4; /* Define a cor rosa. */
+  font-size: 12px; /* Define o tamanho do texto. */
+  font-weight: bold; /* Deixa o texto em negrito. */
+  letter-spacing: 2px; /* Aumenta o espaço entre as letras. */
+}
+
+/* Título: estiliza o título h2 dentro da área de título da sala, com letras grandes, amarelas e sombras coloridas. */
+.titulo-sala h2 {
+  margin: 0; /* Remove a margem padrão do título. */
+  font-size: 42px; /* Define o tamanho da fonte. */
+  line-height: 0.85; /* Controla a altura entre as linhas do título. */
+  color: #ffff00; /* Define a cor amarela. */
+  text-shadow: -4px 0 #ff00d4, -7px 0 #7b36e6; /* Adiciona sombras rosa e roxa ao texto. */
+}
+
+/* Texto: estiliza o último parágrafo dentro da área do título, criando uma descrição pequena e destacada. */
+.titulo-sala > p:last-child {
+  margin: 12px 0 0; /* Adiciona espaço acima e remove as margens laterais e inferior. */
+  font-size: 9px; /* Define o tamanho pequeno da fonte. */
+  font-weight: bold; /* Deixa o texto em negrito. */
+  color: #202020; /* Define a cor cinza-escura. */
+}
+
+/* Tipos de sala: coloca as opções de salas lado a lado usando Flexbox e mantendo um espaço entre elas. */
+.tipos-sala {
+  display: flex; /* Organiza as salas em um layout flexível. */
+  gap: 15px; /* Define o espaço entre as salas. */
+}
+
+/* Cada sala: define o tamanho, o espaçamento interno e o comportamento visual de cada opção de sala. */
+.sala {
+  width: 25%; /* Define a largura de cada sala como 25%. */
+  min-height: 255px; /* Define a altura mínima da sala. */
+  padding: 15px; /* Adiciona espaço interno. */
+  box-sizing: border-box; /* Inclui o preenchimento no cálculo do tamanho total. */
+  position: relative; /* Permite posicionar elementos internos em relação à sala. */
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites da sala. */
+  transition: 0.2s; /* Suaviza as mudanças visuais em 0,2 segundo. */
+}
+
+/* Efeito da sala quando passa o mouse: desloca a sala ligeiramente para cima para destacar a opção selecionada pelo cursor. */
+.sala:hover {
+  transform: translateY(-7px); /* Move a sala 7px para cima. */
+}
+
+/* Detalhe das salas: cria um elemento decorativo no canto inferior direito de cada sala, com borda e rotação. */
+.sala::after {
+  content: ""; /* Cria um elemento decorativo sem texto. */
+  position: absolute; /* Permite posicionar o detalhe dentro da sala. */
+  width: 65px; /* Define a largura do detalhe. */
+  height: 65px; /* Define a altura do detalhe. */
+  right: -25px; /* Posiciona o detalhe além da borda direita. */
+  bottom: -25px; /* Posiciona o detalhe além da borda inferior. */
+  border: 12px solid rgba(0, 0, 0, 0.15); /* Cria uma borda preta com transparência. */
+  transform: rotate(45deg); /* Gira o detalhe em 45 graus. */
+}
+
+/* Topo da sala: distribui os elementos do cabeçalho, mantendo espaço entre eles e alinhamento vertical. */
+.topo-sala {
+  display: flex; /* Organiza os elementos em uma linha flexível. */
+  justify-content: space-between; /* Distribui os elementos nas extremidades. */
+  align-items: center; /* Alinha os elementos verticalmente ao centro. */
+}
+
+/* Número da sala: define o tamanho e o destaque do número exibido no topo da sala. */
+.topo-sala span {
+  font-size: 12px; /* Define o tamanho da fonte. */
+  font-weight: bold; /* Deixa o número em negrito. */
+}
+
+/* Nome da sala: estiliza o título h3 que identifica cada opção de sala. */
+.sala h3 {
+  margin: 0; /* Remove a margem padrão do título. */
+  font-size: 20px; /* Define o tamanho da fonte. */
+  color: #000; /* Define a cor preta. */
+}
+
+/* Espaço da foto: cria uma área retangular para exibir a imagem ou representação visual da sala. */
+.espaco-foto {
+  width: 100%; /* Ocupa toda a largura disponível. */
+  height: 90px; /* Define a altura da área visual. */
+  margin-top: 12px; /* Adiciona espaço acima da área. */
+  background-color: #fff; /* Define o fundo branco. */
+  display: flex; /* Permite organizar o conteúdo com Flexbox. */
+  align-items: center; /* Centraliza o conteúdo verticalmente. */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente. */
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa a área. */
+}
+
+/* Símbolo da sala: define a aparência do símbolo ou ícone exibido no espaço visual. */
+.espaco-foto span {
+  font-size: 45px; /* Define o tamanho grande do símbolo. */
+  color: #202020; /* Define a cor cinza-escura. */
+}
+
+/* Informações: estiliza os parágrafos diretamente dentro de cada sala, ajustando margens, tamanho e espaçamento das linhas. */
+.sala > p {
+  margin: 12px 0 8px; /* Define espaço acima e abaixo do parágrafo. */
+  font-size: 9px; /* Define o tamanho da fonte. */
+  font-weight: bold; /* Deixa o texto em negrito. */
+  line-height: 1.4; /* Define a altura das linhas para facilitar a leitura. */
+}
+
+/* Descrição: faz a descrição ocupar uma linha própria e define seu tamanho e espaçamento entre linhas. */
+.descricao-sala {
+  display: block; /* Faz a descrição ocupar uma linha própria. */
+  font-size: 9px; /* Define o tamanho da fonte. */
+  line-height: 1.2; /* Controla a altura das linhas. */
+}
+
+/* Sala 1: define a cor de fundo roxa para a primeira opção de sala. */
+.sala-1 {
+  background-color: #7b36e6; /* Define o fundo roxo. */
+}
+
+/* Sala 2: define a cor de fundo rosa para a segunda opção de sala. */
+.sala-2 {
+  background-color: #ff00d4; /* Define o fundo rosa. */
+}
+
+/* Sala 3: define a cor de fundo amarela para a terceira opção de sala. */
+.sala-3 {
+  background-color: #ffff00; /* Define o fundo amarelo. */
+}
+
+/* Sala 4: define a cor de fundo azul-claro para a quarta opção de sala. */
+.sala-4 {
+  background-color: #00fff7; /* Define o fundo ciano. */
+}
+
+/* ================================================= */
+/* KARAOKÊ — DATA E HORÁRIO */
+/* ================================================= */
+
+/* Área de data: organiza a seção de escolha da data e do horário. O Flexbox posiciona o título e os campos lado a lado. */
+.data-horario {
+  width: 92%; /* Define a largura da seção. */
+  margin: 30px auto 0; /* Adiciona espaço acima e centraliza a seção. */
+  padding: 30px; /* Adiciona espaço interno. */
+  background-color: #202020; /* Define o fundo cinza-escuro. */
+  box-sizing: border-box; /* Inclui o preenchimento no cálculo da largura total. */
+  display: flex; /* Organiza os elementos em uma linha flexível. */
+  align-items: center; /* Alinha os elementos verticalmente ao centro. */
+  gap: 40px; /* Define o espaço entre o título e os campos. */
+}
+
+/* Título: reserva 30% da largura da seção para o título e sua descrição. */
+.titulo-data {
+  width: 30%; /* Define a largura do bloco do título. */
+}
+
+/* Número: altera a cor do número da seção de data para ciano, destacando-o sobre o fundo escuro. */
+.titulo-data .numero-secao {
+  color: #00fff7; /* Define a cor ciano. */
+}
+
+/* Título: estiliza o título h2 da seção de data e horário com texto branco e tamanho grande. */
+.titulo-data h2 {
+  margin: 0; /* Remove a margem padrão do título. */
+  color: white; /* Define a cor branca. */
+  font-size: 38px; /* Define o tamanho da fonte. */
+  line-height: 0.9; /* Controla a altura das linhas do título. */
+}
+
+/* Texto: estiliza o último parágrafo do bloco de título, usando texto branco e pequeno para a descrição. */
+.titulo-data > p:last-child {
+  margin: 12px 0 0; /* Adiciona espaço acima do texto. */
+  color: white; /* Define a cor branca. */
+  font-size: 9px; /* Define o tamanho pequeno da fonte. */
+  font-weight: bold; /* Deixa o texto em negrito. */
+  line-height: 1.4; /* Define a altura das linhas. */
+}
+
+/* Campos: organiza os campos de data e horário lado a lado e reserva 70% da largura da seção para eles. */
+.campos-data {
+  width: 70%; /* Define a largura da área dos campos. */
+  display: flex; /* Organiza os campos em uma linha flexível. */
+  gap: 15px; /* Define o espaço entre os campos. */
+}
+
+/* Cada campo: permite que cada campo ocupe uma parte igual do espaço disponível. */
+.campo {
+  flex: 1; /* Faz o campo crescer para preencher o espaço disponível. */
+}
+
+/* Nome do campo: coloca o rótulo acima do campo de entrada e define sua aparência. */
+.campo label {
+  display: block; /* Faz o rótulo ocupar uma linha própria. */
+  margin-bottom: 7px; /* Adiciona espaço abaixo do rótulo. */
+  color: white; /* Define a cor branca. */
+  font-size: 9px; /* Define o tamanho da fonte. */
+  font-weight: bold; /* Deixa o rótulo em negrito. */
+}
+
+/* Campos de entrada: padroniza a aparência dos campos input e select, incluindo dimensões, borda e cores. */
+.campo input,
+.campo select {
+  width: 100%; /* Ocupa toda a largura do campo. */
+  height: 42px; /* Define a altura dos campos. */
+  padding: 8px; /* Adiciona espaço interno. */
+  border: 2px solid #00fff7; /* Define uma borda ciano de 2px. */
+  box-sizing: border-box; /* Inclui o preenchimento e a borda no tamanho total. */
+  background-color: white; /* Define o fundo branco. */
+  color: #000; /* Define a cor preta do texto. */
+  font-size: 9px; /* Define o tamanho da fonte. */
+  font-weight: bold; /* Deixa o texto em negrito. */
+  outline: none; /* Remove o contorno padrão do navegador. */
+}
+
+/* Campo selecionado: muda a cor da borda quando o usuário seleciona ou está preenchendo um campo. */
+.campo input:focus,
+.campo select:focus {
+  border-color: #ff00d4; /* Altera a borda para rosa. */
+}
+
+/* ================================================= */
+/* KARAOKÊ — SEUS DADOS */
+/* ================================================= */
+
+/* Área dos dados: organiza a seção do formulário para preencher os dados pessoais necessários à reserva. */
+.seus-dados {
+  width: 92%; /* Define a largura da seção. */
+  margin: 30px auto 50px; /* Adiciona espaço acima e abaixo e centraliza a seção. */
+  padding: 30px; /* Adiciona espaço interno. */
+  background-color: white; /* Define o fundo branco. */
+  box-sizing: border-box; /* Inclui o preenchimento no cálculo do tamanho total. */
+}
+
+/* Título: cria espaço abaixo do bloco de título antes do formulário começar. */
+.titulo-dados {
+  margin-bottom: 25px; /* Adiciona espaço abaixo do título. */
+}
+
+/* Número: define a cor roxa para o número de identificação da seção de dados. */
+.titulo-dados .numero-secao {
+  color: #7b36e6; /* Define a cor roxa. */
+}
+
+/* Título: estiliza o título h2 da seção de dados. */
+.titulo-dados h2 {
+  margin: 0; /* Remove a margem padrão do título. */
+  color: #000; /* Define a cor preta. */
+  font-size: 38px; /* Define o tamanho da fonte. */
+  line-height: 0.9; /* Controla a altura das linhas. */
+}
+
+/* Texto: estiliza o último parágrafo do bloco de título, ajustando cor, tamanho e espaçamento. */
+.titulo-dados > p:last-child {
+  margin: 12px 0 0; /* Adiciona espaço acima do texto. */
+  color: #202020; /* Define a cor cinza-escura. */
+  font-size: 9px; /* Define o tamanho da fonte. */
+  font-weight: bold; /* Deixa o texto em negrito. */
+  line-height: 1.4; /* Define a altura das linhas. */
+}
+
+/* Formulário: organiza os campos em uma grade com duas colunas e espaço entre as linhas e colunas. */
+.formulario {
+  display: grid; /* Ativa o layout em grade. */
+  grid-template-columns: 1fr 1fr; /* Cria duas colunas de mesma proporção. */
+  gap: 18px; /* Define o espaço entre os campos. */
+}
+
+/* Cada campo: faz cada bloco de campo ocupar toda a largura disponível na coluna da grade. */
+.campo-dados {
+  width: 100%; /* Ocupa toda a largura disponível. */
+}
+
+/* Nome do campo: coloca o rótulo acima de cada campo e define sua aparência. */
+.campo-dados label {
+  display: block; /* Faz o rótulo ocupar uma linha própria. */
+  margin-bottom: 7px; /* Adiciona espaço abaixo do rótulo. */
+  color: #000; /* Define a cor preta. */
+  font-size: 9px; /* Define o tamanho da fonte. */
+  font-weight: bold; /* Deixa o rótulo em negrito. */
+}
+
+/* Campos: padroniza os campos de entrada do formulário, definindo tamanho, preenchimento e borda. */
+.campo-dados input {
+  width: 100%; /* Ocupa toda a largura disponível. */
+  height: 42px; /* Define a altura do campo. */
+  padding: 10px; /* Adiciona espaço interno. */
+  border: 2px solid #202020; /* Define uma borda cinza-escura de 2px. */
+  box-sizing: border-box; /* Inclui o preenchimento e a borda no tamanho total. */
+  font-size: 9px; /* Define o tamanho da fonte. */
+  outline: none; /* Remove o contorno padrão do navegador. */
+}
+
+/* Campo selecionado: muda a cor da borda do campo de entrada quando ele recebe foco. */
+.campo-dados input:focus {
+  border-color: #ff00d4; /* Altera a borda para rosa. */
+}
+
+/* Texto dentro dos campos: define a cor do texto de orientação que aparece antes do usuário digitar. */
+.campo-dados input::placeholder {
+  color: #777; /* Define a cor cinza do texto de orientação. */
+}
+
+/* Botão: centraliza o botão de envio do formulário e define suas dimensões, cores e comportamento do cursor. */
+.seus-dados button {
+  display: block; /* Faz o botão ocupar sua própria linha. */
+  margin: 30px auto 0; /* Adiciona espaço acima e centraliza horizontalmente. */
+  padding: 14px 30px; /* Define o espaço interno vertical e horizontal. */
+  border: none; /* Remove a borda do botão. */
+  background-color: #ff00d4; /* Define o fundo rosa. */
+  color: #000; /* Define a cor preta do texto. */
+  font-size: 10px; /* Define o tamanho da fonte. */
+  font-weight: bold; /* Deixa o texto em negrito. */
+  cursor: pointer; /* Mostra o cursor de clique ao passar sobre o botão. */
+  transition: 0.2s; /* Suaviza as mudanças visuais em 0,2 segundo. */
+}
+
+/* Efeito do botão: altera a cor de fundo e move o botão para cima quando o cursor passa sobre ele. */
+.seus-dados button:hover {
+  background-color: #00fff7; /* Muda o fundo para ciano. */
+  transform: translateY(-4px); /* Move o botão 4px para cima. */
+}
+
+/* ================================================= */
+/* KARAOKÊ — FRASE FINAL */
+/* ================================================= */
+
+/* Área da frase: cria a seção final da página, com fundo roxo, espaço interno e controle dos elementos decorativos. */
+.frase-karaoke {
+  width: 92%; /* Define a largura da seção. */
+  margin: 0 auto 60px; /* Centraliza a seção e adiciona espaço abaixo. */
+  padding: 45px; /* Adiciona espaço interno. */
+  background-color: #7b36e6; /* Define o fundo roxo. */
+  box-sizing: border-box; /* Inclui o preenchimento no cálculo do tamanho total. */
+  position: relative; /* Permite posicionar elementos internos em relação à seção. */
+  overflow: hidden; /* Esconde elementos que ultrapassam os limites da seção. */
+}
+
+/* Texto: estiliza o parágrafo da frase final, destacando-o com letras grandes, brancas e em negrito. */
+.frase-karaoke p {
+  margin: 0; /* Remove a margem padrão do parágrafo. */
+  color: white; /* Define a cor branca. */
+  font-size: 34px; /* Define o tamanho grande da fonte. */
+  font-weight: bold; /* Deixa o texto em negrito. */
+  line-height: 0.9; /* Controla a altura das linhas. */
+  position: relative; /* Permite controlar a posição do texto em relação à seção. */
+  z-index: 2; /* Coloca o texto acima de elementos de camadas inferiores. */
+}
+
+/* Destaque: aplica uma cor ciano e uma sombra preta ao texto marcado com strong dentro da frase final. */
+.frase-karaoke strong {
+  color: #00fff7; /* Define a cor ciano do trecho destacado. */
+  text-shadow: 3px 3px #000; /* Adiciona uma sombra preta deslocada 3px para a direita e para baixo. */
+}

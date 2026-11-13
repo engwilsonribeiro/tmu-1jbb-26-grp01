@@ -1,0 +1,673 @@
+/* ================================================= */
+/* CONFIGURAÇÕES GERAIS */
+/* ================================================= */
+
+/* Define as configurações básicas que serão aplicadas ao corpo de toda a página. */
+body {
+  font-family: Arial, sans-serif; /* Define Arial como fonte principal e utiliza uma fonte sem serifa como alternativa. */
+  margin: 0 auto; /* Remove as margens externas e mantém a configuração de centralização horizontal. */
+  padding: 0; /* Remove o espaçamento interno padrão do corpo da página. */
+  background-color: #202020; /* Define o fundo geral da página em cinza-escuro. */
+  box-sizing: border-box; /* Faz com que o tamanho dos elementos considere o preenchimento interno e as bordas. */
+}
+
+/* Define a aparência e o posicionamento dos títulos de nível h1. */
+h1 {
+  color: #333; /* Define a cor do texto do título como cinza-escuro. */
+  text-align: center; /* Centraliza o texto horizontalmente. */
+  margin-top: 50px; /* Adiciona um espaço de 50 pixels acima do título. */
+  margin-left: -20px; /* Desloca o título 20 pixels para a esquerda em relação à posição original. */
+}
+
+/* Remove os marcadores da lista e organiza seus itens horizontalmente, como no menu de navegação. */
+ul {
+  list-style-type: none; /* Remove os marcadores que aparecem antes dos itens da lista. */
+  padding: 0; /* Remove o espaçamento interno padrão da lista. */
+  margin: 0; /* Remove as margens externas padrão da lista. */
+  display: flex; /* Organiza os itens filhos utilizando o modelo Flexbox. */
+  justify-content: center; /* Centraliza os itens horizontalmente dentro da lista. */
+  background-color: #00fff7; /* Define o fundo da lista com a cor ciano. */
+}
+
+
+/* ================================================= */
+/* MENU — TEM EM TODAS AS PÁGINAS */
+/* ================================================= */
+
+/* Define a aparência dos links que ficam dentro dos itens do menu de navegação. */
+nav ul li a {
+  text-decoration: none; /* Remove o sublinhado padrão dos links. */
+  color: #000000; /* Define a cor do texto dos links como preto. */
+  font-weight: bold; /* Deixa o texto dos links em negrito. */
+  padding: 10px 20px; /* Adiciona 10 pixels de espaço vertical e 20 pixels de espaço horizontal ao redor do texto. */
+  display: block; /* Faz o link ocupar o espaço disponível do seu elemento para facilitar a área de clique. */
+  background-color: #00fff7; /* Define o fundo dos links com a cor ciano. */
+  transition: 0.2s; /* Faz as mudanças visuais acontecerem gradualmente durante 0,2 segundo. */
+}
+
+/* Altera as cores dos links quando o cursor do mouse passa sobre eles. */
+nav ul li a:hover {
+  background-color: #7b36e6; /* Muda o fundo do link para roxo durante a interação. */
+  color: white; /* Muda a cor do texto para branco durante a interação. */
+}
+
+/* Define o posicionamento e a largura do menu de navegação. */
+nav {
+  position: relative; /* Permite posicionar elementos filhos absolutos em relação ao menu. */
+  top: 0; /* Mantém o menu sem deslocamento em relação ao topo da sua posição de referência. */
+  left: 0; /* Mantém o menu sem deslocamento em relação ao lado esquerdo da sua posição de referência. */
+  width: 100%; /* Faz o menu ocupar toda a largura disponível. */
+  margin-top: 0; /* Remove o espaço externo acima do menu. */
+  z-index: 10; /* Define a camada de exibição do menu em relação a elementos sobrepostos. */
+}
+
+/* Ajusta o espaçamento à esquerda e a camada de exibição da lista dentro do menu. */
+nav ul {
+  padding-left: 72px; /* Adiciona 72 pixels de espaço interno à esquerda da lista. */
+  z-index: 11; /* Posiciona a lista em uma camada superior à do menu quando houver sobreposição. */
+}
+
+/* Posiciona a imagem principal da logo e controla seu tamanho e sua exibição. */
+.logomarca-estrela {
+  position: absolute; /* Permite posicionar a logo em coordenadas específicas em relação ao elemento de referência. */
+  top: 200%; /* Posiciona o topo da logo a 200% da altura do elemento de referência. */
+  left: 0; /* Alinha a logo à borda esquerda do elemento de referência. */
+  width: 150px; /* Define a largura da logo como 150 pixels. */
+  height: 150px; /* Define a altura da logo como 150 pixels. */
+  transform: translateY(-50%); /* Desloca a logo para cima em metade da própria altura. */
+  background-image: url("./../img/logo.png"); /* Define a imagem utilizada como logo. */
+  background-position: center; /* Centraliza a imagem dentro da área disponível. */
+  background-repeat: no-repeat; /* Impede que a imagem se repita para preencher o espaço. */
+  background-size: contain; /* Ajusta a imagem para caber na área sem distorcer suas proporções. */
+  z-index: 12; /* Posiciona a logo em uma camada superior à do menu e da lista. */
+}
+
+/* Posiciona a estrela azul que compõe a identidade visual da logo. */
+.logomarca-estrela-azul {
+  position: absolute; /* Permite posicionar a estrela em relação ao elemento de referência. */
+  top: 130%; /* Posiciona o topo da estrela a 130% da altura do elemento de referência. */
+  left: -16px; /* Desloca a estrela 16 pixels para a esquerda. */
+  width: 200px; /* Define a largura da estrela como 200 pixels. */
+  height: 300px; /* Define a altura da estrela como 300 pixels. */
+  transform: translateY(-50%); /* Desloca a estrela para cima em metade da própria altura. */
+  background-image: url("./../img/star.png"); /* Define a imagem da estrela azul. */
+  background-position: center; /* Centraliza a imagem dentro da área disponível. */
+  background-repeat: no-repeat; /* Impede a repetição da imagem. */
+  background-size: contain; /* Ajusta a imagem para caber na área sem distorcer suas proporções. */
+  z-index: 11; /* Define a camada de exibição da estrela em relação aos outros elementos. */
+}
+
+/* Posiciona o nome STARRY no menu e define a camada em que ele aparece. */
+.titulo {
+  position: absolute; /* Permite posicionar o título por meio das propriedades top e left. */
+  h1 {
+    color: #000; /* Define a cor do título h1 dentro de .titulo como preto. */
+  }
+  z-index: 13; /* Posiciona o título em uma camada superior à dos demais elementos da logo. */
+  top: -50px; /* Desloca o título 50 pixels para cima em relação à posição de referência. */
+  left: 150px; /* Desloca o título 150 pixels para a direita em relação à posição de referência. */
+}
+
+/* ================================================= */
+
+
+/* ================================================= */
+/* PÁGINA CONTA / ENTER */
+/* ================================================= */
+
+/* ================================================= */
+/* CABEÇALHO */
+/* ================================================= */
+
+/* Organiza a área superior da conta, reunindo a foto, o nome e o botão de edição. */
+.conta-topo {
+  width: 92%; /* Define a largura do cabeçalho como 92% da largura disponível. */
+  min-height: 230px; /* Define uma altura mínima de 230 pixels, permitindo que o elemento cresça se necessário. */
+  margin: 40px auto 0; /* Adiciona 40 pixels de margem superior, centraliza horizontalmente e remove a margem inferior. */
+  padding: 35px; /* Adiciona 35 pixels de espaço interno em todos os lados. */
+  display: flex; /* Organiza os elementos filhos utilizando Flexbox. */
+  align-items: center; /* Alinha os elementos filhos verticalmente ao centro. */
+  gap: 30px; /* Define um espaço de 30 pixels entre os elementos filhos. */
+  position: relative; /* Cria uma referência para o posicionamento absoluto de elementos internos. */
+  background-color: #00fff7; /* Define o fundo do cabeçalho com a cor ciano. */
+  box-sizing: border-box; /* Inclui o preenchimento e as bordas no cálculo da largura e da altura. */
+}
+
+/* ================================================= */
+/* FOTO DA CONTA */
+/* ================================================= */
+
+/* Define o tamanho, o alinhamento e a aparência da área reservada à foto do usuário. */
+.conta-foto {
+  width: 145px; /* Define a largura da área da foto como 145 pixels. */
+  height: 145px; /* Define a altura da área da foto como 145 pixels. */
+  display: flex; /* Permite alinhar o conteúdo interno usando Flexbox. */
+  align-items: center; /* Centraliza o conteúdo verticalmente. */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente. */
+  background-color: #202020; /* Define o fundo da área da foto em cinza-escuro. */
+  border: 5px solid #ffff00; /* Adiciona uma borda amarela de 5 pixels. */
+  color: #00fff7; /* Define a cor do texto interno como ciano. */
+  font-size: 18px; /* Define o tamanho do texto como 18 pixels. */
+  font-weight: bold; /* Deixa o texto em negrito. */
+  box-sizing: border-box; /* Inclui a borda e o preenchimento no tamanho total do elemento. */
+}
+
+/* ================================================= */
+/* NOME DA CONTA */
+/* ================================================= */
+
+/* Alinha a área com o nome da conta à parte inferior do contêiner flexível. */
+.conta-nome {
+  align-self: flex-end; /* Alinha este elemento à extremidade inferior do contêiner Flexbox. */
+}
+
+/* ================================================= */
+/* IDENTIFICAÇÃO */
+/* ================================================= */
+
+/* Estiliza o pequeno texto de identificação exibido acima do nome da conta. */
+.conta-nome span {
+  color: #7b36e6; /* Define a cor do texto como roxo. */
+  font-size: 11px; /* Define o tamanho do texto como 11 pixels. */
+  font-weight: bold; /* Deixa o texto em negrito. */
+  letter-spacing: 2px; /* Adiciona 2 pixels de espaço entre as letras. */
+}
+
+/* ================================================= */
+/* TÍTULO DA CONTA */
+/* ================================================= */
+
+/* Define o espaçamento, a cor e o tamanho do nome principal da conta. */
+.conta-nome h2 {
+  margin: 5px 0; /* Adiciona 5 pixels de margem acima e abaixo e remove as margens laterais. */
+  color: #000; /* Define a cor do título como preto. */
+  font-size: 48px; /* Define o tamanho da fonte como 48 pixels. */
+  line-height: 0.9; /* Define uma altura de linha compacta em relação ao tamanho da fonte. */
+}
+
+/* ================================================= */
+/* E-MAIL DA CONTA */
+/* ================================================= */
+
+/* Define a aparência do parágrafo utilizado para exibir o e-mail da conta. */
+.conta-nome p {
+  margin: 0; /* Remove as margens externas padrão do parágrafo. */
+  color: #000; /* Define a cor do texto como preto. */
+  font-size: 11px; /* Define o tamanho do texto como 11 pixels. */
+}
+
+/* ================================================= */
+/* BOTÃO DE EDIÇÃO */
+/* ================================================= */
+
+/* Posiciona e estiliza o botão usado para editar as informações da conta. */
+.conta-editar {
+  position: absolute; /* Permite posicionar o botão em relação ao cabeçalho. */
+  right: 35px; /* Mantém o botão a 35 pixels da borda direita do cabeçalho. */
+  top: 35px; /* Mantém o botão a 35 pixels da borda superior do cabeçalho. */
+  padding: 10px 25px; /* Adiciona 10 pixels de espaço vertical e 25 pixels de espaço horizontal. */
+  border: none; /* Remove a borda padrão do botão. */
+  background-color: #ff00d4; /* Define o fundo do botão com a cor rosa. */
+  color: #000; /* Define a cor do texto do botão como preto. */
+  font-size: 10px; /* Define o tamanho do texto como 10 pixels. */
+  font-weight: bold; /* Deixa o texto do botão em negrito. */
+  cursor: pointer; /* Exibe o cursor de mão para indicar que o botão pode ser clicado. */
+}
+/* ================================================= */
+/* ÁREA PRINCIPAL */
+/* ================================================= */
+
+/* Organiza o conteúdo principal da página da conta, incluindo o menu lateral e as informações do usuário. */
+.conta-area {
+  width: 92%; /* Define a largura da área como 92% da largura disponível. */
+  margin: 0 auto; /* Remove as margens verticais e centraliza o elemento horizontalmente. */
+  padding: 35px; /* Adiciona 35 pixels de espaço interno em todos os lados. */
+  display: flex; /* Organiza o menu lateral e o conteúdo lado a lado usando Flexbox. */
+  gap: 35px; /* Define um espaço de 35 pixels entre o menu lateral e o conteúdo. */
+  background-color: #202020; /* Define o fundo da área principal como cinza-escuro. */
+  box-sizing: border-box; /* Inclui o preenchimento e as bordas no cálculo da largura total. */
+}
+
+
+/* ================================================= */
+/* MENU LATERAL */
+/* ================================================= */
+
+/* Define a largura do menu lateral e impede que ele seja reduzido automaticamente. */
+.conta-menu {
+  width: 190px; /* Define a largura do menu lateral como 190 pixels. */
+  flex-shrink: 0; /* Impede que o menu diminua de tamanho quando houver pouco espaço disponível. */
+}
+
+/* Estiliza o título ou identificação que aparece acima dos links do menu lateral. */
+.conta-menu > span {
+  display: block; /* Faz o elemento ocupar uma linha própria. */
+  margin-bottom: 20px; /* Adiciona 20 pixels de espaço abaixo do título. */
+  color: #00fff7; /* Define a cor do texto como ciano. */
+  font-size: 11px; /* Define o tamanho da fonte como 11 pixels. */
+  font-weight: bold; /* Deixa o texto em negrito. */
+  letter-spacing: 2px; /* Adiciona 2 pixels de espaço entre as letras. */
+}
+
+/* Define a aparência dos links que permitem navegar pelas opções do menu lateral. */
+.conta-menu a {
+  display: block; /* Faz cada link ocupar uma linha inteira do menu. */
+  padding: 14px 12px; /* Adiciona 14 pixels de espaço vertical e 12 pixels de espaço horizontal. */
+  border-bottom: 1px solid #444; /* Adiciona uma linha inferior cinza-escura para separar os links. */
+  color: #fff; /* Define a cor do texto como branco. */
+  text-decoration: none; /* Remove o sublinhado padrão dos links. */
+  font-size: 11px; /* Define o tamanho da fonte como 11 pixels. */
+  font-weight: bold; /* Deixa o texto em negrito. */
+}
+
+/* Destaca visualmente o link correspondente à seção atualmente selecionada. */
+.conta-menu .ativo {
+  background-color: #ffff00; /* Define o fundo do link ativo como amarelo. */
+  color: #000; /* Define a cor do texto do link ativo como preto. */
+}
+
+/* Diferencia o link utilizado para sair da conta das demais opções do menu. */
+.conta-menu .sair {
+  margin-top: 25px; /* Adiciona 25 pixels de espaço acima do link de saída. */
+  color: #ff00d4; /* Define a cor do texto como rosa. */
+  border: none; /* Remove a borda do link de saída. */
+}
+
+
+/* ================================================= */
+/* CONTEÚDO */
+/* ================================================= */
+
+/* Faz a área de conteúdo ocupar o espaço restante ao lado do menu lateral. */
+.conta-conteudo {
+  flex: 1; /* Permite que o conteúdo cresça e ocupe o espaço disponível no contêiner flexível. */
+  min-width: 0; /* Permite que o conteúdo diminua além do tamanho mínimo definido automaticamente pelo conteúdo interno. */
+}
+
+
+/* ================================================= */
+/* PERFIL */
+/* ================================================= */
+
+/* Organiza as informações principais do perfil e a biografia dentro de um painel escuro. */
+.conta-perfil {
+  min-height: 180px; /* Define uma altura mínima de 180 pixels para o painel do perfil. */
+  padding: 30px; /* Adiciona 30 pixels de espaço interno em todos os lados. */
+  display: flex; /* Organiza as informações internas usando Flexbox. */
+  justify-content: space-between; /* Distribui os elementos, deixando o maior espaço possível entre eles. */
+  align-items: flex-start; /* Alinha os elementos internos ao início do eixo vertical. */
+  background-color: #151515; /* Define o fundo do painel como preto-acinzentado. */
+  border-top: 4px solid #7b36e6; /* Adiciona uma borda roxa de 4 pixels na parte superior. */
+  box-sizing: border-box; /* Inclui o preenchimento e as bordas no cálculo do tamanho total. */
+}
+
+/* Estiliza a identificação que aparece acima do nome dentro do perfil. */
+.conta-perfil > div > span {
+  color: #ff00d4; /* Define a cor do texto como rosa. */
+  font-size: 10px; /* Define o tamanho da fonte como 10 pixels. */
+  font-weight: bold; /* Deixa o texto em negrito. */
+}
+
+/* Define o espaçamento, a cor e o tamanho do nome exibido no perfil. */
+.conta-perfil h2 {
+  margin: 8px 0 3px; /* Adiciona 8 pixels de margem acima, remove as margens laterais e adiciona 3 pixels abaixo. */
+  color: #ffff00; /* Define a cor do nome como amarelo. */
+  font-size: 40px; /* Define o tamanho da fonte como 40 pixels. */
+}
+
+/* Estiliza o parágrafo que exibe o e-mail ou outra informação textual do perfil. */
+.conta-perfil > div > p {
+  margin: 0; /* Remove as margens externas padrão do parágrafo. */
+  color: #aaa; /* Define a cor do texto como cinza-claro. */
+  font-size: 10px; /* Define o tamanho da fonte como 10 pixels. */
+}
+
+/* Define o tamanho, o espaçamento e o fundo da área destinada à biografia do usuário. */
+.conta-biografia {
+  width: 220px; /* Define a largura da área da biografia como 220 pixels. */
+  padding: 20px; /* Adiciona 20 pixels de espaço interno em todos os lados. */
+  background-color: #fff; /* Define o fundo da biografia como branco. */
+  box-sizing: border-box; /* Inclui o preenchimento e as bordas no cálculo da largura total. */
+}
+
+/* Garante que o texto de identificação dentro da biografia seja exibido em preto. */
+.conta-biografia span {
+  color: #000 !important; /* Define a cor do texto como preto e prioriza essa regra sobre outras declarações de cor. */
+}
+
+/* Define o espaçamento, a cor e a altura das linhas do texto da biografia. */
+.conta-biografia p {
+  margin-top: 12px !important; /* Adiciona 12 pixels de espaço acima do parágrafo e prioriza essa regra sobre outras margens superiores. */
+  color: #333 !important; /* Define a cor do texto como cinza-escuro e prioriza essa regra sobre outras declarações de cor. */
+  line-height: 1.5; /* Define a altura das linhas como 1,5 vez o tamanho da fonte para melhorar a leitura. */
+}
+/* ================================================= */
+/* SEÇÕES */
+/* ================================================= */
+
+/* Define o espaçamento superior entre as diferentes seções do conteúdo da conta. */
+.conta-secao {
+  margin-top: 45px; /* Adiciona 45 pixels de espaço acima de cada seção para separá-las visualmente. */
+}
+
+/* Define o espaço abaixo do título que identifica cada seção da conta. */
+.titulo-conta {
+  margin-bottom: 20px; /* Adiciona 20 pixels de espaço abaixo do título para separá-lo do conteúdo seguinte. */
+}
+
+/* Estiliza o número ou identificador que aparece antes do nome de cada seção. */
+.titulo-conta span {
+  color: #ff00d4; /* Define a cor do identificador como rosa. */
+  font-size: 11px; /* Define o tamanho do texto como 11 pixels. */
+  font-weight: bold; /* Deixa o texto em negrito para destacá-lo. */
+}
+
+/* Define a aparência dos títulos principais das seções da conta. */
+.titulo-conta h2 {
+  margin: 6px 0 0; /* Adiciona 6 pixels de margem acima do título e remove as margens laterais e inferior. */
+  color: #fff; /* Define a cor do texto como branco. */
+  font-size: 32px; /* Define o tamanho da fonte como 32 pixels. */
+  line-height: 1; /* Define a altura da linha igual ao tamanho da fonte. */
+  text-shadow: 4px 4px 0 #7b36e6; /* Adiciona uma sombra roxa deslocada 4 pixels para a direita e para baixo, sem desfoque. */
+}
+
+
+/* ================================================= */
+/* RESERVAS */
+/* ================================================= */
+
+/* Organiza os cartões de reservas em uma única coluna, com espaço entre eles. */
+.reservas-grid {
+  display: flex; /* Ativa o Flexbox para organizar os cartões dentro do contêiner. */
+  flex-direction: column; /* Organiza os cartões verticalmente, um abaixo do outro. */
+  gap: 10px; /* Adiciona 10 pixels de espaço entre os cartões de reservas. */
+}
+
+/* Define a estrutura visual de cada cartão que apresenta uma reserva. */
+.reserva-card {
+  min-height: 80px; /* Define uma altura mínima de 80 pixels para cada cartão. */
+  display: flex; /* Organiza a imagem, o texto e a seta lado a lado usando Flexbox. */
+  align-items: center; /* Alinha verticalmente os elementos internos ao centro do cartão. */
+  background-color: #151515; /* Define o fundo do cartão como preto-acinzentado. */
+  border-left: 4px solid #00fff7; /* Adiciona uma borda ciano de 4 pixels à esquerda do cartão. */
+}
+
+/* Define o tamanho e o alinhamento da área reservada à imagem de cada reserva. */
+.reserva-imagem {
+  width: 110px; /* Define a largura da área da imagem como 110 pixels. */
+  height: 60px; /* Define a altura da área da imagem como 60 pixels. */
+  margin-left: 10px; /* Adiciona 10 pixels de espaço à esquerda da área da imagem. */
+  display: flex; /* Permite organizar e alinhar o conteúdo interno usando Flexbox. */
+  align-items: center; /* Centraliza verticalmente o conteúdo da área da imagem. */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo da área da imagem. */
+  background-color: #7b36e6; /* Define o fundo padrão da área da imagem como roxo. */
+  font-size: 9px; /* Define o tamanho do texto interno como 9 pixels. */
+  font-weight: bold; /* Deixa o texto interno em negrito. */
+}
+
+/* Altera o fundo e a cor do texto da área da imagem quando ela possui a classe rosa. */
+.reserva-imagem.rosa {
+  background-color: #ff00d4; /* Define o fundo da área da imagem como rosa. */
+  color: #000; /* Define a cor do texto como preto. */
+}
+
+/* Altera o fundo e a cor do texto da área da imagem quando ela possui a classe amarelo. */
+.reserva-imagem.amarelo {
+  background-color: #ffff00; /* Define o fundo da área da imagem como amarelo. */
+  color: #000; /* Define a cor do texto como preto. */
+}
+
+/* Permite que a área textual da reserva ocupe o espaço disponível no cartão. */
+.reserva-texto {
+  flex: 1; /* Faz a área textual crescer para ocupar o espaço restante do cartão. */
+  padding: 15px 20px; /* Adiciona 15 pixels de espaço vertical e 20 pixels de espaço horizontal. */
+}
+
+/* Estiliza o texto menor utilizado para identificar a categoria da reserva. */
+.reserva-texto span {
+  color: #777; /* Define a cor do texto como cinza. */
+  font-size: 8px; /* Define o tamanho da fonte como 8 pixels. */
+}
+
+/* Define a aparência do título que apresenta o nome da reserva. */
+.reserva-texto h3 {
+  margin: 4px 0; /* Adiciona 4 pixels de margem acima e abaixo e remove as margens laterais. */
+  color: #fff; /* Define a cor do título como branco. */
+  font-size: 14px; /* Define o tamanho da fonte como 14 pixels. */
+}
+
+/* Estiliza o parágrafo que apresenta a data ou outras informações da reserva. */
+.reserva-texto p {
+  margin: 0; /* Remove as margens externas padrão do parágrafo. */
+  color: #aaa; /* Define a cor do texto como cinza-claro. */
+  font-size: 9px; /* Define o tamanho da fonte como 9 pixels. */
+}
+
+/* Define o espaçamento e a aparência da seta exibida no lado direito de cada cartão. */
+.reserva-card > strong {
+  padding: 25px; /* Adiciona 25 pixels de espaço interno ao redor da seta. */
+  color: #00fff7; /* Define a cor da seta como ciano. */
+  font-size: 22px; /* Define o tamanho da seta como 22 pixels. */
+}
+
+
+/* ================================================= */
+/* FAVORITOS */
+/* ================================================= */
+
+/* Organiza os cartões de favoritos em uma grade com três colunas. */
+.favoritos-grid {
+  display: grid; /* Ativa o CSS Grid para organizar os cartões em linhas e colunas. */
+  grid-template-columns: repeat(3, 1fr); /* Cria três colunas de mesma largura, cada uma ocupando uma fração do espaço disponível. */
+  gap: 12px; /* Define um espaço de 12 pixels entre as linhas e as colunas da grade. */
+}
+
+/* Define a estrutura e a distribuição interna do conteúdo de cada cartão favorito. */
+.favorito-card {
+  min-height: 160px; /* Define uma altura mínima de 160 pixels para cada cartão. */
+  padding: 20px; /* Adiciona 20 pixels de espaço interno em todos os lados. */
+  display: flex; /* Organiza o conteúdo interno utilizando Flexbox. */
+  flex-direction: column; /* Organiza o ícone, o nome e o texto verticalmente. */
+  justify-content: space-between; /* Distribui os elementos internos ao longo da altura do cartão. */
+  box-sizing: border-box; /* Inclui o preenchimento e as bordas no cálculo do tamanho total do cartão. */
+}
+
+/* Define o tamanho do ícone ou símbolo destacado dentro de cada cartão favorito. */
+.favorito-card strong {
+  font-size: 32px; /* Define o tamanho do ícone ou símbolo como 32 pixels. */
+}
+
+/* Define a aparência do nome de cada item favorito. */
+.favorito-card h3 {
+  margin: 0; /* Remove as margens externas padrão do título. */
+  font-size: 18px; /* Define o tamanho da fonte como 18 pixels. */
+}
+
+/* Define o espaçamento e a aparência do texto complementar dos cartões favoritos. */
+.favorito-card p {
+  margin: 5px 0 0; /* Adiciona 5 pixels de margem acima do parágrafo e remove as margens laterais e inferior. */
+  font-size: 9px; /* Define o tamanho do texto como 9 pixels. */
+  font-weight: bold; /* Deixa o texto em negrito. */
+}
+
+/* Define o fundo roxo e a cor do texto dos cartões que possuem a classe roxo. */
+.favorito-card.roxo {
+  background-color: #7b36e6; /* Define o fundo do cartão como roxo. */
+  color: #000000; /* Define a cor do texto como preto. */
+}
+
+/* Define o fundo rosa e a cor do texto dos cartões que possuem a classe rosa. */
+.favorito-card.rosa {
+  background-color: #ff00d4; /* Define o fundo do cartão como rosa. */
+  color: #000; /* Define a cor do texto como preto. */
+}
+
+/* Define o fundo ciano e a cor do texto dos cartões que possuem a classe ciano. */
+.favorito-card.ciano {
+  background-color: #00fff7; /* Define o fundo do cartão como ciano. */
+  color: #000; /* Define a cor do texto como preto. */
+}
+/* ================================================= */
+/* HISTÓRICO */
+/* ================================================= */
+
+/* Define o espaçamento, o preenchimento e as cores do painel que apresenta o histórico da conta. */
+.conta-historico {
+  margin-top: 45px; /* Adiciona 45 pixels de espaço acima do painel para separá-lo da seção anterior. */
+  padding: 30px; /* Adiciona 30 pixels de espaço interno em todos os lados. */
+  background-color: #ffff00; /* Define o fundo do painel como amarelo. */
+  color: #000; /* Define a cor padrão do texto dentro do painel como preto. */
+  box-sizing: border-box; /* Inclui o preenchimento e as bordas no cálculo do tamanho total do painel. */
+}
+
+/* Define a aparência do número ou identificador exibido no início do histórico. */
+.conta-historico > span {
+  font-size: 11px; /* Define o tamanho da fonte como 11 pixels. */
+  font-weight: bold; /* Deixa o texto em negrito para destacá-lo. */
+}
+
+/* Estiliza o título principal da área de histórico. */
+.conta-historico h2 {
+  margin: 8px 0; /* Adiciona 8 pixels de margem acima e abaixo e remove as margens laterais. */
+  font-size: 30px; /* Define o tamanho da fonte como 30 pixels. */
+}
+
+/* Define a aparência do texto descritivo exibido no painel de histórico. */
+.conta-historico p {
+  margin: 0; /* Remove as margens externas padrão do parágrafo. */
+  font-size: 11px; /* Define o tamanho da fonte como 11 pixels. */
+}
+
+
+/* ================================================= */
+/* CONFIGURAÇÕES */
+/* ================================================= */
+
+/* Organiza a área de configurações da conta, distribuindo as informações e o botão na mesma linha. */
+.conta-configuracoes {
+  margin-top: 15px; /* Adiciona 15 pixels de espaço acima da área de configurações. */
+  padding: 25px 30px; /* Adiciona 25 pixels de espaço vertical e 30 pixels de espaço horizontal. */
+  display: flex; /* Organiza as informações e o botão usando Flexbox. */
+  align-items: center; /* Alinha verticalmente os elementos internos ao centro. */
+  justify-content: space-between; /* Distribui os elementos com o maior espaço possível entre eles. */
+  background-color: #151515; /* Define o fundo da área como preto-acinzentado. */
+}
+
+/* Estiliza o número ou identificador exibido na área de configurações. */
+.conta-configuracoes > span {
+  color: #00fff7; /* Define a cor do texto como ciano. */
+  font-size: 11px; /* Define o tamanho da fonte como 11 pixels. */
+}
+
+/* Define a aparência do título que identifica as configurações da conta. */
+.conta-configuracoes h2 {
+  margin: 0; /* Remove as margens externas padrão do título. */
+  color: #fff; /* Define a cor do texto como branco. */
+  font-size: 18px; /* Define o tamanho da fonte como 18 pixels. */
+}
+
+/* Define a aparência do botão disponível na área de configurações. */
+.conta-configuracoes button {
+  padding: 9px 20px; /* Adiciona 9 pixels de espaço vertical e 20 pixels de espaço horizontal. */
+  border: none; /* Remove a borda padrão do botão. */
+  background-color: #ff00d4; /* Define o fundo do botão como rosa. */
+  color: #000; /* Define a cor do texto do botão como preto. */
+  font-size: 9px; /* Define o tamanho da fonte como 9 pixels. */
+  font-weight: bold; /* Deixa o texto do botão em negrito. */
+}
+
+
+/* ================================================= */
+/* FINAL */
+/* ================================================= */
+
+/* Define a largura, o espaçamento e o alinhamento do painel de encerramento da página. */
+.conta-final {
+  width: 92%; /* Define a largura do painel como 92% da largura disponível. */
+  margin: 0 auto 60px; /* Remove a margem superior, centraliza horizontalmente e adiciona 60 pixels de margem inferior. */
+  padding: 50px; /* Adiciona 50 pixels de espaço interno em todos os lados. */
+  background-color: #000; /* Define o fundo do painel como preto. */
+  text-align: center; /* Centraliza horizontalmente o texto dentro do painel. */
+  box-sizing: border-box; /* Inclui o preenchimento e as bordas no cálculo da largura total. */
+}
+
+/* Estiliza o texto menor que aparece acima da frase principal do encerramento. */
+.conta-final p {
+  margin: 0 0 15px; /* Remove as margens superior e laterais e adiciona 15 pixels de margem inferior. */
+  color: #00fff7; /* Define a cor do texto como ciano. */
+  font-size: 12px; /* Define o tamanho da fonte como 12 pixels. */
+  font-weight: bold; /* Deixa o texto em negrito. */
+  letter-spacing: 4px; /* Adiciona 4 pixels de espaço entre as letras. */
+}
+
+/* Define a aparência da frase principal que encerra a página da conta. */
+.conta-final h2 {
+  margin: 0; /* Remove as margens externas padrão do título. */
+  color: #ffff00; /* Define a cor do texto como amarelo. */
+  font-size: 40px; /* Define o tamanho da fonte como 40 pixels. */
+  line-height: 0.95; /* Define uma altura de linha compacta em relação ao tamanho da fonte. */
+  text-shadow: 4px 4px 0 #ff00d4; /* Adiciona uma sombra rosa deslocada 4 pixels para a direita e para baixo, sem desfoque. */
+}
+
+
+/* ================================================= */
+/* RESPONSIVIDADE */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+  /* Organiza os elementos do cabeçalho verticalmente em telas com até 768 pixels de largura. */
+  .conta-topo {
+    flex-direction: column; /* Organiza os elementos filhos em uma coluna, um abaixo do outro. */
+    align-items: flex-start; /* Alinha os elementos à esquerda do contêiner. */
+    padding: 30px; /* Define 30 pixels de espaço interno em todos os lados. */
+  }
+
+  /* Alinha o nome da conta à esquerda quando o cabeçalho está organizado em coluna. */
+  .conta-nome {
+    align-self: flex-start; /* Alinha este elemento ao início do eixo transversal, à esquerda neste layout. */
+  }
+
+  /* Faz o botão de edição voltar ao fluxo normal do cabeçalho em telas menores. */
+  .conta-editar {
+    position: static; /* Remove o posicionamento absoluto e mantém o botão no fluxo normal do documento. */
+  }
+
+  /* Empilha o menu lateral e o conteúdo principal para facilitar a visualização em telas menores. */
+  .conta-area {
+    flex-direction: column; /* Organiza o menu e o conteúdo verticalmente, um abaixo do outro. */
+    padding: 20px; /* Reduz o espaço interno da área para 20 pixels em todos os lados. */
+  }
+
+  /* Faz o menu lateral ocupar toda a largura disponível no layout responsivo. */
+  .conta-menu {
+    width: 100%; /* Define a largura do menu como 100% do espaço disponível. */
+  }
+
+  /* Organiza as informações do perfil em coluna e adiciona espaço entre elas. */
+  .conta-perfil {
+    flex-direction: column; /* Organiza os elementos internos verticalmente. */
+    gap: 20px; /* Define um espaço de 20 pixels entre os elementos internos. */
+  }
+
+  /* Faz a biografia ocupar toda a largura disponível em telas menores. */
+  .conta-biografia {
+    width: 100%; /* Define a largura da biografia como 100% do espaço disponível. */
+  }
+
+  /* Transforma a grade de favoritos em uma única coluna para facilitar a leitura em telas estreitas. */
+  .favoritos-grid {
+    grid-template-columns: 1fr; /* Cria uma única coluna que ocupa toda a largura disponível. */
+  }
+
+  /* Reduz o espaçamento interno do painel final em telas menores. */
+  .conta-final {
+    padding: 40px 20px; /* Define 40 pixels de espaço vertical e 20 pixels de espaço horizontal. */
+  }
+
+  /* Reduz o tamanho da frase final para que ela se ajuste melhor às telas menores. */
+  .conta-final h2 {
+    font-size: 30px; /* Define o tamanho da fonte como 30 pixels em vez de 40 pixels. */
+  }
+
+}

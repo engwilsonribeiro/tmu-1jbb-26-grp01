@@ -1,0 +1,794 @@
+/* ================================================= */
+/* CONFIGURAÇÕES GERAIS */
+/* ================================================= */
+
+/* Define a fonte padrão, remove espaços externos e internos,
+escolhe a cor de fundo e controla o tamanho dos elementos. */
+body {
+  font-family: Arial, sans-serif; /* Define a fonte usada nos textos da página */
+  margin: 0 auto; /* Remove a margem vertical padrão e centraliza horizontalmente */
+  padding: 0; /* Remove o espaço interno padrão do elemento */
+  background-color: #202020; /* Define o fundo cinza-escuro da página */
+  box-sizing: border-box; /* Inclui bordas e preenchimento no cálculo do tamanho */
+}
+
+/* Centraliza os títulos principais, define sua cor
+e cria um espaço acima deles. */
+h1 {
+  color: #333; /* Define a cor do texto do título */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  margin-top: 50px; /* Cria um espaço de 50 pixels acima do título */
+  margin-left: -20px; 
+
+}
+
+/* Remove os marcadores e espaços padrão da lista,
+organiza os itens lado a lado e define o fundo azul-claro. */
+ul {
+  list-style-type: none; /* Remove os marcadores que aparecem nos itens da lista */
+  padding: 0; /* Remove o espaço interno padrão da lista */
+  margin: 0; /* Remove o espaço externo padrão da lista */
+  display: flex; /* Organiza os itens usando o modelo Flexbox */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  background-color: #00fff7; /* Define o fundo azul-claro da lista */
+}
+
+
+/* ================================================= */
+/* MENU — TEM EM TODAS AS PÁGINAS */
+/* ================================================= */
+
+/* Define a aparência dos links do menu, incluindo cor,
+negrito, espaçamento, fundo e transição dos efeitos. */
+nav ul li a {
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+  color: #000000; /* Define a cor preta para o texto dos links */
+  font-weight: bold; /* Deixa o texto dos links em negrito */
+  padding: 10px 20px; /* Cria espaço interno vertical e horizontal ao redor do texto */
+  display: block; /* Faz o link ocupar o espaço disponível do bloco */
+  background-color: #00fff7; /* Define o fundo azul-claro de cada link */
+  transition: 0.2s; /* Suaviza as mudanças visuais dos links em 0,2 segundo */
+}
+
+/* Muda as cores do link quando o usuário passa o mouse sobre ele. */
+nav ul li a:hover {
+  background-color: #7b36e6; /* Muda o fundo do link para roxo durante o efeito */
+  color: white; /* Muda a cor do texto para branco durante o efeito */
+}
+
+/* Define o posicionamento e a largura do menu,
+além de controlar sua posição na organização das camadas. */
+nav {
+  position: relative; /* Permite posicionar elementos em relação à área do menu */
+  top: 0; /* Mantém o menu sem deslocamento a partir do topo */
+  left: 0; /* Mantém o menu sem deslocamento a partir da esquerda */
+  width: 100%; /* Faz o menu ocupar toda a largura disponível */
+  margin-top: 0; /* Remove o espaço externo acima do menu */
+  z-index: 10; /* Define a camada em que o menu aparece na sobreposição */
+}
+
+/* Adiciona espaço à esquerda da lista do menu
+e define sua posição em relação às outras camadas. */
+nav ul {
+  padding-left: 72px; /* Cria um espaço interno de 72 pixels à esquerda da lista */
+  z-index: 11; /* Coloca a lista em uma camada acima da definida para o menu */
+}
+
+/* Posiciona a logo principal e ajusta seu tamanho,
+sua imagem e sua exibição dentro do espaço reservado. */
+.logomarca-estrela {
+  position: absolute; /* Permite posicionar a logo sem depender do fluxo normal dos elementos */
+  top: 200%; /* Define a posição vertical da logo em relação ao elemento de referência */
+  left: 0; /* Alinha a logo ao lado esquerdo do elemento de referência */
+  width: 150px; /* Define a largura da área reservada para a logo */
+  height: 150px; /* Define a altura da área reservada para a logo */
+  transform: translateY(-50%); /* Desloca a logo para cima em metade da própria altura */
+  background-image: url("./../img/logo.png"); /* Carrega a imagem principal da logo como fundo */
+  background-position: center; /* Centraliza a imagem dentro da área reservada */
+  background-repeat: no-repeat; /* Impede que a imagem seja repetida */
+  background-size: contain; /* Ajusta a imagem para caber na área sem deformá-la */
+  z-index: 12; /* Coloca a logo em uma camada acima do menu e da lista */
+}
+
+/* Posiciona a estrela azul e ajusta seu tamanho
+e a forma como a imagem aparece na página. */
+.logomarca-estrela-azul {
+  position: absolute; /* Permite posicionar a estrela independentemente do fluxo normal */
+  top: 130%; /* Define a posição vertical da estrela em relação ao elemento de referência */
+  left: -16px; /* Desloca a estrela 16 pixels para a esquerda */
+  width: 200px; /* Define a largura da área reservada para a estrela */
+  height: 300px; /* Define a altura da área reservada para a estrela */
+  transform: translateY(-50%); /* Desloca a estrela para cima em metade da própria altura */
+  background-image: url("./../img/star.png"); /* Carrega a imagem da estrela como fundo */
+  background-position: center; /* Centraliza a imagem dentro da área reservada */
+  background-repeat: no-repeat; /* Impede que a imagem da estrela se repita */
+  background-size: contain; /* Ajusta a imagem para caber na área sem deformá-la */
+  z-index: 11; /* Define a camada em que a estrela aparece */
+}
+
+/* Posiciona o nome STARRY e define a cor do título
+h1 que estiver dentro desse elemento. */
+.titulo {
+  position: absolute; /* Permite posicionar o nome independentemente do fluxo normal */
+  h1 {
+    color: #000; /* Define a cor preta para o título h1 dentro desse elemento */
+  }
+  z-index: 13; /* Coloca o nome em uma camada acima dos outros elementos do menu */
+  top: -50px; /* Desloca o elemento 50 pixels para cima */
+  left: 150px; /* Posiciona o elemento a 150 pixels da esquerda */
+}
+/* ================================================= */
+/* PÁGINA SOBRE / ABOUT */
+/* ================================================= */
+
+/* Define a largura e a altura mínima da apresentação,
+controla seu posicionamento e impede que o conteúdo ultrapasse seus limites. */
+.sobre-apresentacao {
+  width: 92%; /* Faz a área ocupar 92% da largura disponível */
+  min-height: 500px; /* Define uma altura mínima de 500 pixels para a apresentação */
+  margin: 45px auto 0; /* Cria 45 pixels de espaço acima e centraliza horizontalmente */
+  position: relative; /* Serve de referência para os elementos posicionados dentro da apresentação */
+  overflow: hidden; /* Esconde partes dos elementos que ultrapassarem os limites da área */
+  box-sizing: border-box; /* Inclui bordas e preenchimento no cálculo do tamanho total */
+}
+
+/* Posiciona o título da apresentação e define sua largura
+e a camada em que ele aparece. */
+.titulo-sobre {
+  position: absolute; /* Permite posicionar o título independentemente do fluxo normal */
+  top: 150px; /* Posiciona o título a 150 pixels do topo da área de referência */
+  left: 60px; /* Posiciona o título a 60 pixels da esquerda da área de referência */
+  width: 360px; /* Define uma largura de 360 pixels para o título */
+  z-index: 5; /* Coloca o título em uma camada acima dos elementos com valores menores */
+}
+
+/* Organiza o texto de identificação em uma linha própria
+e define sua cor, seu tamanho e o espaçamento entre as letras. */
+.titulo-sobre > span {
+  display: block; /* Faz o texto ocupar uma linha própria */
+  margin-bottom: 10px; /* Cria 10 pixels de espaço abaixo do texto */
+  color: #00fff7; /* Define a cor azul-clara do texto */
+  font-size: 12px; /* Define o tamanho da fonte em 12 pixels */
+  font-weight: bold; /* Deixa o texto em negrito */
+  letter-spacing: 2px; /* Adiciona 2 pixels de espaço entre as letras */
+}
+
+/* Define a aparência do título principal da apresentação,
+incluindo cor, tamanho, espaçamento entre linhas e sombras. */
+.titulo-sobre h2 {
+  margin: 0; /* Remove a margem padrão do título */
+  color: #ffff00; /* Define a cor amarela do texto */
+  font-size: 55px; /* Define o tamanho da fonte em 55 pixels */
+  line-height: 0.9; /* Reduz o espaço vertical entre as linhas do título */
+  font-weight: 900; /* Aplica uma espessura muito alta à fonte */
+  text-shadow:
+    6px 6px 0 #ff00d4,
+    11px 11px 0 #7b36e6; /* Cria duas sombras deslocadas, uma rosa e outra roxa */
+}
+
+/* Define a aparência do slogan abaixo do título,
+ajustando seu espaçamento, sua cor e a leitura do texto. */
+.titulo-sobre p {
+  margin-top: 25px; /* Cria 25 pixels de espaço acima do parágrafo */
+  color: white; /* Define a cor branca para o texto */
+  font-size: 16px; /* Define o tamanho da fonte em 16 pixels */
+  font-weight: bold; /* Deixa o texto em negrito */
+  line-height: 1.2; /* Define o espaçamento vertical entre as linhas */
+  letter-spacing: 1px; /* Adiciona 1 pixel de espaço entre as letras */
+}
+
+/* Faz o conteúdo ocupar toda a largura e altura disponíveis
+e cria uma referência para posicionar seus elementos internos. */
+.sobre-conteudo {
+  width: 100%; /* Faz o conteúdo ocupar toda a largura do elemento pai */
+  height: 100%; /* Faz o conteúdo ocupar toda a altura do elemento pai */
+  position: relative; /* Permite posicionar os elementos internos em relação a essa área */
+}
+
+/* Posiciona o balão na parte inferior da apresentação,
+define seu tamanho e utiliza uma imagem como fundo. */
+.balao-sobre {
+  position: absolute; /* Permite posicionar o balão independentemente do fluxo normal */
+  left: 20px; /* Posiciona o balão a 20 pixels da esquerda da área de referência */
+  bottom: 25px; /* Posiciona o balão a 25 pixels da parte inferior da área de referência */
+  width: 470px; /* Define a largura do balão em 470 pixels */
+  height: 220px; /* Define a altura do balão em 220 pixels */
+  padding: 65px 75px 50px 65px; /* Define os espaços internos superior, direito, inferior e esquerdo */
+  box-sizing: border-box; /* Inclui o preenchimento no cálculo do tamanho total do balão */
+  background-image: url("./../img/balão.starry.png"); /* Carrega a imagem do balão como fundo */
+  background-position: center; /* Centraliza a imagem de fundo */
+  background-repeat: no-repeat; /* Impede que a imagem do balão se repita */
+  background-size: 100% 100%; /* Faz a imagem ocupar toda a largura e altura do balão */
+  z-index: 3; /* Define a camada em que o balão aparece */
+}
+
+/* Define a aparência do texto dentro do balão,
+centralizando-o e ajustando seu tamanho e espaçamento. */
+.balao-sobre p {
+  margin: 0; /* Remove a margem padrão do parágrafo */
+  color: #000; /* Define a cor preta do texto */
+  font-size: 10px; /* Define o tamanho da fonte em 10 pixels */
+  font-weight: bold; /* Deixa o texto em negrito */
+  line-height: 1.4; /* Define o espaçamento vertical entre as linhas */
+  text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+/* Posiciona a imagem do local e define suas dimensões,
+sua borda e a camada em que ela aparece. */
+.imagem-local {
+  position: absolute; /* Permite posicionar a imagem independentemente do fluxo normal */
+  top: 0; /* Alinha a imagem ao topo da área de referência */
+  right: 15px; /* Mantém a imagem a 15 pixels da direita da área de referência */
+  width: 58%; /* Define a largura da imagem como 58% do espaço de referência */
+  height: 430px; /* Define a altura da imagem em 430 pixels */
+  z-index: 4; /* Coloca a imagem em uma camada acima do balão */
+  overflow: hidden; /* Esconde as partes da imagem que ultrapassarem os limites */
+  border: 5px solid #00fff7; /* Adiciona uma borda azul-clara de 5 pixels */
+  box-sizing: border-box; /* Inclui a borda no cálculo do tamanho total */
+}
+
+/* Faz a foto preencher toda a área reservada
+e remove o espaço extra que imagens em linha podem criar. */
+.imagem-local img {
+  width: 100%; /* Faz a imagem ocupar toda a largura da área reservada */
+  height: 100%; /* Faz a imagem ocupar toda a altura da área reservada */
+  object-fit: cover; /* Preenche a área sem deformar a imagem, cortando o excesso quando necessário */
+  display: block; /* Faz a imagem se comportar como bloco e remove espaços extras abaixo dela */
+}
+
+
+/* ================================================= */
+/* HISTÓRIA */
+/* ================================================= */
+
+/* Organiza a seção da história em uma linha,
+define seu espaçamento, seu fundo e sua borda lateral. */
+.historia {
+  width: 92%; /* Faz a seção ocupar 92% da largura disponível */
+  margin: 70px auto 0; /* Cria 70 pixels de espaço acima e centraliza horizontalmente */
+  padding: 45px; /* Cria 45 pixels de espaço interno em todos os lados */
+  display: flex; /* Organiza os elementos da seção lado a lado */
+  gap: 60px; /* Cria 60 pixels de espaço entre os elementos */
+  background-color: #151515; /* Define o fundo em um tom de preto */
+  box-sizing: border-box; /* Inclui o preenchimento e as bordas no tamanho total */
+  border-left: 8px solid #7b36e6; /* Adiciona uma borda roxa de 8 pixels à esquerda */
+}
+
+/* Define a largura reservada para o título da seção
+e impede que ele diminua de tamanho dentro do Flexbox. */
+.titulo-secao {
+  width: 35%; /* Reserva 35% da largura disponível para o título */
+  flex-shrink: 0; /* Impede que o título seja reduzido para acomodar os outros elementos */
+}
+
+/* Coloca o número da seção em uma linha própria
+e define sua cor, seu tamanho e seu espaçamento. */
+.titulo-secao > span {
+  display: block; /* Faz o número ocupar uma linha própria */
+  margin-bottom: 10px; /* Cria 10 pixels de espaço abaixo do número */
+  color: #ff00d4; /* Define a cor rosa do número */
+  font-size: 18px; /* Define o tamanho da fonte em 18 pixels */
+  font-weight: bold; /* Deixa o número em negrito */
+}
+
+/* Define a aparência do título da seção história,
+incluindo cor, tamanho, espaçamento e sombra. */
+.titulo-secao h2 {
+  margin: 0; /* Remove a margem padrão do título */
+  color: #ffff00; /* Define a cor amarela do texto */
+  font-size: 48px; /* Define o tamanho da fonte em 48 pixels */
+  line-height: 0.95; /* Ajusta o espaço vertical entre as linhas */
+  text-shadow: 4px 4px 0 #ff00d4; /* Cria uma sombra rosa deslocada 4 pixels para a direita e para baixo */
+}
+
+/* Faz o texto da seção ocupar o espaço restante
+depois que o título recebe sua largura. */
+.texto-secao {
+  flex: 1; /* Permite que o texto ocupe o espaço restante da linha */
+}
+
+/* Define o espaçamento, a cor e a legibilidade
+dos parágrafos da seção história. */
+.texto-secao p {
+  margin: 0 0 20px; /* Remove as margens superior e laterais e cria 20 pixels abaixo de cada parágrafo */
+  color: white; /* Define a cor branca do texto */
+  font-size: 15px; /* Define o tamanho da fonte em 15 pixels */
+  line-height: 1.7; /* Aumenta o espaço entre as linhas para facilitar a leitura */
+}
+
+
+/* ================================================= */
+/* MISSÃO */
+/* ================================================= */
+
+/* Organiza a seção da missão em uma linha,
+alinha os elementos verticalmente e define seu fundo. */
+.missao {
+  width: 92%; /* Faz a seção ocupar 92% da largura disponível */
+  margin: 40px auto 0; /* Cria 40 pixels de espaço acima e centraliza horizontalmente */
+  padding: 45px; /* Cria 45 pixels de espaço interno em todos os lados */
+  display: flex; /* Organiza os elementos lado a lado usando Flexbox */
+  align-items: center; /* Centraliza os elementos verticalmente dentro da seção */
+  gap: 60px; /* Cria 60 pixels de espaço entre o título e a caixa de texto */
+  background-color: #00fff7; /* Define o fundo azul-claro da seção */
+  box-sizing: border-box; /* Inclui o preenchimento e as bordas no tamanho total */
+}
+
+/* Define a largura reservada para o título da missão
+e impede que ele seja reduzido dentro do Flexbox. */
+.titulo-missao {
+  width: 35%; /* Reserva 35% da largura disponível para o título */
+  flex-shrink: 0; /* Impede que o título diminua de tamanho */
+}
+
+/* Coloca o número da missão em uma linha própria
+e define sua cor, seu tamanho e seu espaçamento. */
+.titulo-missao > span {
+  display: block; /* Faz o número ocupar uma linha própria */
+  margin-bottom: 10px; /* Cria 10 pixels de espaço abaixo do número */
+  color: #7b36e6; /* Define a cor roxa do número */
+  font-size: 18px; /* Define o tamanho da fonte em 18 pixels */
+  font-weight: bold; /* Deixa o número em negrito */
+}
+
+/* Define a aparência do título da missão,
+ajustando a cor, o tamanho e a sombra. */
+.titulo-missao h2 {
+  margin: 0; /* Remove a margem padrão do título */
+  color: #000; /* Define a cor preta do texto */
+  font-size: 48px; /* Define o tamanho da fonte em 48 pixels */
+  line-height: 0.95; /* Ajusta o espaço vertical entre as linhas */
+  text-shadow: 5px 5px 0 #ff00d4; /* Cria uma sombra rosa deslocada 5 pixels para a direita e para baixo */
+}
+
+/* Faz a caixa de texto ocupar o espaço restante
+e define seu preenchimento interno e sua cor de fundo. */
+.caixa-missao {
+  flex: 1; /* Permite que a caixa ocupe o espaço restante da seção */
+  padding: 30px; /* Cria 30 pixels de espaço interno ao redor do texto */
+  background-color: #000; /* Define o fundo preto da caixa */
+}
+
+/* Define a aparência do texto da missão,
+incluindo cor, tamanho e espaçamento entre linhas. */
+.caixa-missao p {
+  margin: 0; /* Remove a margem padrão do parágrafo */
+  color: white; /* Define a cor branca do texto */
+  font-size: 16px; /* Define o tamanho da fonte em 16 pixels */
+  line-height: 1.6; /* Define o espaço vertical entre as linhas do texto */
+}
+
+
+/* ================================================= */
+/* EXPERIÊNCIA */
+/* ================================================= */
+
+/* Define a largura, o espaçamento interno e o fundo
+da seção que apresenta a experiência. */
+.experiencia {
+  width: 92%; /* Faz a seção ocupar 92% da largura disponível */
+  margin: 40px auto 0; /* Cria 40 pixels de espaço acima e centraliza horizontalmente */
+  padding: 45px; /* Cria 45 pixels de espaço interno em todos os lados */
+  background-color: #ff00d4; /* Define o fundo rosa da seção */
+  box-sizing: border-box; /* Inclui o preenchimento e as bordas no tamanho total */
+}
+
+/* Cria espaço abaixo do título da seção
+para separá-lo dos itens de experiência. */
+.titulo-experiencia {
+  margin-bottom: 35px; /* Cria 35 pixels de espaço abaixo do título */
+}
+
+/* Define a cor, o tamanho e a espessura
+do número que identifica a seção. */
+.titulo-experiencia > span {
+  color: #ffff00; /* Define a cor amarela do número */
+  font-size: 18px; /* Define o tamanho da fonte em 18 pixels */
+  font-weight: bold; /* Deixa o número em negrito */
+}
+
+/* Define a aparência do título da experiência,
+incluindo seu espaçamento, tamanho e sombra. */
+.titulo-experiencia h2 {
+  margin: 10px 0 0; /* Cria 10 pixels de espaço acima e remove as margens laterais e inferior */
+  color: white; /* Define a cor branca do título */
+  font-size: 48px; /* Define o tamanho da fonte em 48 pixels */
+  line-height: 0.95; /* Ajusta o espaço vertical entre as linhas */
+  text-shadow: 5px 5px 0 #7b36e6; /* Cria uma sombra roxa deslocada 5 pixels para a direita e para baixo */
+}
+
+/* Organiza os itens da experiência lado a lado
+e define o espaço entre as caixas. */
+.experiencia-conteudo {
+  display: flex; /* Coloca os itens em uma linha usando Flexbox */
+  gap: 15px; /* Cria 15 pixels de espaço entre os itens */
+}
+
+/* Define o tamanho e o espaçamento interno de cada item
+e estabelece seu fundo e o cálculo de suas dimensões. */
+.experiencia-item {
+  flex: 1; /* Faz os itens dividirem igualmente o espaço disponível */
+  min-height: 180px; /* Define uma altura mínima de 180 pixels para cada item */
+  padding: 25px; /* Cria 25 pixels de espaço interno ao redor do conteúdo */
+  background-color: #7b36e6; /* Define o fundo roxo do item */
+  box-sizing: border-box; /* Inclui o preenchimento e as bordas no tamanho total */
+}
+
+/* Coloca o número de cada item em uma linha própria
+e define seu espaçamento, sua cor e seu tamanho. */
+.experiencia-item > span {
+  display: block; /* Faz o número ocupar uma linha própria */
+  margin-bottom: 30px; /* Cria 30 pixels de espaço abaixo do número */
+  color: #ffff00; /* Define a cor amarela do número */
+  font-size: 14px; /* Define o tamanho da fonte em 14 pixels */
+  font-weight: bold; /* Deixa o número em negrito */
+}
+
+/* Coloca o nome de cada item em uma linha própria
+e define sua cor, seu tamanho e seu espaçamento. */
+.experiencia-item strong {
+  display: block; /* Faz o nome ocupar uma linha própria */
+  margin-bottom: 10px; /* Cria 10 pixels de espaço abaixo do nome */
+  color: #000; /* Define a cor preta do texto */
+  font-size: 25px; /* Define o tamanho da fonte em 25 pixels */
+}
+
+/* Define a aparência dos textos descritivos
+dentro dos itens da seção experiência. */
+.experiencia-item p {
+  margin: 0; /* Remove a margem padrão do parágrafo */
+  color: #000; /* Define a cor preta do texto */
+  font-size: 13px; /* Define o tamanho da fonte em 13 pixels */
+  line-height: 1.5; /* Define o espaço vertical entre as linhas */
+}
+
+/* Define uma cor de fundo diferente para o segundo item. */
+.experiencia-item:nth-child(2) {
+  background-color: #01FFF6; /* Aplica o fundo azul-claro ao segundo item */
+}
+
+/* Define a cor de fundo amarela para o terceiro item. */
+.experiencia-item:nth-child(3) {
+  background-color: #ffff00; /* Aplica o fundo amarelo ao terceiro item */
+}
+
+
+/* ================================================= */
+/* VALORES */
+/* ================================================= */
+
+/* Define a largura, o espaçamento e o fundo
+da seção que apresenta os valores da página. */
+.valores {
+  width: 92%; /* Faz a seção ocupar 92% da largura disponível */
+  margin: 40px auto 0; /* Cria 40 pixels de espaço acima e centraliza horizontalmente */
+  padding: 45px; /* Cria 45 pixels de espaço interno em todos os lados */
+  background-color: #151515; /* Define o fundo em um tom de preto */
+  box-sizing: border-box; /* Inclui o preenchimento e as bordas no tamanho total */
+}
+
+/* Cria espaço abaixo do título da seção
+para separá-lo da lista de valores. */
+.titulo-valores {
+  margin-bottom: 35px; /* Cria 35 pixels de espaço abaixo do título */
+}
+
+/* Define a cor, o tamanho e a espessura
+do número que identifica a seção de valores. */
+.titulo-valores > span {
+  color: #ff00d4; /* Define a cor rosa do número */
+  font-size: 18px; /* Define o tamanho da fonte em 18 pixels */
+  font-weight: bold; /* Deixa o número em negrito */
+}
+
+/* Define a aparência do título da seção de valores,
+incluindo o espaçamento, a cor e a sombra. */
+.titulo-valores h2 {
+  margin: 10px 0 0; /* Cria 10 pixels de espaço acima e remove as margens laterais e inferior */
+  color: white; /* Define a cor branca do título */
+  font-size: 48px; /* Define o tamanho da fonte em 48 pixels */
+  line-height: 0.95; /* Ajusta o espaço vertical entre as linhas */
+  text-shadow: 5px 5px 0 #00fff7; /* Cria uma sombra azul-clara deslocada 5 pixels para a direita e para baixo */
+}
+
+/* Organiza os valores em uma grade com duas colunas
+e define o espaço entre os elementos. */
+.lista-valores {
+  display: grid; /* Organiza os elementos usando o modelo Grid */
+  grid-template-columns: repeat(2, 1fr); /* Divide a área em duas colunas de mesma largura */
+  gap: 15px; /* Cria 15 pixels de espaço entre os itens da grade */
+}
+
+/* Define a altura mínima e o espaço interno
+de cada caixa de valor. */
+.valor {
+  min-height: 170px; /* Define uma altura mínima de 170 pixels para cada caixa */
+  padding: 25px; /* Cria 25 pixels de espaço interno ao redor do conteúdo */
+  box-sizing: border-box; /* Inclui o preenchimento e as bordas no tamanho total */
+}
+
+/* Coloca o número de cada valor em uma linha própria
+e cria espaço abaixo dele. */
+.valor strong {
+  display: block; /* Faz o número ocupar uma linha própria */
+  margin-bottom: 20px; /* Cria 20 pixels de espaço abaixo do número */
+  font-size: 14px; /* Define o tamanho da fonte em 14 pixels */
+}
+
+/* Define o espaçamento e o tamanho
+dos nomes de cada valor. */
+.valor h3 {
+  margin: 0 0 10px; /* Remove as margens superior e laterais e cria 10 pixels abaixo do título */
+  font-size: 25px; /* Define o tamanho da fonte em 25 pixels */
+}
+
+/* Define a aparência dos textos descritivos
+dentro das caixas de valores. */
+.valor p {
+  margin: 0; /* Remove a margem padrão do parágrafo */
+  font-size: 13px; /* Define o tamanho da fonte em 13 pixels */
+  line-height: 1.5; /* Define o espaço vertical entre as linhas */
+}
+
+/* Define o fundo roxo e a cor do texto
+da caixa identificada como valor roxo. */
+.valor-roxo {
+  background-color: #7b36e6; /* Define o fundo roxo da caixa */
+  color: rgb(0, 0, 0); /* Define a cor preta para o texto da caixa */
+}
+
+/* Define o fundo azul-claro e a cor do texto
+da caixa identificada como valor ciano. */
+.valor-ciano {
+  background-color: #00fff7; /* Define o fundo azul-claro da caixa */
+  color: #000; /* Define a cor preta para o texto da caixa */
+}
+
+/* Define o fundo rosa e a cor do texto
+da caixa identificada como valor rosa. */
+.valor-rosa {
+  background-color: #ff00d4; /* Define o fundo rosa da caixa */
+  color: #000; /* Define a cor preta para o texto da caixa */
+}
+
+/* Define o fundo amarelo e a cor do texto
+da caixa identificada como valor amarelo. */
+.valor-amarelo {
+  background-color: #ffff00; /* Define o fundo amarelo da caixa */
+  color: #000; /* Define a cor preta para o texto da caixa */
+}
+
+
+/* ================================================= */
+/* DIFERENCIAL */
+/* ================================================= */
+
+/* Organiza a seção do diferencial em uma linha
+e define sua largura, seu espaçamento e seu fundo. */
+.diferencial {
+  width: 92%; /* Faz a seção ocupar 92% da largura disponível */
+  margin: 40px auto 0; /* Cria 40 pixels de espaço acima e centraliza horizontalmente */
+  padding: 55px; /* Cria 55 pixels de espaço interno em todos os lados */
+  display: flex; /* Organiza os elementos lado a lado usando Flexbox */
+  gap: 70px; /* Cria 70 pixels de espaço entre o título e o texto */
+  background-color: #7b36e6; /* Define o fundo roxo da seção */
+  box-sizing: border-box; /* Inclui o preenchimento e as bordas no tamanho total */
+}
+
+/* Reserva uma parte da largura para o título
+e impede que ele diminua dentro do Flexbox. */
+.titulo-diferencial {
+  width: 40%; /* Reserva 40% da largura disponível para o título */
+  flex-shrink: 0; /* Impede que o título seja reduzido para acomodar o texto */
+}
+
+/* Coloca o destaque acima do título e define
+sua cor, seu tamanho e o espaçamento entre as letras. */
+.titulo-diferencial > span {
+  display: block; /* Faz o destaque ocupar uma linha própria */
+  margin-bottom: 15px; /* Cria 15 pixels de espaço abaixo do destaque */
+  color: #ffff00; /* Define a cor amarela do texto */
+  font-size: 11px; /* Define o tamanho da fonte em 11 pixels */
+  font-weight: bold; /* Deixa o texto em negrito */
+  letter-spacing: 1px; /* Adiciona 1 pixel de espaço entre as letras */
+}
+
+/* Define a aparência do título do diferencial,
+incluindo sua cor, seu tamanho e sua sombra. */
+.titulo-diferencial h2 {
+  margin: 0; /* Remove a margem padrão do título */
+  color: white; /* Define a cor branca do texto */
+  font-size: 48px; /* Define o tamanho da fonte em 48 pixels */
+  line-height: 0.95; /* Ajusta o espaço vertical entre as linhas */
+  text-shadow: 5px 5px 0 #ff00d4; /* Cria uma sombra rosa deslocada 5 pixels para a direita e para baixo */
+}
+
+/* Faz o texto do diferencial ocupar o espaço restante
+depois que o título recebe sua largura. */
+.texto-diferencial {
+  flex: 1; /* Permite que o texto ocupe o espaço restante da seção */
+}
+
+/* Define a cor, o tamanho e o espaçamento
+dos parágrafos que explicam o diferencial. */
+.texto-diferencial p {
+  margin: 0 0 20px; /* Remove as margens superior e laterais e cria 20 pixels abaixo de cada parágrafo */
+  color: white; /* Define a cor branca do texto */
+  font-size: 15px; /* Define o tamanho da fonte em 15 pixels */
+  line-height: 1.6; /* Ajusta o espaço vertical entre as linhas */
+}
+
+/* Destaca a frase final do diferencial,
+colocando-a em uma linha própria e aumentando seu destaque visual. */
+.texto-diferencial strong {
+  display: block; /* Faz o texto destacado ocupar uma linha própria */
+  margin-top: 30px; /* Cria 30 pixels de espaço acima do destaque */
+  color: #ffff00; /* Define a cor amarela do texto */
+  font-size: 18px; /* Define o tamanho da fonte em 18 pixels */
+  line-height: 1.3; /* Define o espaço vertical entre as linhas */
+}
+
+
+/* ================================================= */
+/* FRASE FINAL */
+/* ================================================= */
+
+/* Define a largura e a altura mínima da área final,
+centraliza o conteúdo e adiciona uma borda superior. */
+.frase-final {
+  width: 92%; /* Faz a área ocupar 92% da largura disponível */
+  min-height: 300px; /* Define uma altura mínima de 300 pixels */
+  margin: 40px auto 70px; /* Cria 40 pixels acima, centraliza horizontalmente e cria 70 pixels abaixo */
+  padding: 60px; /* Cria 60 pixels de espaço interno em todos os lados */
+  background-color: #000; /* Define o fundo preto da área */
+  box-sizing: border-box; /* Inclui o preenchimento e as bordas no tamanho total */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  border-top: 6px solid #00fff7; /* Adiciona uma borda azul-clara de 6 pixels no topo */
+}
+
+/* Define a aparência do texto que aparece antes
+da frase principal, incluindo cor e espaçamento. */
+.frase-final p {
+  margin: 0 0 25px; /* Remove as margens superior e laterais e cria 25 pixels abaixo do parágrafo */
+  color: #ff00d4; /* Define a cor rosa do texto */
+  font-size: 16px; /* Define o tamanho da fonte em 16 pixels */
+  font-weight: bold; /* Deixa o texto em negrito */
+  letter-spacing: 5px; /* Adiciona 5 pixels de espaço entre as letras */
+}
+
+/* Define a aparência da frase principal,
+incluindo cor, tamanho, espaçamento e sombras. */
+.frase-final h2 {
+  margin: 0; /* Remove a margem padrão do título */
+  color: #ffff00; /* Define a cor amarela do texto */
+  font-size: 52px; /* Define o tamanho da fonte em 52 pixels */
+  line-height: 0.95; /* Ajusta o espaço vertical entre as linhas */
+  text-shadow:
+    5px 5px 0 #ff00d4,
+    10px 10px 0 #7b36e6; /* Cria duas sombras deslocadas, uma rosa e outra roxa */
+}
+
+/* Coloca a frase complementar em uma linha própria
+e define seu espaçamento, sua cor e seu tamanho. */
+.frase-final > span {
+  display: block; /* Faz a frase ocupar uma linha própria */
+  margin-top: 30px; /* Cria 30 pixels de espaço acima da frase */
+  color: #00fff7; /* Define a cor azul-clara do texto */
+  font-size: 12px; /* Define o tamanho da fonte em 12 pixels */
+  font-weight: bold; /* Deixa o texto em negrito */
+  letter-spacing: 2px; /* Adiciona 2 pixels de espaço entre as letras */
+}
+
+
+/* ================================================= */
+/* RESPONSIVIDADE — SOBRE */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+  /* Ajusta a apresentação para telas menores,
+removendo a altura mínima fixa e adicionando espaço interno. */
+  .sobre-apresentacao {
+    min-height: auto; /* Permite que a altura se ajuste ao conteúdo em telas menores */
+    padding: 30px 0; /* Cria 30 pixels de espaço interno em cima e embaixo, sem espaço nas laterais */
+  }
+
+  /* Coloca o título no fluxo normal da página
+e faz com que ele ocupe toda a largura disponível. */
+  .titulo-sobre {
+    position: relative; /* Mantém o título no fluxo da página, permitindo ajustes de posicionamento */
+    top: auto; /* Remove o deslocamento vertical definido anteriormente */
+    left: auto; /* Remove o deslocamento lateral definido anteriormente */
+    width: 100%; /* Faz o título ocupar toda a largura disponível */
+    padding: 20px; /* Cria 20 pixels de espaço interno ao redor do título */
+    box-sizing: border-box; /* Inclui o preenchimento e as bordas no tamanho total */
+  }
+
+  /* Reduz o tamanho do título principal
+para que ele se ajuste melhor às telas menores. */
+  .titulo-sobre h2 {
+    font-size: 42px; /* Diminui o tamanho da fonte para 42 pixels */
+  }
+
+  /* Organiza o conteúdo da apresentação em uma coluna
+e define o espaço entre os elementos. */
+  .sobre-conteudo {
+    display: flex; /* Organiza os elementos usando Flexbox */
+    flex-direction: column; /* Coloca os elementos um abaixo do outro */
+    gap: 25px; /* Cria 25 pixels de espaço entre os elementos */
+  }
+
+  /* Coloca o balão no fluxo normal da página
+e ajusta sua largura e altura para telas menores. */
+  .balao-sobre {
+    position: relative; /* Faz o balão participar do fluxo normal da página */
+    left: auto; /* Remove o deslocamento lateral definido anteriormente */
+    bottom: auto; /* Remove o deslocamento inferior definido anteriormente */
+    width: 100%; /* Faz o balão ocupar toda a largura disponível */
+    height: 240px; /* Define a altura do balão em 240 pixels */
+  }
+
+  /* Coloca a imagem do local no fluxo normal da página
+e ajusta seu tamanho para telas menores. */
+  .imagem-local {
+    position: relative; /* Faz a imagem participar do fluxo normal da página */
+    top: auto; /* Remove o deslocamento a partir do topo */
+    right: auto; /* Remove o deslocamento a partir da direita */
+    width: 100%; /* Faz a imagem ocupar toda a largura disponível */
+    height: 300px; /* Define a altura da imagem em 300 pixels */
+  }
+
+  /* Organiza as seções história, missão e diferencial
+em colunas e ajusta os espaços internos e entre os elementos. */
+  .historia,
+  .missao,
+  .diferencial {
+    flex-direction: column; /* Coloca os elementos um abaixo do outro */
+    gap: 30px; /* Cria 30 pixels de espaço entre os elementos */
+    padding: 30px; /* Define 30 pixels de espaço interno em todos os lados */
+  }
+
+  /* Faz os títulos dessas seções ocuparem toda a largura
+disponível nas telas menores. */
+  .titulo-secao,
+  .titulo-missao,
+  .titulo-diferencial {
+    width: 100%; /* Faz cada título ocupar toda a largura disponível */
+  }
+
+  /* Reduz o espaço interno da seção experiência
+para adaptar seu conteúdo às telas menores. */
+  .experiencia {
+    padding: 30px; /* Define 30 pixels de espaço interno em todos os lados */
+  }
+
+  /* Coloca os itens da experiência um abaixo do outro
+para facilitar a visualização em telas estreitas. */
+  .experiencia-conteudo {
+    flex-direction: column; /* Organiza os itens verticalmente em uma coluna */
+  }
+
+  /* Reduz o espaço interno da seção valores
+para aproveitar melhor a largura disponível. */
+  .valores {
+    padding: 30px; /* Define 30 pixels de espaço interno em todos os lados */
+  }
+
+  /* Organiza os valores em uma única coluna
+em vez de duas nas telas menores. */
+  .lista-valores {
+    grid-template-columns: 1fr; /* Define uma coluna que ocupa toda a largura disponível */
+  }
+
+  /* Reduz o espaço interno da área da frase final
+para adaptar o conteúdo às telas menores. */
+  .frase-final {
+    padding: 40px 20px; /* Define 40 pixels de espaço vertical e 20 pixels de espaço lateral */
+  }
+
+  /* Reduz o tamanho da frase principal
+para que ela se ajuste melhor às telas menores. */
+  .frase-final h2 {
+    font-size: 38px; /* Diminui o tamanho da fonte para 38 pixels */
+  }
+}
